@@ -1,5 +1,6 @@
 package UI_Selenium.step_defs;
 
+import UI_Selenium.pages.DosDontsTablePage;
 import UI_Selenium.pages.LogInPage;
 import UI_Selenium.ui_utils.Selenium_utils;
 import common_utils.ConfigReader;
@@ -22,11 +23,13 @@ public class ScenarioContext {
     //Classes
     public LogInPage logInPage;
     public Selenium_utils selenium_utils;
+    public DosDontsTablePage dosDontsTablePage;
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
         logInPage = new LogInPage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
+        dosDontsTablePage =new DosDontsTablePage(driver);
     }
 
 //    //API

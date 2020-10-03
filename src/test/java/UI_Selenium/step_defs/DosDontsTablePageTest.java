@@ -11,9 +11,11 @@ public class DosDontsTablePageTest {
 
     @Then("I verify Do's table exists")
     public void i_verify_do_s_table_exists() {
+    context.selenium_utils.waitForVisibility(context.dosDontsTablePage.doTable);
     }
 
     @Then("I verify Dont's table exists")
     public void i_verify_dont_s_table_exists() {
+        context.selenium_utils.waitForVisibility(context.dosDontsTablePage.dontsTable);
     }
 }

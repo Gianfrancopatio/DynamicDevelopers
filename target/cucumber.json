@@ -1,0 +1,110 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Open DevPrepp site",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "Using projectURL",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "I log in with email \"gianfrancopatio@hotmail.com\" and password \"DevPrepp1\"",
+            "match": {},
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-03T20:34:38.170Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6381000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Verifying tables DO\u0027s and Dont\u0027s exist",
+        "description": "",
+        "id": "do-s-and-dont-s-table-test;verifying-tables-do-s-and-dont-s-exist",
+        "after": [
+          {
+            "result": {
+              "duration": 798000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "I verify Do\u0027s table exists",
+            "match": {
+              "location": "UI_Selenium.step_defs.DosDontsTablePageTest.i_verify_do_s_table_exists()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "I verify Dont\u0027s table exists",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@doAndDontsTable"
+          },
+          {
+            "name": "@dosTable"
+          }
+        ]
+      }
+    ],
+    "name": "Do\u0027s and Dont\u0027s table test",
+    "description": "",
+    "id": "do-s-and-dont-s-table-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/TLA-15.feature",
+    "tags": [
+      {
+        "name": "@doAndDontsTable",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

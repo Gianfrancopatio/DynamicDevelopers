@@ -1,6 +1,7 @@
 package UI_Selenium.step_defs;
 
 import UI_Selenium.pages.LogInPage;
+import UI_Selenium.pages.SessionExpiresPage;
 import UI_Selenium.ui_utils.Selenium_utils;
 import common_utils.ConfigReader;
 import io.cucumber.java.Scenario;
@@ -22,11 +23,12 @@ public class ScenarioContext {
     //Classes
     public LogInPage logInPage;
     public Selenium_utils selenium_utils;
-
+     public SessionExpiresPage sessionExpiresPage;
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
         logInPage = new LogInPage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
+        sessionExpiresPage = new SessionExpiresPage(driver);
     }
 
 //    //API

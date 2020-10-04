@@ -14,24 +14,32 @@ Feature: All Topic dashboard test
 
   Scenario Outline: verify AllTopics dashboard contain all questions
     When I click on Alltopics dashboard
-    And I sendKey "<question>" from "<dashboard>"
+    And I sendKey "<question>"
     When I click "search" button
-    Then I verify that AllTopic dashboad contains "question"
+    Then I verify that AllTopic dashboad contains "<question>"
     Examples:
-      | question                                                        |  | dashboard   |
-      | How to get a substring?                                         |  | Coding      |
-      | Give me an example of when you’ve successfully solved a problem |  | Soft skills |
-      | What is Javascript?                                             |  | JavaScript  |
-      | Define iframe in HTML.                                          |  | HTML        |
-      | Explain what is Bootstrap?                                      |  | BootStrap   |
-      | What is the difference between JavaScript and jQuery?           |  | JQuery      |
+      | question                                                        |
+      | How to get a substring?                                         |
+      | Give me an example of when you’ve successfully solved a problem |
+      | What is Javascript?                                             |
+      | Define iframe in HTML.                                          |
+      | Explain what is Bootstrap?                                      |
+      | What is the difference between JavaScript and jQuery?           |
 
-
-  Scenario: Verify AllTopis dashboard Doesn't contain fake Question
+  @notExist
+  Scenario Outline: Verify AllTopis dashboard Doesn't contain fake Question
     When I click on Alltopics dashboard
-    And I sendKey "question" from "random"
+    And I sendKey "<question>"
     When I click "search" button
-    Then I verify that AllTopic dashboad does not contains "question"
+    Then I verify that AllTopic dashboad does not contains "<question>"
+    Examples:
+      | question                                                 |
+      | Who can make America great?                              |
+      | How are you doing ?                                      |
+      | What 333 455, 333?                                  |
+      | 1234566788 1234567??                                     |
+      | what is your name 342344?                              |
+      | What should we do? |
 
 
 

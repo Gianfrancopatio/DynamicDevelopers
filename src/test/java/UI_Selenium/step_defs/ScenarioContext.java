@@ -1,5 +1,6 @@
 package UI_Selenium.step_defs;
 
+import UI_Selenium.pages.AllTopicsPage;
 import UI_Selenium.pages.DosDontsTablePage;
 import UI_Selenium.pages.LogInPage;
 import UI_Selenium.pages.SessionExpiresPage;
@@ -27,6 +28,7 @@ public class ScenarioContext {
     public LoginTest loginTest;
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
+    public AllTopicsPage allTopicsPage;
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
@@ -36,6 +38,8 @@ public class ScenarioContext {
         dosDontsTablePage =new DosDontsTablePage(driver);
 
         sessionExpiresPage = new SessionExpiresPage(driver);
+
+        allTopicsPage = new AllTopicsPage(driver);
 
     }
 

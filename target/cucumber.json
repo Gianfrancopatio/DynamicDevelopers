@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 813000000,
+              "duration": 489000000,
               "status": "passed"
             },
             "line": 5,
@@ -24,11 +24,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-10-04T02:05:51.406Z",
+        "start_timestamp": "2020-10-04T16:09:47.004Z",
         "before": [
           {
             "result": {
-              "duration": 2397000000,
+              "duration": 1752000000,
               "status": "passed"
             },
             "match": {
@@ -36,14 +36,14 @@
             }
           }
         ],
-        "line": 18,
-        "name": "Verify user is able to sing up a new account",
+        "line": 42,
+        "name": "Verify user is unable to sing up with existing email",
         "description": "",
-        "id": "developer-preparation-application-tests;verify-user-is-able-to-sing-up-a-new-account",
+        "id": "developer-preparation-application-tests;verify-user-is-unable-to-sing-up-with-existing-email",
         "after": [
           {
             "result": {
-              "duration": 114000000,
+              "duration": 102000000,
               "status": "passed"
             },
             "match": {
@@ -56,10 +56,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3459000000,
+              "duration": 3500000000,
               "status": "passed"
             },
-            "line": 19,
+            "line": 43,
             "name": "user click create new account",
             "match": {
               "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
@@ -68,10 +68,10 @@
           },
           {
             "result": {
-              "duration": 1827000000,
+              "duration": 1890000000,
               "status": "passed"
             },
-            "line": 20,
+            "line": 44,
             "name": "user provides following data",
             "match": {
               "location": "UI_Selenium.step_defs.LoginTest.userProvidesFollowingData(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
@@ -80,25 +80,25 @@
               {
                 "cells": [
                   "name",
-                  "DDdevelopers"
+                  "kala"
                 ]
               },
               {
                 "cells": [
                   "email",
-                  "DDdevelopers@gmail.com"
+                  "kk.best59@gmail.com"
                 ]
               },
               {
                 "cells": [
                   "password",
-                  "dd12345"
+                  "Best56780"
                 ]
               },
               {
                 "cells": [
                   "confirmpassword",
-                  "dd12345"
+                  "Best56780"
                 ]
               }
             ],
@@ -106,10 +106,10 @@
           },
           {
             "result": {
-              "duration": 429000000,
+              "duration": 452000000,
               "status": "passed"
             },
-            "line": 25,
+            "line": 50,
             "name": "user click on signup button",
             "match": {
               "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
@@ -118,13 +118,13 @@
           },
           {
             "result": {
-              "duration": 199000000,
+              "duration": 423000000,
               "status": "passed"
             },
-            "line": 26,
-            "name": "verify message Successfully signed up! is up",
+            "line": 51,
+            "name": "verify message The user already exists is up",
             "match": {
-              "location": "UI_Selenium.step_defs.LoginTest.verifyMessageSuccessfullySignedUpIsUp()"
+              "location": "UI_Selenium.step_defs.LoginTest.verifyMessageTheUserAlreadyExistsIsUp()"
             },
             "keyword": "Then "
           }
@@ -134,7 +134,7 @@
             "name": "@LogInPage"
           },
           {
-            "name": "@SignUpPositive"
+            "name": "@SignUpWexistingEmail"
           }
         ]
       }

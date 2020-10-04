@@ -18,8 +18,8 @@ Feature: Developer Preparation application tests
   Scenario: Verify user is able to sing up a new account
     When user click create new account
     And user provides following data
-      | name            | DDdevelopers           |
-      | email           | DDdevelopers@gmail.com |
+      | name            | DDdevelopers59           |
+      | email           | DDdevelopers59@gmail.com |
       | password        | dd12345                |
       | confirmpassword | dd12345                |
     And  user click on signup button
@@ -62,6 +62,18 @@ Feature: Developer Preparation application tests
     And  user click on signup button
     Then  verify message The passwords lenght must be more than six is up
 
+  @sixdigitPassSignUp
+  Scenario: verify error msg is up when user provide password 6 digits password
+    When user click create new account
+    And user provides following data
+      | name            | newDD45           |
+      | email           | newDD45@gmail.com |
+      | password        | dd1236             |
+                        ##password is 6
+      | confirmpassword | dd1236             |
+    And  user click on signup button
+    Then  verify message The passwords lenght must be more than six is up
+
   @unmatchconfirmpassword
   Scenario: verify error msg appeared when user provide unmatch confirmpassword to sign up
     When user click create new account
@@ -94,14 +106,14 @@ Feature: Developer Preparation application tests
       Then  verify user on DevPrepp page
 
   @inValidEmail
-  Scenario: user is able to sign in with valid account
+  Scenario: user is not able to sign in with invalid Email
     When user provides invalid Email
     And user provides valid password
     And  user click on signIn button
     Then  verify the error message is up as invalid credentials
 
   @inValidPassword
-  Scenario: user is able to sign in with valid account
+  Scenario: user is not able to sign in with invalid password
     When user provides valid Email
     And user provides invalid password
     And  user click on signIn button

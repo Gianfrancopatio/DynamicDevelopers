@@ -18,8 +18,8 @@ Feature: Developer Preparation application tests
   Scenario: Verify user is able to sing up a new account
     When user click create new account
     And user provides following data
-      | name            | DDdevelopers           |
-      | email           | DDdevelopers@gmail.com |
+      | name            | DDdevelopers59           |
+      | email           | DDdevelopers59@gmail.com |
       | password        | dd12345                |
       | confirmpassword | dd12345                |
     And  user click on signup button
@@ -59,6 +59,18 @@ Feature: Developer Preparation application tests
       | password        | dd123             |
                         ##password is less than 6
       | confirmpassword | dd123             |
+    And  user click on signup button
+    Then  verify message The passwords lenght must be more than six is up
+
+  @sixdigitPassSignUp
+  Scenario: verify error msg is up when user provide password 6 digits password
+    When user click create new account
+    And user provides following data
+      | name            | newDD45           |
+      | email           | newDD45@gmail.com |
+      | password        | dd1236             |
+                        ##password is 6
+      | confirmpassword | dd1236             |
     And  user click on signup button
     Then  verify message The passwords lenght must be more than six is up
 

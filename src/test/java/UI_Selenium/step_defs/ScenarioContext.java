@@ -22,6 +22,8 @@ public class ScenarioContext {
     //Classes
     public LogInPage logInPage;
     public Selenium_utils selenium_utils;
+    public LoginTest loginTest;
+
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {

@@ -1,0 +1,132 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1020000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-04T01:44:13.911Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2358000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 104,
+        "name": "user is able to sign in with valid account",
+        "description": "",
+        "id": "developer-preparation-application-tests;user-is-able-to-sign-in-with-valid-account",
+        "after": [
+          {
+            "result": {
+              "duration": 138000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 590000000,
+              "status": "passed"
+            },
+            "line": 105,
+            "name": "user provides valid Email",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesValidEmail()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 443000000,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "user provides invalid password",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesInvalidPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 439000000,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSignInButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 196000000,
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "verify the error message is up as invalid credentials",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidCredentials()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@inValidPassword"
+          }
+        ]
+      }
+    ],
+    "name": "Developer Preparation application tests",
+    "description": "",
+    "id": "developer-preparation-application-tests",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/TLA-01%20Login.feature",
+    "tags": [
+      {
+        "name": "@LogInPage",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

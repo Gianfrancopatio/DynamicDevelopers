@@ -94,14 +94,14 @@ Feature: Developer Preparation application tests
       Then  verify user on DevPrepp page
 
   @inValidEmail
-  Scenario: user is able to sign in with valid account
+  Scenario: user is not able to sign in with invalid Email
     When user provides invalid Email
     And user provides valid password
     And  user click on signIn button
     Then  verify the error message is up as invalid credentials
 
   @inValidPassword
-  Scenario: user is able to sign in with valid account
+  Scenario: user is not able to sign in with invalid password
     When user provides valid Email
     And user provides invalid password
     And  user click on signIn button

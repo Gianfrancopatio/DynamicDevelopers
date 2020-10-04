@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1020000000,
+              "duration": 813000000,
               "status": "passed"
             },
             "line": 5,
@@ -24,11 +24,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-10-04T01:44:13.911Z",
+        "start_timestamp": "2020-10-04T02:05:51.406Z",
         "before": [
           {
             "result": {
-              "duration": 2358000000,
+              "duration": 2397000000,
               "status": "passed"
             },
             "match": {
@@ -36,14 +36,14 @@
             }
           }
         ],
-        "line": 104,
-        "name": "user is able to sign in with valid account",
+        "line": 18,
+        "name": "Verify user is able to sing up a new account",
         "description": "",
-        "id": "developer-preparation-application-tests;user-is-able-to-sign-in-with-valid-account",
+        "id": "developer-preparation-application-tests;verify-user-is-able-to-sing-up-a-new-account",
         "after": [
           {
             "result": {
-              "duration": 138000000,
+              "duration": 114000000,
               "status": "passed"
             },
             "match": {
@@ -56,49 +56,75 @@
         "steps": [
           {
             "result": {
-              "duration": 590000000,
+              "duration": 3459000000,
               "status": "passed"
             },
-            "line": 105,
-            "name": "user provides valid Email",
+            "line": 19,
+            "name": "user click create new account",
             "match": {
-              "location": "UI_Selenium.step_defs.LoginTest.userProvidesValidEmail()"
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 443000000,
+              "duration": 1827000000,
               "status": "passed"
             },
-            "line": 106,
-            "name": "user provides invalid password",
+            "line": 20,
+            "name": "user provides following data",
             "match": {
-              "location": "UI_Selenium.step_defs.LoginTest.userProvidesInvalidPassword()"
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesFollowingData(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "DDdevelopers"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "DDdevelopers@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "dd12345"
+                ]
+              },
+              {
+                "cells": [
+                  "confirmpassword",
+                  "dd12345"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 429000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 439000000,
+              "duration": 199000000,
               "status": "passed"
             },
-            "line": 107,
-            "name": "user click on signIn button",
+            "line": 26,
+            "name": "verify message Successfully signed up! is up",
             "match": {
-              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSignInButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 196000000,
-              "status": "passed"
-            },
-            "line": 108,
-            "name": "verify the error message is up as invalid credentials",
-            "match": {
-              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidCredentials()"
+              "location": "UI_Selenium.step_defs.LoginTest.verifyMessageSuccessfullySignedUpIsUp()"
             },
             "keyword": "Then "
           }
@@ -108,7 +134,7 @@
             "name": "@LogInPage"
           },
           {
-            "name": "@inValidPassword"
+            "name": "@SignUpPositive"
           }
         ]
       }

@@ -3,6 +3,7 @@ package UI_Selenium.step_defs;
 import UI_Selenium.pages.SessionExpiresPage;
 import UI_Selenium.ui_utils.Selenium_utils;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 public class SessionExpiresPageTest {
@@ -21,7 +22,7 @@ public class SessionExpiresPageTest {
 
     @Then("I verify session is expired")
     public void i_verify_session_is_expired() {
-    context.selenium_utils.waitForVisibility(context.sessionExpiresPage.createAccountBtn);
+        Assert.assertTrue(context.sessionExpiresPage.createAccountBtn.isDisplayed());
 
     }
 

@@ -26,7 +26,11 @@ public class ScenarioContext {
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
     public AllTopicsPage allTopicsPage;
+<<<<<<< HEAD
     public DosnDontsStatementsPage dosnDontsStatementsPage;
+=======
+    public LikeButtonPage likeButtonPage;
+>>>>>>> 954022caacb88f7faf64712dda24783545f2fc74
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
@@ -39,7 +43,11 @@ public class ScenarioContext {
 
         allTopicsPage = new AllTopicsPage(driver);
 
+<<<<<<< HEAD
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
+=======
+        likeButtonPage = new LikeButtonPage(driver);
+>>>>>>> 954022caacb88f7faf64712dda24783545f2fc74
 
     }
 

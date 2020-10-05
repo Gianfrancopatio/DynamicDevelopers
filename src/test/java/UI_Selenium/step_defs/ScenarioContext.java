@@ -1,9 +1,6 @@
 package UI_Selenium.step_defs;
 
-import UI_Selenium.pages.AllTopicsPage;
-import UI_Selenium.pages.DosDontsTablePage;
-import UI_Selenium.pages.LogInPage;
-import UI_Selenium.pages.SessionExpiresPage;
+import UI_Selenium.pages.*;
 import UI_Selenium.ui_utils.Selenium_utils;
 import common_utils.ConfigReader;
 import io.cucumber.java.Scenario;
@@ -29,6 +26,7 @@ public class ScenarioContext {
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
     public AllTopicsPage allTopicsPage;
+    public DosnDontsStatementsPage dosnDontsStatementsPage;
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
@@ -40,6 +38,8 @@ public class ScenarioContext {
         sessionExpiresPage = new SessionExpiresPage(driver);
 
         allTopicsPage = new AllTopicsPage(driver);
+
+        dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
 
     }
 

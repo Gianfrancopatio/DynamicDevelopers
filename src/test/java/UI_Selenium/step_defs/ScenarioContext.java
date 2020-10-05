@@ -21,7 +21,13 @@ public class ScenarioContext {
     public LoginTest loginTest;
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
-    public TLA_6_AllTopics TLA6AllTopics;
+
+    public TLA_6_AllTopicsPage TLA6AllTopics;
+
+    public TLA_6_AllTopicsPage allTopicsPage;
+
+    public DosnDontsStatementsPage dosnDontsStatementsPage;
+
     public LikeButtonPage likeButtonPage;
 
     //Selenium methods
@@ -29,11 +35,14 @@ public class ScenarioContext {
         logInPage = new LogInPage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
 
-        dosDontsTablePage =new DosDontsTablePage(driver);
+        dosDontsTablePage = new DosDontsTablePage(driver);
 
         sessionExpiresPage = new SessionExpiresPage(driver);
 
-        TLA6AllTopics = new TLA_6_AllTopics(driver);
+        allTopicsPage = new TLA_6_AllTopicsPage(driver);
+
+
+        dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
 
         likeButtonPage = new LikeButtonPage(driver);
 

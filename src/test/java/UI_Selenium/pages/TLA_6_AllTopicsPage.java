@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class TLA_6_AllTopics {
-    public TLA_6_AllTopics(WebDriver driver) {
+public class TLA_6_AllTopicsPage {
+    public TLA_6_AllTopicsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
@@ -32,5 +32,14 @@ public class TLA_6_AllTopics {
 
     @FindBy(xpath = "//div[@class='col-md-8']")
     public List<WebElement> search_result;
+
+    @FindBy(xpath = "//a[contains(@href, ':')]")
+    public List<WebElement> questions;
+
+    @FindBy(css = ".answer-count.ml-5")
+    public List<WebElement> answerCount;
+
+    @FindBy(css = "div.answer-section")
+    public WebElement answerSection;
 
 }

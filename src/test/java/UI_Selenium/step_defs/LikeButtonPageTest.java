@@ -18,6 +18,4 @@ public class LikeButtonPageTest {
     public void the_don_t_table_as_well() {
         context.selenium_utils.waitForClickability(context.likeButtonPage.likeBtn2);
     }
-
-
 }

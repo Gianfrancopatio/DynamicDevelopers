@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class AllTopicsPage {
-    public AllTopicsPage(WebDriver driver) {
+public class TLA_6_AllTopics {
+    public TLA_6_AllTopics(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 

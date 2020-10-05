@@ -5,10 +5,6 @@ import UI_Selenium.ui_utils.Selenium_utils;
 import common_utils.ConfigReader;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.restassured.http.Headers;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -33,7 +29,7 @@ public class ScenarioContext {
         logInPage = new LogInPage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
 
-        dosDontsTablePage =new DosDontsTablePage(driver);
+        dosDontsTablePage = new DosDontsTablePage(driver);
 
         sessionExpiresPage = new SessionExpiresPage(driver);
 

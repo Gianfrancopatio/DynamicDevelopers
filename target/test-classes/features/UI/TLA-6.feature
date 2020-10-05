@@ -3,7 +3,7 @@
 Feature: All Topic dashboard test
 
   Background: Open the Login page
-    Given I open "URL"
+    Given I open "projectURL"
     When I log in with valid email "live@live.com" and password "livelive"
 
 
@@ -33,13 +33,13 @@ Feature: All Topic dashboard test
     When I click "search" button
     Then I verify that AllTopic dashboad does not contains "<question>"
     Examples:
-      | question                                                 |
-      | Who can make America great?                              |
-      | How are you doing ?                                      |
-      | What 333 455, 333?                                  |
-      | 1234566788 1234567??                                     |
-      | what is your name 342344?                              |
-      | What should we do? |
+      | question                    |
+      | Who can make America great? |
+      | How are you doing ?         |
+      | What 333 455, 333?          |
+      | 1234566788 1234567??        |
+      | what is your name 342344?   |
+      | What should we do?          |
 
 
 

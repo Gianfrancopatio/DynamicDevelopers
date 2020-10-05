@@ -33,4 +33,13 @@ public class AllTopicsPage {
     @FindBy(xpath = "//div[@class='col-md-8']")
     public List<WebElement> search_result;
 
+    @FindBy(xpath = "//a[contains(@href, ':')]")
+    public List<WebElement> questions;
+
+    @FindBy(css = ".answer-count.ml-5")
+    public List<WebElement> answerCount;
+
+    @FindBy(css = "div.answer-section")
+    public WebElement answerSection;
+
 }

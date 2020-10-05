@@ -7,6 +7,7 @@ public class DosDontsTablePageTest {
     ScenarioContext context;
 
     public DosDontsTablePageTest(ScenarioContext scenarioContext) {
+
         context = scenarioContext;
     }
 

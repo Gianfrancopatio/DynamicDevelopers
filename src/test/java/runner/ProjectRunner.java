@@ -12,14 +12,18 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
+<<<<<<< HEAD
         tags = "@doAndDontsTable"
         , dryRun = false
+=======
+        tags = "@LogInPage"
+        ,dryRun = false
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
 )
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = false)
     public Object[][] scenarios() {
-
         return super.scenarios();
     }
 }

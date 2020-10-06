@@ -92,12 +92,14 @@
             <artifactId>cucumber-testng</artifactId>
             <version>${cucumber-testng.version}</version>
         </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
             <version>6.7.0</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>

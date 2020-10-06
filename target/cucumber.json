@@ -1,40 +1,41 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
         "line": 4,
+<<<<<<< HEAD
         "name": "Open DevPrepp site",
+=======
+        "name": "User open login/registration page",
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
               "status": "undefined"
+=======
+              "duration": 4808000000,
+              "status": "passed"
             },
             "line": 5,
-            "name": "open project URL",
-            "match": {},
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
             },
-            "line": 6,
-            "name": "I log in with email \"gianfrancopatio@hotmail.com\" and password \"DevPrepp1\"",
-            "match": {},
-            "keyword": "When "
+            "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2020-10-06T00:11:11.443Z",
+        "start_timestamp": "2020-10-06T01:00:11.599Z",
         "before": [
           {
             "result": {
-              "duration": 6277000000,
+              "duration": 9359000000,
               "status": "passed"
             },
             "match": {
@@ -42,14 +43,14 @@
             }
           }
         ],
-        "line": 9,
-        "name": "Verifying tables DO\u0027s and Dont\u0027s table exist",
+        "line": 8,
+        "name": "Verify logIn/Sign up fields are existed on the LogIn page",
         "description": "",
-        "id": "do-s-and-dont-s-table-test;verifying-tables-do-s-and-dont-s-table-exist",
+        "id": "developer-preparation-application-tests;verify-login/sign-up-fields-are-existed-on-the-login-page",
         "after": [
           {
             "result": {
-              "duration": 678000000,
+              "duration": 195000000,
               "status": "passed"
             },
             "match": {
@@ -62,6 +63,2088 @@
         "steps": [
           {
             "result": {
+              "duration": 1490000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify \"emailfield\"  exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emailfield\"",
+                  "offset": 7
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.verifyExists(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1395000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify \"passwordfield\"  exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"passwordfield\"",
+                  "offset": 7
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.verifyExists(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1378000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "verify \"SignInButton\"  exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"SignInButton\"",
+                  "offset": 7
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.verifyExists(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3648000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1400000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "verify \"namefield\"  exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"namefield\"",
+                  "offset": 7
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.verifyExists(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2385000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "verify \"confirmpasswordfield\"  exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"confirmpasswordfield\"",
+                  "offset": 7
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.verifyExists(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@VerifyFields"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4829000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.593Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9363000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify user is able to sing up a new account",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-user-is-able-to-sing-up-a-new-account",
+        "after": [
+          {
+            "result": {
+              "duration": 138000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3608000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4837000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user provides following data with random name and email",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesFollowingDataWithRandomNameAndEmail(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "password",
+                  "dd12345"
+                ]
+              },
+              {
+                "cells": [
+                  "confirmpassword",
+                  "dd12345"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 588000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 361000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "verify message Successfully signed up! is up",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyMessageSuccessfullySignedUpIsUp()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@SignUpPositive"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4814000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.593Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9363000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Verify user is unable to sing up with existing name",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-user-is-unable-to-sing-up-with-existing-name",
+        "after": [
+          {
+            "result": {
+              "duration": 270000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3590000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4540000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user provides following data",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesFollowingData(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "Best"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "kk.best59@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "Best56780"
+                ]
+              },
+              {
+                "cells": [
+                  "confirmpassword",
+                  "Best56780"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 526000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 416000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "verify message The user already exists is up",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyMessageTheUserAlreadyExistsIsUp()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@SignUpWexistingName"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4847000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.593Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9363000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "Verify user is unable to sing up with existing email",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-user-is-unable-to-sing-up-with-existing-email",
+        "after": [
+          {
+            "result": {
+              "duration": 217000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3607000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4650000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "user provides following data",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesFollowingData(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "kala"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "kk.best59@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "Best56780"
+                ]
+              },
+              {
+                "cells": [
+                  "confirmpassword",
+                  "Best56780"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 694000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 685000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "verify message The user already exists is up",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyMessageTheUserAlreadyExistsIsUp()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@SignUpWexistingEmail"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4798000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.593Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9363000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 52,
+        "name": "verify error msg is up when user provide password less than 6 digits",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-error-msg-is-up-when-user-provide-password-less-than-6-digits",
+        "after": [
+          {
+            "result": {
+              "duration": 191000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3605000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4363000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user provides following data",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesFollowingData(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "newDD45"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "newDD45@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "dd123"
+                ]
+              },
+              {
+                "cells": [
+                  "confirmpassword",
+                  "dd123"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 745000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 572000000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "verify the error message is up as Password must be at least six characters in length.",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsPasswordMustBeAtLeastCharactersInLength()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@passwordSighUpInvalid"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4877000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.599Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9359000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 71,
+        "name": "verify error msg is up when user Invalid passwordFormat",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-error-msg-is-up-when-user-invalid-passwordformat;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 141000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3848000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3944000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "user provides \"emailinvalid1\" \"emailinvalid1\" \"dd12356\" \"dd12356\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emailinvalid1\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"emailinvalid1\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 56
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 825000000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 375000000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "verify the error message is up as Invalid email format",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidEmailFormat()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@InvalidEmailFormat"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4894000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.599Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9365000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 72,
+        "name": "verify error msg is up when user Invalid passwordFormat",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-error-msg-is-up-when-user-invalid-passwordformat;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 268000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3844000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4045000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "user provides \"emailinvalid2\" \"emailinvalid2 test@gmail.com\" \"dd12356\" \"dd12356\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emailinvalid2\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"emailinvalid2 test@gmail.com\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 61
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 71
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 848000000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 382000000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "verify the error message is up as Invalid email format",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidEmailFormat()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@InvalidEmailFormat"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4886000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.599Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9359000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 73,
+        "name": "verify error msg is up when user Invalid passwordFormat",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-error-msg-is-up-when-user-invalid-passwordformat;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 271000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3785000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4519000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "user provides \"emailinvalid3\" \"emailinvalid3@gmail\" \"dd12356\" \"dd12356\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emailinvalid3\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"emailinvalid3@gmail\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 52
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 62
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 619000000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 565000000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "verify the error message is up as Invalid email format",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidEmailFormat()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@InvalidEmailFormat"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4921000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.599Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9365000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 74,
+        "name": "verify error msg is up when user Invalid passwordFormat",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-error-msg-is-up-when-user-invalid-passwordformat;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 279000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3827000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4336000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "user provides \"emailinvalid4\" \"emailinvalid4.com\" \"dd12356\" \"dd12356\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emailinvalid4\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"emailinvalid4.com\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 60
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 832000000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 650000000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "verify the error message is up as Invalid email format",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidEmailFormat()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@InvalidEmailFormat"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4950000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:11.599Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9359000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 75,
+        "name": "verify error msg is up when user Invalid passwordFormat",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-error-msg-is-up-when-user-invalid-passwordformat;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 279000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3793000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4353000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "user provides \"emailinvalid5\" \"emailinvalid5@.com\" \"dd12356\" \"dd12356\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emailinvalid5\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"emailinvalid5@.com\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 61
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 696000000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 583000000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "verify the error message is up as Invalid email format",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidEmailFormat()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@InvalidEmailFormat"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2186000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:35.143Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4342000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 78,
+        "name": "verify error msg appeared when user provide unmatch confirmpassword to sign up",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-error-msg-appeared-when-user-provide-unmatch-confirmpassword-to-sign-up",
+        "after": [
+          {
+            "result": {
+              "duration": 114000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3498000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2282000000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "user provides following data",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesFollowingData(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "newDD5"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "newDD5@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "dd12356"
+                ]
+              },
+              {
+                "cells": [
+                  "confirmpassword",
+                  "dd12567"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 532000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "user click on signup button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSighupButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2366000000,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "verify message The passwords did not match is up",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyMessageThePasswordsDidNotMatchIsUp()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@unmatchconfirmpassword"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2182000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:35.162Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4308000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 96,
+        "name": "verify sign up button is not enable if some of the fields is blank",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-sign-up-button-is-not-enable-if-some-of-the-fields-is-blank;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 133000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3492000000,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2417000000,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user provides \"\" \"newDD5@gmail.com\" \"dd12356\" \"dd12356\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"newDD5@gmail.com\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 46
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "verify sign up button is not enable",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifySignUpButtonIsNotEnable()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@blankfield"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2036000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:35.278Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4100000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 97,
+        "name": "verify sign up button is not enable if some of the fields is blank",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-sign-up-button-is-not-enable-if-some-of-the-fields-is-blank;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 113000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3464000000,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2287000000,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user provides \"dd\" \"\" \"dd12356\" \"dd12356\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"dd\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 32
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34000000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "verify sign up button is not enable",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifySignUpButtonIsNotEnable()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@blankfield"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2109000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:35.284Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4449000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 98,
+        "name": "verify sign up button is not enable if some of the fields is blank",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-sign-up-button-is-not-enable-if-some-of-the-fields-is-blank;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 108000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3623000000,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2332000000,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user provides \"dd\" \"newDD5@gmail.com\" \"\" \"dd12356\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"dd\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"newDD5@gmail.com\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 41
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22000000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "verify sign up button is not enable",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifySignUpButtonIsNotEnable()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@blankfield"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1873000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:35.369Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4323000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 99,
+        "name": "verify sign up button is not enable if some of the fields is blank",
+        "description": "",
+        "id": "developer-preparation-application-tests;verify-sign-up-button-is-not-enable-if-some-of-the-fields-is-blank;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 125000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3465000000,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user click create new account",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userIsAbleToClickCreateNewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2552000000,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user provides \"dd\" \"newDD5@gmail.com\" \"dd12356\" \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"dd\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"newDD5@gmail.com\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"dd12356\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 48
+                }
+              ],
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesNameEmailPasswordConfirmPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35000000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "verify sign up button is not enable",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifySignUpButtonIsNotEnable()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@blankfield"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3690000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
+            },
+            "line": 5,
+            "name": "open project URL",
+            "match": {},
+            "keyword": "Given "
+<<<<<<< HEAD
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "I log in with email \"gianfrancopatio@hotmail.com\" and password \"DevPrepp1\"",
+            "match": {},
+            "keyword": "When "
+=======
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:35.650Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3848000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 102,
+        "name": "user is able to sign in with valid account",
+        "description": "",
+        "id": "developer-preparation-application-tests;user-is-able-to-sign-in-with-valid-account",
+        "after": [
+          {
+            "result": {
+              "duration": 105000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 865000000,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "user provides valid Email",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesValidEmail()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 505000000,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "user provides valid password",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesValidPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 481000000,
+              "status": "passed"
+            },
+            "line": 105,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSignInButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1772000000,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "verify user on DevPrepp page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyUserOnDevPreppPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@ValidSignIn"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3481000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
+          }
+        ]
+      },
+      {
+<<<<<<< HEAD
+        "start_timestamp": "2020-10-06T00:11:11.443Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6277000000,
+=======
+        "start_timestamp": "2020-10-06T01:00:35.657Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3950000000,
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+<<<<<<< HEAD
+        "line": 9,
+        "name": "Verifying tables DO\u0027s and Dont\u0027s table exist",
+        "description": "",
+        "id": "do-s-and-dont-s-table-test;verifying-tables-do-s-and-dont-s-table-exist",
+        "after": [
+          {
+            "result": {
+              "duration": 678000000,
+=======
+        "line": 109,
+        "name": "user is not able to sign in with invalid Email",
+        "description": "",
+        "id": "developer-preparation-application-tests;user-is-not-able-to-sign-in-with-invalid-email",
+        "after": [
+          {
+            "result": {
+              "duration": 111000000,
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
               "status": "skipped"
             },
             "line": 10,
@@ -81,18 +2164,183 @@
               "location": "UI_Selenium.step_defs.DosDontsTablePageTest.i_verify_dont_s_table_exists()"
             },
             "keyword": "And "
+=======
+              "duration": 1037000000,
+              "status": "passed"
+            },
+            "line": 110,
+            "name": "user provides invalid Email",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesInvalidEmail()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 541000000,
+              "status": "passed"
+            },
+            "line": 111,
+            "name": "user provides valid password",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesValidPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 498000000,
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSignInButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 94000000,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "verify the error message is up as invalid credentials",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidCredentials()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@inValidEmail"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User open login/registration page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2312000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open login page",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-06T01:00:35.702Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3452000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 116,
+        "name": "user is not able to sign in with invalid password",
+        "description": "",
+        "id": "developer-preparation-application-tests;user-is-not-able-to-sign-in-with-invalid-password",
+        "after": [
+          {
+            "result": {
+              "duration": 111000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 887000000,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "user provides valid Email",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesValidEmail()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 760000000,
+              "status": "passed"
+            },
+            "line": 118,
+            "name": "user provides invalid password",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userProvidesInvalidPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 537000000,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "user click on signIn button",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.userClickOnSignInButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 205000000,
+              "status": "passed"
+            },
+            "line": 120,
+            "name": "verify the error message is up as invalid credentials",
+            "match": {
+              "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidCredentials()"
+            },
+            "keyword": "Then "
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
+          }
+        ],
+        "tags": [
+          {
+<<<<<<< HEAD
             "name": "@doAndDontsTable"
           },
           {
             "name": "@doDontTable"
+=======
+            "name": "@LogInPage"
+          },
+          {
+            "name": "@inValidPassword"
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
           }
         ]
       }
     ],
+<<<<<<< HEAD
     "name": "Do\u0027s and Dont\u0027s table test",
     "description": "",
     "id": "do-s-and-dont-s-table-test",
@@ -101,6 +2349,16 @@
     "tags": [
       {
         "name": "@doAndDontsTable",
+=======
+    "name": "Developer Preparation application tests",
+    "description": "",
+    "id": "developer-preparation-application-tests",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UI/TLA-01%20Login.feature",
+    "tags": [
+      {
+        "name": "@LogInPage",
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
         "type": "Tag",
         "location": {
           "line": 1,

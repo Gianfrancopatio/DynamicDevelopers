@@ -1,6 +1,7 @@
 package UI_Selenium.step_defs;
 
 import UI_Selenium.pages.LogInPage;
+import com.github.javafaker.Faker;
 import common_utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -38,6 +39,10 @@ public class LoginTest {
 
     @And("user provides following data")
     public void userProvidesFollowingData(Map<String,String> dataInput) {
+        Faker faker = new Faker();
+        String name = faker.funnyName().name();
+        String email = faker.internet().emailAddress(name);
+
         if(dataInput.get("name").equals("null")){
             context.logInPage.name.sendKeys("");
             context.selenium_utils.sendKeys(context.logInPage.email, dataInput.get("email"));
@@ -70,11 +75,11 @@ public class LoginTest {
     }
 
 
-
-    @Then("verify message The passwords lenght must be more than six is up")
-    public void verifyMessageThePasswordsLenghtMustBeMoreThanSixIsUp() {
+    @Then("verify the error message is up as Password must be at least six characters in length.")
+    public void verifyTheErrorMessageIsUpAsPasswordMustBeAtLeastCharactersInLength() {
         context.selenium_utils.highlightElement(context.logInPage.passwordDigiterror);
         Assert.assertTrue(context.logInPage.passwordDigiterror.isDisplayed());
+        Assert.assertEquals(context.logInPage.passwordDigiterror.getText(),"Password must be at least 6 characters in length.");
     }
 
     @Then("verify {string}  exists")
@@ -178,6 +183,26 @@ public class LoginTest {
     @And("user provides invalid password")
     public void userProvidesInvalidPassword() {
         context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup,"dd879000");
+    }
+
+
+    @Then("verify the error message is up as Invalid email format")
+    public void verifyTheErrorMessageIsUpAsInvalidEmailFormat() {
+        context.selenium_utils.highlightElement(context.logInPage.invalidEmailformat);
+        Assert.assertEquals(context.logInPage.invalidEmailformat.getText(),"Invalid email format");
+    }
+
+    @And("user provides following data with random name and email")
+    public void userProvidesFollowingDataWithRandomNameAndEmail(Map<String, String> dataInput) {
+        Faker faker = new Faker();
+        String name = faker.funnyName().name();
+        String email = faker.internet().emailAddress();
+
+        context.selenium_utils.sendKeys(context.logInPage.name, name);
+        context.selenium_utils.sendKeys(context.logInPage.email, email);
+        context.selenium_utils.sendKeys(context.logInPage.password, dataInput.get("password"));
+        context.selenium_utils.sendKeys(context.logInPage.confirmpassword, dataInput.get("confirmpassword"));
+
     }
 }
 

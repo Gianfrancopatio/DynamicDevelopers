@@ -13,7 +13,6 @@ Feature: Developer Preparation application tests
     Then verify "namefield"  exists
     And  verify "confirmpasswordfield"  exists
 
-
   @SignUpPositive
   Scenario: Verify user is able to sing up a new account
     When user click create new account

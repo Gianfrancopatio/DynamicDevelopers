@@ -22,7 +22,6 @@ public class ScenarioContext {
     //Classes
     public LogInPage logInPage;
     public Selenium_utils selenium_utils;
-    public LoginTest loginTest;
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
     public TLA_6_AllTopicsPage TLA6AllTopics;

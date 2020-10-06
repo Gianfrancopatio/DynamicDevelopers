@@ -5,6 +5,10 @@ import UI_Selenium.ui_utils.Selenium_utils;
 import common_utils.ConfigReader;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,31 +25,20 @@ public class ScenarioContext {
     public LoginTest loginTest;
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
-
     public TLA_6_AllTopicsPage TLA6AllTopics;
-
     public TLA_6_AllTopicsPage allTopicsPage;
-
     public DosnDontsStatementsPage dosnDontsStatementsPage;
-
     public LikeButtonPage likeButtonPage;
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
         logInPage = new LogInPage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
-
         dosDontsTablePage = new DosDontsTablePage(driver);
-
         sessionExpiresPage = new SessionExpiresPage(driver);
-
         allTopicsPage = new TLA_6_AllTopicsPage(driver);
-
-
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
-
         likeButtonPage = new LikeButtonPage(driver);
-
     }
 
 //    //API

@@ -4,13 +4,20 @@
     "elements": [
       {
         "line": 4,
+<<<<<<< HEAD
+        "name": "Open DevPrepp site",
+=======
         "name": "User open login/registration page",
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
+              "status": "undefined"
+=======
               "duration": 4808000000,
               "status": "passed"
             },
@@ -1954,8 +1961,23 @@
             "name": "I open login page",
             "match": {
               "location": "UI_Selenium.step_defs.LoginTest.i_open()"
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
             },
+            "line": 5,
+            "name": "open project URL",
+            "match": {},
             "keyword": "Given "
+<<<<<<< HEAD
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "I log in with email \"gianfrancopatio@hotmail.com\" and password \"DevPrepp1\"",
+            "match": {},
+            "keyword": "When "
+=======
           }
         ]
       },
@@ -2066,15 +2088,24 @@
               "location": "UI_Selenium.step_defs.LoginTest.i_open()"
             },
             "keyword": "Given "
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
           }
         ]
       },
       {
+<<<<<<< HEAD
+        "start_timestamp": "2020-10-06T00:11:11.443Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6277000000,
+=======
         "start_timestamp": "2020-10-06T01:00:35.657Z",
         "before": [
           {
             "result": {
               "duration": 3950000000,
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
               "status": "passed"
             },
             "match": {
@@ -2082,6 +2113,16 @@
             }
           }
         ],
+<<<<<<< HEAD
+        "line": 9,
+        "name": "Verifying tables DO\u0027s and Dont\u0027s table exist",
+        "description": "",
+        "id": "do-s-and-dont-s-table-test;verifying-tables-do-s-and-dont-s-table-exist",
+        "after": [
+          {
+            "result": {
+              "duration": 678000000,
+=======
         "line": 109,
         "name": "user is not able to sign in with invalid Email",
         "description": "",
@@ -2090,6 +2131,7 @@
           {
             "result": {
               "duration": 111000000,
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
               "status": "passed"
             },
             "match": {
@@ -2102,6 +2144,27 @@
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "I verify Do\u0027s table exists",
+            "match": {
+              "location": "UI_Selenium.step_defs.DosDontsTablePageTest.i_verify_do_s_table_exists()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "I verify Dont\u0027s table exists",
+            "match": {
+              "location": "UI_Selenium.step_defs.DosDontsTablePageTest.i_verify_dont_s_table_exists()"
+            },
+            "keyword": "And "
+=======
               "duration": 1037000000,
               "status": "passed"
             },
@@ -2257,18 +2320,36 @@
               "location": "UI_Selenium.step_defs.LoginTest.verifyTheErrorMessageIsUpAsInvalidCredentials()"
             },
             "keyword": "Then "
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
           }
         ],
         "tags": [
           {
+<<<<<<< HEAD
+            "name": "@doAndDontsTable"
+          },
+          {
+            "name": "@doDontTable"
+=======
             "name": "@LogInPage"
           },
           {
             "name": "@inValidPassword"
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
           }
         ]
       }
     ],
+<<<<<<< HEAD
+    "name": "Do\u0027s and Dont\u0027s table test",
+    "description": "",
+    "id": "do-s-and-dont-s-table-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UI/TLA-15.feature",
+    "tags": [
+      {
+        "name": "@doAndDontsTable",
+=======
     "name": "Developer Preparation application tests",
     "description": "",
     "id": "developer-preparation-application-tests",
@@ -2277,6 +2358,7 @@
     "tags": [
       {
         "name": "@LogInPage",
+>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
         "type": "Tag",
         "location": {
           "line": 1,

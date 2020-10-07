@@ -39,9 +39,6 @@ public class TLA_6_AllTopicsPage {
     @FindBy(css = ".answer-count.ml-5")
     public List<WebElement> answerCount;
 
-    @FindBy(css = ".answer-count.ml-5")
-    public WebElement count;
-
     @FindBy(css = "div.answer-section")
     public WebElement answerSection;
 
@@ -50,8 +47,4 @@ public class TLA_6_AllTopicsPage {
 
     @FindBy(css = "div.row.answer")
     public WebElement answerRow;
-
-    @FindBy(css = ".btn.btn-outline-primary")
-    public WebElement likeBtn;
-
 }

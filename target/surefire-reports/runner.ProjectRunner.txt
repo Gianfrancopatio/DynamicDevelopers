@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: runner.ProjectRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 96.703 sec - in runner.ProjectRunner
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 186.165 sec <<< FAILURE! - in runner.ProjectRunner
+runScenario(runner.ProjectRunner)  Time elapsed: 184.866 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:92)
+	at org.junit.Assert.assertTrue(Assert.java:43)
+	at org.junit.Assert.assertTrue(Assert.java:54)
+	at UI_Selenium.step_defs.QA_SectionTest.iVerifyAnswerCountCorrespondsTheActualCountOfAnswersUnderAQuestion(QA_SectionTest.java:88)
+	at ✽.I verify Answer count corresponds to the actual count of answers under a question(file:///Users/sapsan_pz/Documents/DynamicDevelopers/src/test/resources/features/UI/TLA-9-10.feature:18)
+

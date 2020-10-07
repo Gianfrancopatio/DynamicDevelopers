@@ -39,16 +39,19 @@ public class TLA_6_AllTopicsPage {
     @FindBy(css = ".answer-count.ml-5")
     public List<WebElement> answerCount;
 
+    @FindBy(css = ".answer-count.ml-5")
+    public WebElement count;
+
     @FindBy(css = "div.answer-section")
     public WebElement answerSection;
 
     @FindBy(xpath = "//div[@class='row answer']")
     public List<WebElement> answerRows;
 
-    @FindBy(xpath = "//*[text()='1.']")
+    @FindBy(css = "div.row.answer")
     public WebElement answerRow;
 
-    @FindBy(css = "i.far.fa-thumbs-up")
+    @FindBy(css = ".btn.btn-outline-primary")
     public WebElement likeBtn;
 
 }

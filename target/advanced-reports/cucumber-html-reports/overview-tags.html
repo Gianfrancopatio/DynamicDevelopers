@@ -49,28 +49,28 @@ $(document).ready(function() {
   $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@TLA10_AnswerCount",  "@TLA9_Q&amp;ASection",  "@devPrep", ] ,
+        labels:  [ "@TLA10_AnswerCount",  "@devPrep", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00,  100.00,  100.00, ]             },
+                data:  [ 66.67,  66.67, ]             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00,  0.00,  0.00, ]             },
+                data:  [ 33.33,  33.33, ]             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00,  0.00,  0.00, ]             },
+                data:  [ 0.00,  0.00, ]             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00,  0.00,  0.00, ]             },
+                data:  [ 0.00,  0.00, ]             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00,  0.00,  0.00, ]             }
+                data:  [ 0.00,  0.00, ]             }
         ]
     };
 
@@ -131,7 +131,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>_API Tests</td>
               <td>1</td>
-            <td>06 Oct 2020, 19:59</td>
+            <td>07 Oct 2020, 13:27</td>
     </tr>
   </tbody>
 </table>
@@ -195,86 +195,69 @@ $(document).ready(function() {
           <tr>
         <td class="tagname"><a href="report-tag_TLA10_AnswerCount.html">@TLA10_AnswerCount</a></td>
         
-        <td      class="passed"    >3</td>
-        <td >0</td>
+        <td      class="passed"    >2</td>
+        <td      class="failed"    >1</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td class="total">3</td>
 
-        <td  class="passed"    >1</td>
         <td >0</td>
+        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="2052501000">2.052</td>
-        <td class="passed">Passed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="report-tag_TLA9_Q-ASection.html">@TLA9_Q&amp;ASection</a></td>
-        
-        <td      class="passed"    >4</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">4</td>
-
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-
-        <td class="duration" data-value="87420615000">1:27.420</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="177311599000">2:57.311</td>
+        <td class="failed">Failed</td>
       </tr>
           <tr>
         <td class="tagname"><a href="report-tag_devPrep.html">@devPrep</a></td>
         
-        <td      class="passed"    >7</td>
+        <td      class="passed"    >2</td>
+        <td      class="failed"    >1</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td class="total">7</td>
+        <td class="total">3</td>
 
-        <td  class="passed"    >2</td>
         <td >0</td>
-        <td class="total">2</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
 
-        <td class="duration" data-value="89473116000">1:29.473</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="177311599000">2:57.311</td>
+        <td class="failed">Failed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-            <td>14</td>
+            <td>4</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>14</td>
+      <td>6</td>
 
-      <td>4</td>
       <td>0</td>
-      <td>4</td>
+      <td>2</td>
+      <td>2</td>
 
-      <td class="duration">2:58.946</td>
-      <td>3</td>
+      <td class="duration">5:54.623</td>
+      <td>2</td>
     </tr>
     <tr>
       <td></td>
-            <td>100.00%</td>
-      <td>0.00%</td>
+            <td>66.67%</td>
+      <td>33.33%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
+      <td>0.00%</td>
       <td>100.00%</td>
+      <td></td>
+      <td></td>
       <td>0.00%</td>
-      <td></td>
-      <td></td>
-      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>

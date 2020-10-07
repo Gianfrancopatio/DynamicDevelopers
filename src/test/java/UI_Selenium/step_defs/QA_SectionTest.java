@@ -1,6 +1,9 @@
 package UI_Selenium.step_defs;
 
+<<<<<<< HEAD
 import UI_Selenium.pages.TLA_6_AllTopicsPage;
+=======
+>>>>>>> 3b997306d05d78d6673f4fcfdee23773dbc0544a
 import UI_Selenium.pages.LogInPage;
 import common_utils.ConfigReader;
 import io.cucumber.java.en.And;
@@ -45,25 +48,32 @@ public class QA_SectionTest {
             }
         }
         Assert.assertTrue(count == context.allTopicsPage.questions.size());
+        context.selenium_utils.logInfo("Each question field is not empty", true);
     }
 
     @And("I verify each question has an Answer section")
-    public void iVerifyEachQuestionHasAnAnswerSection() throws InterruptedException {
+    public void iVerifyEachQuestionHasAnAnswerSection() {
         for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
+            context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
             context.selenium_utils.click(context.allTopicsPage.questions.get(i));
-            Thread.sleep(500);
             Assert.assertTrue(context.allTopicsPage.answerSection.isDisplayed());
+            if(i < 3 || i > 87) {
+                context.selenium_utils.logInfo("Question has an Answer section under it", true);
+            }
         }
     }
 
     @Then("I verify there is an Answer count for each question")
     public void iVerifyThereIsAnAnswerCountForEachQuestion() {
         //Verification option 1
-        System.out.println(context.allTopicsPage.answerCount.size());
         Assert.assertTrue(context.allTopicsPage.questions.size() == context.allTopicsPage.answerCount.size());
         //Verification option 2
-        for(WebElement e : context.allTopicsPage.answerCount) {
-            Assert.assertTrue(e.isDisplayed());
+        for(int i = 0; i < context.allTopicsPage.answerCount.size(); i++) {
+            Assert.assertTrue(context.allTopicsPage.answerCount.get(i).isDisplayed());
+            if(i < 3 || i > 87) {
+                context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
+                context.selenium_utils.logInfo("Each question contains an Answer Count", true);
+            }
         }
     }
 }

@@ -13,8 +13,14 @@ import org.testng.annotations.DataProvider;
                 "rerun:target/re-run.txt"
         },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         tags = "@doAndDontsTable"
         , dryRun = false
+=======
+
+        tags = "@TLA10_AnswerCount",
+        dryRun = false
+>>>>>>> Stashed changes
 =======
 
         tags = "@TLA10_AnswerCount",

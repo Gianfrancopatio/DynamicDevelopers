@@ -34,22 +34,18 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.sendKeys(context.allTopicsPage.password_field, password);
         context.selenium_utils.click(context.allTopicsPage.signIn_Btn);
         context.selenium_utils.logInfo("I login using valid email: " + email + " and password: " + password, true);
-
-
     }
 
     @Then("I verify that All Topic dash is visible")
     public void iVerifyThatAllTopicDashIsVisible() {
         Assert.assertTrue(context.allTopicsPage.alltopics_dash.isDisplayed());
         context.selenium_utils.logInfo("I verify AllTopics dash is displayed", true);
-
     }
 
     @And("I verify that All Topic dash is clickable")
     public void iVerifyThatAllTopicDashIsClickable() {
         Assert.assertTrue(context.allTopicsPage.alltopics_dash.isEnabled());
         context.selenium_utils.logInfo("I verify that Alltopics dash is enabled", false);
-
     }
 
     @When("I click on Alltopics dashboard")

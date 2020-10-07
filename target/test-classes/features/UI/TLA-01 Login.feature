@@ -13,24 +13,12 @@ Feature: Developer Preparation application tests
     Then verify "namefield"  exists
     And  verify "confirmpasswordfield"  exists
 
-<<<<<<< HEAD
-
-  @SignUpPositive
-  Scenario: Verify user is able to sing up a new account
-    When user click create new account
-    And user provides following data
-      | name            | DDdevelopers59           |
-      | email           | DDdevelopers59@gmail.com |
-      | password        | dd12345                |
-      | confirmpassword | dd12345                |
-=======
   @SignUpPositive
   Scenario: Verify user is able to sing up a new account
     When user click create new account
     And user provides following data with random name and email
       | password        | dd12345 |
       | confirmpassword | dd12345 |
->>>>>>> 3b997306d05d78d6673f4fcfdee23773dbc0544a
     And  user click on signup button
     Then  verify message Successfully signed up! is up
 
@@ -66,38 +54,13 @@ Feature: Developer Preparation application tests
       | name            | newDD45           |
       | email           | newDD45@gmail.com |
       | password        | dd123             |
-<<<<<<< HEAD
-                        ##password is less than 6
-      | confirmpassword | dd123             |
-    And  user click on signup button
-    Then  verify message The passwords lenght must be more than six is up
-
-  @sixdigitPassSignUp
-  Scenario: verify error msg is up when user provide password 6 digits password
-    When user click create new account
-    And user provides following data
-      | name            | newDD45           |
-      | email           | newDD45@gmail.com |
-      | password        | dd1236             |
-                        ##password is 6
-      | confirmpassword | dd1236             |
-    And  user click on signup button
-    Then  verify message The passwords lenght must be more than six is up
-
-  @unmatchconfirmpassword
-  Scenario: verify error msg appeared when user provide unmatch confirmpassword to sign up
-=======
                           ##password is less than 6
       | confirmpassword | dd123             |
     And  user click on signup button
     Then  verify the error message is up as Password must be at least six characters in length.
 
   @InvalidEmailFormat
-<<<<<<< Updated upstream
-  Scenario Outline: verify error msg is up when user Invalid passwordFormat
-=======
   Scenario Outline: verify error msg is up when user fill Invalid password Format
->>>>>>> Stashed changes
     When user click create new account
     And user provides "<name>" "<email>" "<password>" "<confirmPassword>"
     And  user click on signup button
@@ -112,7 +75,6 @@ Feature: Developer Preparation application tests
 
   @unmatchconfirmpassword
   Scenario: verify error msg appeared when user provide unmatch confirm gitpassword to sign up
->>>>>>> 3b997306d05d78d6673f4fcfdee23773dbc0544a
     When user click create new account
     And user provides following data
       | name            | newDD5           |
@@ -135,21 +97,12 @@ Feature: Developer Preparation application tests
       | dd   | newDD5@gmail.com |          | dd12356         |
       | dd   | newDD5@gmail.com | dd12356  |                 |
 
-<<<<<<< HEAD
-    @ValidSignIn
-    Scenario: user is able to sign in with valid account
-      When user provides valid Email
-      And user provides valid password
-      And  user click on signIn button
-      Then  verify user on DevPrepp page
-=======
   @ValidSignIn
   Scenario: user is able to sign in with valid account
     When user provides valid Email
     And user provides valid password
     And  user click on signIn button
     Then  verify user on DevPrepp page
->>>>>>> 3b997306d05d78d6673f4fcfdee23773dbc0544a
 
   @inValidEmail
   Scenario: user is not able to sign in with invalid Email

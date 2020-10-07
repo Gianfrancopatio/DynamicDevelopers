@@ -12,8 +12,14 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
+<<<<<<< Updated upstream
         tags = "@doAndDontsTable"
         , dryRun = false
+=======
+
+        tags = "@TLA10_AnswerCount",
+        dryRun = false
+>>>>>>> Stashed changes
 
 )
 

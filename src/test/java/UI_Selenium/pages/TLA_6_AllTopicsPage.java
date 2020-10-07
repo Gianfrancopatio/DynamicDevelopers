@@ -42,4 +42,13 @@ public class TLA_6_AllTopicsPage {
     @FindBy(css = "div.answer-section")
     public WebElement answerSection;
 
+    @FindBy(xpath = "//div[@class='row answer']")
+    public List<WebElement> answerRows;
+
+    @FindBy(xpath = "//*[text()='1.']")
+    public WebElement answerRow;
+
+    @FindBy(css = "i.far.fa-thumbs-up")
+    public WebElement likeBtn;
+
 }

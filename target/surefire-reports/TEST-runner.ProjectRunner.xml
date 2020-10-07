@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runner.ProjectRunner" time="184.866" tests="1" errors="0" skipped="0" failures="1">
+<testsuite name="runner.ProjectRunner" time="98.841" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.1+13-LTS"/>
@@ -63,52 +63,5 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="184.866">
-    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
-	at org.junit.Assert.fail(Assert.java:92)
-	at org.junit.Assert.assertTrue(Assert.java:43)
-	at org.junit.Assert.assertTrue(Assert.java:54)
-	at UI_Selenium.step_defs.QA_SectionTest.iVerifyAnswerCountCorrespondsTheActualCountOfAnswersUnderAQuestion(QA_SectionTest.java:88)
-	at ✽.I verify Answer count corresponds to the actual count of answers under a question(file:///Users/sapsan_pz/Documents/DynamicDevelopers/src/test/resources/features/UI/TLA-9-10.feature:18)
-</failure>
-    <system-out><![CDATA[Configuring TestNG with: TestNG652Configurator
-0|0 
-0|0 
-1|1 
-13|13
-0|0 
-0|0 
-0|0 
-0|0 
-1|1 
-0|0 
-1|1 
-0|0 
-0|0 
-3|3 
-0|0 
-1|1 
-1|1 
-0|0 
-17|17
-1|1 
-0|0 
-0|0 
-1|1 
-1|1 
-0|0 
-1|1 
-1|1 
-]]></system-out>
-    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 22271
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Oct 07, 2020 1:24:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="98.841"/>
 </testsuite>

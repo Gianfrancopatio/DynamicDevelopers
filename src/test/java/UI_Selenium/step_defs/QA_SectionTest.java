@@ -77,26 +77,27 @@ public class QA_SectionTest {
     }
 
     @And("I verify Answer count corresponds to the actual count of answers under a question")
-    public void iVerifyAnswerCountCorrespondsTheActualCountOfAnswersUnderAQuestion() {
+    public void iVerifyAnswerCountCorrespondsTheActualCountOfAnswersUnderAQuestion() throws InterruptedException {
         int count = 0;
-        for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
+        int size = context.allTopicsPage.questions.size();
+        for (int i = 0; i < size; i++) {
             context.selenium_utils.click(context.allTopicsPage.questions.get(i));
-            if (!context.allTopicsPage.answerCount.get(i).getText().substring(0, 1).equals("0")) {
+            context.selenium_utils.sleep(500);
+            if (!context.allTopicsPage.answerCount.get(i).getText().trim().equals("0")) {
                 count = context.allTopicsPage.answerRows.size();
-                if(context.allTopicsPage.answerCount.get(i).getText().charAt(1) == ' '){
-                    Assert.assertTrue(count == Integer.parseInt(context.allTopicsPage.answerCount.get(i).getText().substring(0,1)));
-                } else {
-                    Assert.assertTrue(count == Integer.parseInt(context.allTopicsPage.answerCount.get(i).getText().substring(0,2)));
-                }
+                Assert.assertTrue(count == Integer.parseInt(context.allTopicsPage.answerCount.get(i).getText().substring(0, 2).trim()));
+                if(i < 3 || i > size - 4)
+                context.selenium_utils.logInfo("Verifying if the counter reflects the number of answers", true);
             } else {
                 try {
                     context.allTopicsPage.answerRow.isDisplayed();
                 } catch (Exception e) {
                     count = 0;
                     Assert.assertTrue(count == Integer.parseInt(context.allTopicsPage.answerCount.get(i).getText().substring(0,1)));
+                    if(i < 3 || i > size-4)
+                        context.selenium_utils.logInfo("Verifying if the counter reflects the number of answers", true);
                 }
             }
-            System.out.println(count +"|" + context.allTopicsPage.answerCount.get(i).getText().substring(0,2));
         }
     }
 }

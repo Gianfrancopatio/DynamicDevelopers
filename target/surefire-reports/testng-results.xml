@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-10-07T13:23:59 EDT" name="Surefire suite" finished-at="2020-10-07T13:27:05 EDT" duration-ms="185659">
+  <suite started-at="2020-10-07T19:17:38 EDT" name="Surefire suite" finished-at="2020-10-07T19:19:17 EDT" duration-ms="99727">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@130161f7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-10-07T13:23:59 EDT" name="Surefire test" finished-at="2020-10-07T13:27:05 EDT" duration-ms="185659">
+    <test started-at="2020-10-07T19:17:38 EDT" name="Surefire test" finished-at="2020-10-07T19:19:17 EDT" duration-ms="99727">
       <class name="runner.ProjectRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.ProjectRunner@130161f7]" started-at="2020-10-07T13:23:59 EDT" name="setUpClass" finished-at="2020-10-07T13:24:00 EDT" duration-ms="618" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.ProjectRunner@130161f7]" started-at="2020-10-07T19:17:38 EDT" name="setUpClass" finished-at="2020-10-07T19:17:38 EDT" duration-ms="614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@130161f7]" started-at="2020-10-07T13:24:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T13:27:04 EDT" duration-ms="184851" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@130161f7]" started-at="2020-10-07T19:17:38 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T19:19:17 EDT" duration-ms="98839" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify each question has a count of answers"]]>
+                <![CDATA["Verify each question has an answer section"]]>
               </value>
             </param>
             <param index="1">
@@ -27,21 +27,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
-at org.junit.Assert.fail(Assert.java:92)
-at org.junit.Assert.assertTrue(Assert.java:43)
-at org.junit.Assert.assertTrue(Assert.java:54)
-at UI_Selenium.step_defs.QA_SectionTest.iVerifyAnswerCountCorrespondsTheActualCountOfAnswersUnderAQuestion(QA_SectionTest.java:88)
-at ✽.I verify Answer count corresponds to the actual count of answers under a question(file:///Users/sapsan_pz/Documents/DynamicDevelopers/src/test/resources/features/UI/TLA-9-10.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.ProjectRunner@130161f7]" started-at="2020-10-07T13:27:04 EDT" name="tearDownClass" finished-at="2020-10-07T13:27:05 EDT" duration-ms="134" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.ProjectRunner@130161f7]" started-at="2020-10-07T19:19:17 EDT" name="tearDownClass" finished-at="2020-10-07T19:19:17 EDT" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

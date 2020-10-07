@@ -12,7 +12,7 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
-        tags = "@TLA10_AnswerCount",
+        tags = "@TLA9_Q&ASection",
         dryRun = false
 
 )

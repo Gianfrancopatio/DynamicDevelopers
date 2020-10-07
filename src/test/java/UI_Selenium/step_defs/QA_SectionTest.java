@@ -53,6 +53,9 @@ public class QA_SectionTest {
             context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
             context.selenium_utils.click(context.allTopicsPage.questions.get(i));
             Assert.assertTrue(context.allTopicsPage.answerSection.isDisplayed());
+            if(i < 3 || i > 87) {
+                context.selenium_utils.logInfo("Question has an Answer section under it", true);
+            }
         }
     }
 

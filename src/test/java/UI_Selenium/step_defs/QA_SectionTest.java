@@ -1,6 +1,6 @@
 package UI_Selenium.step_defs;
 
-import UI_Selenium.pages.AllTopicsPage;
+import UI_Selenium.pages.TLA_6_AllTopicsPage;
 import UI_Selenium.pages.LogInPage;
 import common_utils.ConfigReader;
 import io.cucumber.java.en.And;

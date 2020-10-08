@@ -69,7 +69,7 @@ public class TLA_6_AllTopicsTest {
 
     @Then("I verify that AllTopic dashboad contains {string}")
     public void iVerifyThatAllTopicDashboadContains(String question) {
-        context.selenium_utils.sleep(500);
+        context.selenium_utils.sleep(1000);
         Assert.assertEquals(question, context.allTopicsPage.search_result.get(0).getText());
         context.selenium_utils.logInfo("Alltopics dash contains " + question, true);
 
@@ -77,7 +77,7 @@ public class TLA_6_AllTopicsTest {
 
     @Then("I verify that AllTopic dashboad does not contains {string}")
     public void iVerifyThatAllTopicDashboadDoesNotContains(String randomQuestion) {
-        context.selenium_utils.sleep(500);
+        context.selenium_utils.sleep(1000);
         List<WebElement> list = context.allTopicsPage.search_result;
         Assert.assertEquals(list.size(), 0);
         context.selenium_utils.logInfo("Alltopics dash doesn't contain " + randomQuestion, true);

@@ -1,4 +1,26 @@
 -------------------------------------------------------------------------------
 Test set: runner.ProjectRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 96.703 sec - in runner.ProjectRunner
+Tests run: 13, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 193.986 sec <<< FAILURE! - in runner.ProjectRunner
+runScenario(runner.ProjectRunner)  Time elapsed: 9.602 sec  <<< FAILURE!
+java.lang.AssertionError: expected [0] but found [92]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
+	at ✽.I verify that AllTopic dashboad does not contains "1234566788 1234567??"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
+
+runScenario(runner.ProjectRunner)  Time elapsed: 11.459 sec  <<< FAILURE!
+java.lang.AssertionError: expected [0] but found [92]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
+	at ✽.I verify that AllTopic dashboad does not contains "what is your name 342344?"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
+

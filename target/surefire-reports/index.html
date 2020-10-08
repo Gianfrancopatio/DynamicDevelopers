@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">13 methods, 2 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +123,57 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify each question has a count of answers&quot;, &quot;Optional[Developer Preparation application tests]&quot;)">runScenario("Verify each question has a count of answers", "Optional[Developer Preparation application tests]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify each question has an answer section&quot;, &quot;Optional[Developer Preparation application tests]&quot;)">runScenario("Verify each question has an answer section", "Optional[Developer Preparation application tests]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verifying All topics dashboard is visible&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("Verifying All topics dashboard is visible", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.ProjectRunner" class="method navigator-link" hash-for-method="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -124,6 +188,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">runner.ProjectRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [0] but found [92]
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
+	at ✽.I verify that AllTopic dashboad does not contains &quot;what is your name 342344?&quot;(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [0] but found [92]
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
+	at ✽.I verify that AllTopic dashboad does not contains &quot;1234566788 1234567??&quot;(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -132,20 +234,110 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify each question has a count of answers&quot;, &quot;Optional[Developer Preparation application tests]&quot;)">
-                  </a> <!-- runScenario("Verify each question has a count of answers", "Optional[Developer Preparation application tests]") -->
+                  <a name="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify each question has a count of answers", "Optional[Developer Preparation application tests]")</span>
+                  <span class="parameters">("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify each question has an answer section&quot;, &quot;Optional[Developer Preparation application tests]&quot;)">
-                  </a> <!-- runScenario("Verify each question has an answer section", "Optional[Developer Preparation application tests]") -->
+                  <a name="runScenario(&quot;Verifying All topics dashboard is visible&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("Verifying All topics dashboard is visible", "Optional[All Topic dashboard test]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify each question has an answer section", "Optional[Developer Preparation application tests]")</span>
+                  <span class="parameters">("Verifying All topics dashboard is visible", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify AllTopis dashboard Doesn&#039;t contain fake Question&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;verify AllTopics dashboard contain all questions&quot;, &quot;Optional[All Topic dashboard test]&quot;)">
+                  </a> <!-- runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -211,20 +403,64 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(13);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.ProjectRunner')
-data.setCell(0, 3, 91330);
+data.setCell(0, 3, 33601);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runner.ProjectRunner')
-data.setCell(1, 3, 4647);
+data.setCell(1, 3, 20535);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runner.ProjectRunner')
+data.setCell(2, 3, 19823);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runner.ProjectRunner')
+data.setCell(3, 3, 18957);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runner.ProjectRunner')
+data.setCell(4, 3, 17240);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'runner.ProjectRunner')
+data.setCell(5, 3, 13396);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'runner.ProjectRunner')
+data.setCell(6, 3, 11460);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'runner.ProjectRunner')
+data.setCell(7, 3, 9831);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'runner.ProjectRunner')
+data.setCell(8, 3, 9818);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'runner.ProjectRunner')
+data.setCell(9, 3, 9793);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'runner.ProjectRunner')
+data.setCell(10, 3, 9674);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'runner.ProjectRunner')
+data.setCell(11, 3, 9596);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'runner.ProjectRunner')
+data.setCell(12, 3, 9397);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -256,16 +492,64 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Verify each question has an answer section", "Optional[Developer Preparation application tests]")</span>
-                <span class="method-start">328 ms</span>
+                <span class="method-name">runScenario("Verifying All topics dashboard is visible", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">292 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Verify each question has a count of answers", "Optional[Developer Preparation application tests]")</span>
-                <span class="method-start">91659 ms</span>
+                <span class="method-name">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">17533 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">27364 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">37157 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">50554 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">60372 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("verify AllTopics dashboard contain all questions", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">69769 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">79443 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">113044 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">133579 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">153402 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">163003 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify AllTopis dashboard Doesn't contain fake Question", "Optional[All Topic dashboard test]")</span>
+                <span class="method-start">174463 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">96308 ms</span>
+                <span class="method-start">193421 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

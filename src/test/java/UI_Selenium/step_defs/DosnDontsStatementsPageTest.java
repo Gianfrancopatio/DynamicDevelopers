@@ -27,7 +27,7 @@ public class DosnDontsStatementsPageTest {
 
     }
 
-
+// Do Table
     @When("I click on Add Do button")
     public void i_click_on_add_do_button()  {
         context.selenium_utils.sleep(2000);
@@ -41,7 +41,6 @@ public class DosnDontsStatementsPageTest {
         context.selenium_utils.sendKeys(context.dosnDontsStatementsPage.textBox, arg0);
     }
 
-
     @When("I click enter button to enter new statement")
     public void iClickButtonToEnterNewStatement() {
         context.selenium_utils.click(context.dosnDontsStatementsPage.submitButton);
@@ -54,10 +53,7 @@ public class DosnDontsStatementsPageTest {
     }
 
 
-
-
-
-
+// Don't Table
 
     @When("I click on Add Don't button")
     public void i_click_on_add_don_t_button() {

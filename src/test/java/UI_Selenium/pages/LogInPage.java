@@ -40,7 +40,7 @@ public class LogInPage {
     @FindBy(xpath="//div[contains(text(),'The user already exists')]")
     public WebElement userexists;
 
-    @FindBy(xpath = "//div[contains(text(),'The passwords lenght must be more than 6')]")
+    @FindBy(xpath = "//div[contains(text(),'Password must be at least 6 characters in length')]")
     public WebElement passwordDigiterror;
 
     @FindBy(xpath = "//div[contains(text(),'The passwords did not match')]")
@@ -51,6 +51,10 @@ public class LogInPage {
 
     @FindBy(xpath="//div[contains(text(),'invalid credentials')]")
     public WebElement inValidCredentials;
+
+    @FindBy(xpath="//div[contains(text(),'Invalid email format')]")
+    public WebElement invalidEmailformat;
+
 
 
 }

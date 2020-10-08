@@ -25,6 +25,7 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.logInfo("I open the website using URL: " + projectURL, false);
 
 
+
     }
 
     @When("I log in with valid email {string} and password {string}")
@@ -80,6 +81,7 @@ public class TLA_6_AllTopicsTest {
 
     @Then("I verify that AllTopic dashboad does not contains {string}")
     public void iVerifyThatAllTopicDashboadDoesNotContains(String randomQuestion) {
+        context.selenium_utils.sleep(500);
         List<WebElement> list = context.allTopicsPage.search_result;
         Assert.assertEquals(list.size(), 0);
         context.selenium_utils.logInfo("Alltopics dash doesn't contain " + randomQuestion, true);

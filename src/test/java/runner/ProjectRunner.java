@@ -12,8 +12,9 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
-        tags = "@alltopics"
-        ,dryRun = false
+        tags = "@TLA9_Q&ASection",
+        dryRun = false
+
 )
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {

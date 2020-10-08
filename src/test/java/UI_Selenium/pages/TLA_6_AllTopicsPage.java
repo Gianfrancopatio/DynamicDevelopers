@@ -32,4 +32,9 @@ public class TLA_6_AllTopicsPage {
     @FindBy(css = "div.answer-section")
     public WebElement answerSection;
 
+    @FindBy(xpath = "//div[@class='row answer']")
+    public List<WebElement> answerRows;
+
+    @FindBy(css = "div.row.answer")
+    public WebElement answerRow;
 }

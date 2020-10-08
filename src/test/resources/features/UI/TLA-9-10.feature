@@ -15,3 +15,5 @@ Feature: Developer Preparation application tests
   Scenario: Verify each question has a count of answers
     And I navigate to All Topics
     Then I verify there is an Answer count for each question
+    And I verify Answer count corresponds to the actual count of answers under a question
+

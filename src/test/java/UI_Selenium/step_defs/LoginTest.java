@@ -20,6 +20,7 @@ public class LoginTest {
     ScenarioContext context;
 
     public LoginTest(ScenarioContext scenarioContext){
+
         this.context = scenarioContext;
     }
 
@@ -60,6 +61,7 @@ public class LoginTest {
 
     @Then("user click on signup button")
     public void userClickOnSighupButton() {
+
         context.selenium_utils.click(context.logInPage.signUp);
     }
 

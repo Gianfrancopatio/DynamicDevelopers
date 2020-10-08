@@ -12,6 +12,7 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
+<<<<<<< HEAD
 
         tags = "@doAndDontsTable"
         , dryRun = false
@@ -19,6 +20,11 @@ import org.testng.annotations.DataProvider;
 //        tags = "@LogInPage"
 //        ,dryRun = false
 //>>>>>>> 7ac02532f870ef003d7453703168c9abb0d1a2e4
+=======
+        tags = "@AddStatements",
+        dryRun = false
+
+>>>>>>> 915f65304ec056219ea54f47a8a414d1fde0a2b2
 )
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {

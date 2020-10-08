@@ -24,19 +24,11 @@ public class ScenarioContext {
     public Selenium_utils selenium_utils;
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
-<<<<<<< HEAD
-    public AllTopicsPage allTopicsPage;
-//<<<<<<< HEAD
     public DosnDontsStatementsPage dosnDontsStatementsPage;
-//=======
+
     public LikeButtonPage likeButtonPage;
-//>>>>>>> 954022caacb88f7faf64712dda24783545f2fc74
-=======
-    public TLA_6_AllTopicsPage TLA6AllTopics;
     public TLA_6_AllTopicsPage allTopicsPage;
-    public DosnDontsStatementsPage dosnDontsStatementsPage;
-    public LikeButtonPage likeButtonPage;
->>>>>>> 0dbe557346a0bf2a1077fd262268d6349eaf65e9
+
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
@@ -44,21 +36,17 @@ public class ScenarioContext {
         selenium_utils = new Selenium_utils(scenarioContext);
         dosDontsTablePage = new DosDontsTablePage(driver);
         sessionExpiresPage = new SessionExpiresPage(driver);
-<<<<<<< HEAD
 
-        allTopicsPage = new AllTopicsPage(driver);
 
-//<<<<<<< HEAD
+
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
-//=======
-        likeButtonPage = new LikeButtonPage(driver);
-//>>>>>>> 954022caacb88f7faf64712dda24783545f2fc74
 
-=======
+        likeButtonPage = new LikeButtonPage(driver);
+
         allTopicsPage = new TLA_6_AllTopicsPage(driver);
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);
->>>>>>> 0dbe557346a0bf2a1077fd262268d6349eaf65e9
+
     }
 
 //    //API

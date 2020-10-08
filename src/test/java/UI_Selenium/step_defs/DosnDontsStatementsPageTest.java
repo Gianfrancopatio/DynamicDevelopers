@@ -19,18 +19,18 @@ public class DosnDontsStatementsPageTest {
         context.driver.get(ConfigReader.readProperty
                 ("projectURL","src/test/resources/properties/configuration.properties"));
     }
-    @When("I log in with email {string} and password {string}")
-    public void iLogInWithEmailAndPassword(String arg0, String arg1) {
-        context.selenium_utils.sendKeys(context.dosnDontsStatementsPage.email4, arg0);
-        context.selenium_utils.sendKeys(context.dosnDontsStatementsPage.password4, arg1);
-        context.selenium_utils.click(context.dosnDontsStatementsPage.signIn4);
-
-    }
+//    @When("I log in with email {string} and password {string}")
+//    public void iLogInWithEmailAndPassword(String arg0, String arg1) {
+//        context.selenium_utils.sendKeys(context.dosnDontsStatementsPage.email5, arg0);
+//        context.selenium_utils.sendKeys(context.dosnDontsStatementsPage.password5, arg1);
+//        context.selenium_utils.click(context.dosnDontsStatementsPage.signIn5);
+//
+//    }
 
 // Do Table
     @When("I click on Add Do button")
     public void i_click_on_add_do_button()  {
-        context.selenium_utils.sleep(2000);
+        context.selenium_utils.sleep(5000);
         context.selenium_utils.moveIntoView(context.dosnDontsStatementsPage.doAddButton);
 
         context.selenium_utils.click(context.dosnDontsStatementsPage.doAddButton);

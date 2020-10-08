@@ -12,11 +12,11 @@ public class DosnDontsStatementsPage {
 
     }
        @FindBy(xpath = "//input[@name='email']")
-                public WebElement email4;
+                public WebElement email5;
        @FindBy(xpath = "//input[@name='password']")
-                public WebElement password4;
+                public WebElement password5;
        @FindBy(xpath = "//button[text()='Sign in']")
-                public WebElement signIn4;
+                public WebElement signIn5;
 
 
 

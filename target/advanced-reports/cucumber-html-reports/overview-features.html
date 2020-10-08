@@ -51,7 +51,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                5,
+                10,
                 0,
                 0,
                 0,
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 5) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -234,7 +234,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>_API Tests</td>
               <td>1</td>
-            <td>07 Oct 2020, 19:19</td>
+            <td>07 Oct 2020, 21:16</td>
     </tr>
   </tbody>
 </table>
@@ -329,20 +329,20 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-UI-TLA-9-10-feature.html">Developer Preparation application tests</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-UI-TLA-5-feature.html">Do's and Dont's table Statements</a></td>
         
-        <td      class="passed"    >5</td>
+        <td      class="passed"    >10</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">5</td>
+        <td class="total">10</td>
 
         <td  class="passed"    >1</td>
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="94170060000">1:34.170</td>
+        <td class="duration" data-value="13968000000">13.968</td>
         <td class="passed">Passed</td>
       </tr>
       </tbody>
@@ -350,18 +350,18 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-            <td>5</td>
+            <td>10</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>5</td>
+      <td>10</td>
 
       <td>1</td>
       <td>0</td>
       <td>1</td>
 
-      <td class="duration">1:34.170</td>
+      <td class="duration">13.968</td>
       <td>1</td>
     </tr>
     <tr>

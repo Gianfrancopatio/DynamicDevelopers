@@ -39,11 +39,14 @@ public class DosnDontsStatementsPageTest {
     @Then("I sendKeys {string} and I verify it")
     public void iSendKeysAndIVerifyIt(String arg0) {
         context.selenium_utils.sendKeys(context.dosnDontsStatementsPage.textBox, arg0);
+
     }
 
     @When("I click enter button to enter new statement")
     public void iClickButtonToEnterNewStatement() {
         context.selenium_utils.click(context.dosnDontsStatementsPage.submitButton);
+        context.selenium_utils.logInfo("I verify New Statement is displayed", true);
+
     }
 
     @Then("I verify that new statements appear at the bottom of the do table")
@@ -76,6 +79,8 @@ public class DosnDontsStatementsPageTest {
     @Then("I verify that new statements appear at the bottom of the don't table")
     public void iVerifyThatNewStatementsAppearAtTheBottomOfTheDonTTable() {
         Assert.assertTrue(context.dosnDontsStatementsPage.dontsStatement.isDisplayed());
+        context.selenium_utils.logInfo("I verify Second Statements is displayed", true);
+
     }
 
 

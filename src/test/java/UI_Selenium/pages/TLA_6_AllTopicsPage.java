@@ -11,16 +11,6 @@ public class TLA_6_AllTopicsPage {
     public TLA_6_AllTopicsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-
-    @FindBy(xpath = "//input[@name='email']")
-    public WebElement email_field;
-
-    @FindBy(xpath = "//input[@name='password']")
-    public WebElement password_field;
-
-    @FindBy(xpath = "//button[text()='Sign in']")
-    public WebElement signIn_Btn;
-
     @FindBy(xpath = "//button[text()='All Topics']")
     public WebElement alltopics_dash;
 

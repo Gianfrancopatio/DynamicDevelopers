@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="13" passed="11" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-10-07T18:58:29 EDT" name="Surefire suite" finished-at="2020-10-07T19:01:43 EDT" duration-ms="193581">
+  <suite started-at="2020-10-08T00:03:20 EDT" name="Surefire suite" finished-at="2020-10-08T00:06:54 EDT" duration-ms="214489">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-10-07T18:58:29 EDT" name="Surefire test" finished-at="2020-10-07T19:01:43 EDT" duration-ms="193581">
+    <test started-at="2020-10-08T00:03:20 EDT" name="Surefire test" finished-at="2020-10-08T00:06:54 EDT" duration-ms="214489">
       <class name="runner.ProjectRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:58:29 EDT" name="setUpClass" finished-at="2020-10-07T18:58:30 EDT" duration-ms="284" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:03:20 EDT" name="setUpClass" finished-at="2020-10-08T00:03:20 EDT" duration-ms="263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:58:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T18:58:47 EDT" duration-ms="17240" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:03:20 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:03:31 EDT" duration-ms="11103" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,155 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:58:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T18:58:57 EDT" duration-ms="9831" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:03:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:03:45 EDT" duration-ms="13416" status="FAIL">
           <params>
             <param index="0">
               <value>
                 <![CDATA["verify AllTopics dashboard contain all questions"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:58:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T18:59:06 EDT" duration-ms="9793" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["verify AllTopics dashboard contain all questions"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:59:06 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T18:59:20 EDT" duration-ms="13396" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["verify AllTopics dashboard contain all questions"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:59:20 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T18:59:30 EDT" duration-ms="9818" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["verify AllTopics dashboard contain all questions"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:59:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T18:59:39 EDT" duration-ms="9397" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["verify AllTopics dashboard contain all questions"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:59:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T18:59:49 EDT" duration-ms="9674" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["verify AllTopics dashboard contain all questions"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T18:59:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T19:00:22 EDT" duration-ms="33601" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify AllTopis dashboard Doesn't contain fake Question"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T19:00:22 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T19:00:43 EDT" duration-ms="20535" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify AllTopis dashboard Doesn't contain fake Question"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T19:00:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T19:01:03 EDT" duration-ms="19823" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify AllTopis dashboard Doesn't contain fake Question"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[All Topic dashboard test]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T19:01:03 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T19:01:12 EDT" duration-ms="9596" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify AllTopis dashboard Doesn't contain fake Question"]]>
               </value>
             </param>
             <param index="1">
@@ -189,25 +45,169 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [0] but found [92]]]>
+              <![CDATA[expected [test question] but found [How to get a substring?]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [0] but found [92]
+              <![CDATA[java.lang.AssertionError: expected [test question] but found [How to get a substring?]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:907)
-at org.testng.Assert.assertEquals(Assert.java:917)
-at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
-at ✽.I verify that AllTopic dashboad does not contains "1234566788 1234567??"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadContains(TLA_6_AllTopicsTest.java:63)
+at ✽.I verify that AllTopic dashboad contains "How to get a substring?"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:19)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T19:01:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T19:01:24 EDT" duration-ms="11460" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:03:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:03:58 EDT" duration-ms="13060" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify AllTopics dashboard contain all questions"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:03:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:04:14 EDT" duration-ms="16678" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify AllTopics dashboard contain all questions"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:04:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:04:26 EDT" duration-ms="11719" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify AllTopics dashboard contain all questions"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:04:26 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:04:36 EDT" duration-ms="9770" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify AllTopics dashboard contain all questions"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:04:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:04:46 EDT" duration-ms="10571" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify AllTopics dashboard contain all questions"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:04:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:05:06 EDT" duration-ms="19581" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify AllTopis dashboard Doesn't contain fake Question"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:05:06 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:05:25 EDT" duration-ms="19153" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify AllTopis dashboard Doesn't contain fake Question"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:05:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:05:45 EDT" duration-ms="19707" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify AllTopis dashboard Doesn't contain fake Question"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:05:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:06:04 EDT" duration-ms="19281" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify AllTopis dashboard Doesn't contain fake Question"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Topic dashboard test]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:06:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:06:26 EDT" duration-ms="21918" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -222,17 +222,17 @@ at ✽.I verify that AllTopic dashboad does not contains "1234566788 1234567??"(
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [0] but found [92]]]>
+              <![CDATA[expected [0] but found [1]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [0] but found [92]
+              <![CDATA[java.lang.AssertionError: expected [0] but found [1]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:907)
 at org.testng.Assert.assertEquals(Assert.java:917)
-at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
+at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:72)
 at ✽.I verify that AllTopic dashboad does not contains "what is your name 342344?"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
 ]]>
             </full-stacktrace>
@@ -240,7 +240,7 @@ at ✽.I verify that AllTopic dashboad does not contains "what is your name 3423
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T19:01:24 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-07T19:01:43 EDT" duration-ms="18957" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:06:26 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-08T00:06:54 EDT" duration-ms="28127" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -256,7 +256,7 @@ at ✽.I verify that AllTopic dashboad does not contains "what is your name 3423
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-07T19:01:43 EDT" name="tearDownClass" finished-at="2020-10-07T19:01:43 EDT" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.ProjectRunner@569cfc36]" started-at="2020-10-08T00:06:54 EDT" name="tearDownClass" finished-at="2020-10-08T00:06:54 EDT" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

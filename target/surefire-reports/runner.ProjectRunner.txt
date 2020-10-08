@@ -1,26 +1,26 @@
 -------------------------------------------------------------------------------
 Test set: runner.ProjectRunner
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 193.986 sec <<< FAILURE! - in runner.ProjectRunner
-runScenario(runner.ProjectRunner)  Time elapsed: 9.602 sec  <<< FAILURE!
-java.lang.AssertionError: expected [0] but found [92]
+Tests run: 13, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 214.904 sec <<< FAILURE! - in runner.ProjectRunner
+runScenario(runner.ProjectRunner)  Time elapsed: 13.418 sec  <<< FAILURE!
+java.lang.AssertionError: expected [test question] but found [How to get a substring?]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:907)
-	at org.testng.Assert.assertEquals(Assert.java:917)
-	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
-	at ✽.I verify that AllTopic dashboad does not contains "1234566788 1234567??"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadContains(TLA_6_AllTopicsTest.java:63)
+	at ✽.I verify that AllTopic dashboad contains "How to get a substring?"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:19)
 
-runScenario(runner.ProjectRunner)  Time elapsed: 11.459 sec  <<< FAILURE!
-java.lang.AssertionError: expected [0] but found [92]
+runScenario(runner.ProjectRunner)  Time elapsed: 21.919 sec  <<< FAILURE!
+java.lang.AssertionError: expected [0] but found [1]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:907)
 	at org.testng.Assert.assertEquals(Assert.java:917)
-	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:72)
 	at ✽.I verify that AllTopic dashboad does not contains "what is your name 342344?"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
 

@@ -78,7 +78,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>_API Tests</td>
               <td>1</td>
-            <td>07 Oct 2020, 19:01</td>
+            <td>08 Oct 2020, 00:06</td>
     </tr>
   </tbody>
 </table>
@@ -125,18 +125,17 @@ $(document).ready(function() {
 <div class="tags indention">
       <b>Tags:</b>
            <a href="report-tag_alltopics.html">@alltopics</a>
-           <a href="report-tag_notExist.html">@notExist</a>
       </div>
 
   
-  <span class="lead-duration duration">3.022</span>
+  <span class="lead-duration duration">2.774</span>
 
 
     <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">Verify AllTopis dashboard Doesn't contain fake Question</span>
+  <span class="name">verify AllTopics dashboard contain all questions</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -166,7 +165,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">1.141</span>
+  <span class="lead-duration duration">1.187</span>
 
           </div>
 
@@ -203,7 +202,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I click on Alltopics dashboard</span>
   
-  <span class="lead-duration duration">0.738</span>
+  <span class="lead-duration duration">0.458</span>
 
   </div>
 
@@ -222,9 +221,9 @@ $(document).ready(function() {
         
 <div class="brief passed">
   <span class="keyword indention">And</span>
-  <span class="name">I sendKey &quot;1234566788 1234567??&quot;</span>
+  <span class="name">I sendKey &quot;How to get a substring?&quot;</span>
   
-  <span class="lead-duration duration">0.846</span>
+  <span class="lead-duration duration">0.883</span>
 
   </div>
 
@@ -243,7 +242,7 @@ $(document).ready(function() {
         </div>
         <div id="output-4" class="collapse collapsable-details " >
           
-          <pre><p>10-07-2020 18:58:44 INFO: I sendKey: 1234566788 1234567?? in search field</p></pre>
+          <pre><p>10-08-2020 00:03:29 INFO: I sendKey: How to get a substring? in search field</p></pre>
         </div>
       </div>
       </div>
@@ -253,13 +252,13 @@ $(document).ready(function() {
                 <div class="embedding indention">
         <div data-toggle="collapse" data-target="#embedding-5" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-14605326.png" download target="_blank">
+      <a href="embeddings/embedding_-126777056.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-5" class="collapse collapsable-details">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-14605326.png">
+        <img src="embeddings/embedding_-126777056.png">
       </div>
     </div>
   </div>
@@ -291,7 +290,7 @@ $(document).ready(function() {
         </div>
         <div id="output-6" class="collapse collapsable-details " >
           
-          <pre><p>10-07-2020 18:58:44 INFO: I click searchbutton</p></pre>
+          <pre><p>10-08-2020 00:03:29 INFO: I click searchbutton</p></pre>
         </div>
       </div>
       </div>
@@ -303,9 +302,9 @@ $(document).ready(function() {
         
 <div class="brief failed">
   <span class="keyword indention">Then</span>
-  <span class="name">I verify that AllTopic dashboad does not contains &quot;1234566788 1234567??&quot;</span>
+  <span class="name">I verify that AllTopic dashboad contains &quot;How to get a substring?&quot;</span>
   
-  <span class="lead-duration duration">1.044</span>
+  <span class="lead-duration duration">1.040</span>
 
   </div>
 
@@ -314,18 +313,18 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
-          <a>java.lang.AssertionError: expected [0] but found [92]</a>
+          <a>java.lang.AssertionError: expected [test question] but found [How to get a substring?]</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: expected [0] but found [92]
+        <pre>java.lang.AssertionError: expected [test question] but found [How to get a substring?]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:907)
-	at org.testng.Assert.assertEquals(Assert.java:917)
-	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
-	at &#10045;.I verify that AllTopic dashboad does not contains &quot;1234566788 1234567??&quot;(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadContains(TLA_6_AllTopicsTest.java:63)
+	at &#10045;.I verify that AllTopic dashboad contains &quot;How to get a substring?&quot;(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:19)
 </pre>
       </div>
     </div>
@@ -364,7 +363,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
                           <span class="location name">UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">0.491</span>
+  <span class="lead-duration duration">0.597</span>
 
           </div>
 
@@ -378,13 +377,13 @@ $(document).ready(function() {
                 <div class="embedding indention">
         <div data-toggle="collapse" data-target="#embedding-9" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_689897363.png" download target="_blank">
+      <a href="embeddings/embedding_-508977290.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-9" class="collapse collapsable-details">
       <div class="embedding-content">
-        <img src="embeddings/embedding_689897363.png">
+        <img src="embeddings/embedding_-508977290.png">
       </div>
     </div>
   </div>
@@ -412,7 +411,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">4.355</span>
+  <span class="lead-duration duration">2.677</span>
 
 
     <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
@@ -449,7 +448,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">UI_Selenium.step_defs.Hooks.setUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">1.036</span>
+  <span class="lead-duration duration">1.054</span>
 
           </div>
 
@@ -486,7 +485,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I click on Alltopics dashboard</span>
   
-  <span class="lead-duration duration">1.108</span>
+  <span class="lead-duration duration">0.401</span>
 
   </div>
 
@@ -507,7 +506,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I sendKey &quot;what is your name 342344?&quot;</span>
   
-  <span class="lead-duration duration">0.853</span>
+  <span class="lead-duration duration">0.871</span>
 
   </div>
 
@@ -526,7 +525,7 @@ $(document).ready(function() {
         </div>
         <div id="output-13" class="collapse collapsable-details " >
           
-          <pre><p>10-07-2020 18:58:44 INFO: I sendKey: what is your name 342344? in search field</p></pre>
+          <pre><p>10-08-2020 00:03:29 INFO: I sendKey: what is your name 342344? in search field</p></pre>
         </div>
       </div>
       </div>
@@ -536,13 +535,13 @@ $(document).ready(function() {
                 <div class="embedding indention">
         <div data-toggle="collapse" data-target="#embedding-14" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1150603273.png" download target="_blank">
+      <a href="embeddings/embedding_1148453370.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-14" class="collapse collapsable-details">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1150603273.png">
+        <img src="embeddings/embedding_1148453370.png">
       </div>
     </div>
   </div>
@@ -555,7 +554,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I click &quot;search&quot; button</span>
   
-  <span class="lead-duration duration">0.388</span>
+  <span class="lead-duration duration">0.386</span>
 
   </div>
 
@@ -574,7 +573,7 @@ $(document).ready(function() {
         </div>
         <div id="output-15" class="collapse collapsable-details " >
           
-          <pre><p>10-07-2020 18:58:44 INFO: I click searchbutton</p></pre>
+          <pre><p>10-08-2020 00:03:29 INFO: I click searchbutton</p></pre>
         </div>
       </div>
       </div>
@@ -588,7 +587,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I verify that AllTopic dashboad does not contains &quot;what is your name 342344?&quot;</span>
   
-  <span class="lead-duration duration">2.004</span>
+  <span class="lead-duration duration">1.017</span>
 
   </div>
 
@@ -597,17 +596,17 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-16">
-          <a>java.lang.AssertionError: expected [0] but found [92]</a>
+          <a>java.lang.AssertionError: expected [0] but found [1]</a>
       </div>
       <div id="msg-16" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: expected [0] but found [92]
+        <pre>java.lang.AssertionError: expected [0] but found [1]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:907)
 	at org.testng.Assert.assertEquals(Assert.java:917)
-	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:72)
 	at &#10045;.I verify that AllTopic dashboad does not contains &quot;what is your name 342344?&quot;(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
 </pre>
       </div>
@@ -647,7 +646,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
                           <span class="location name">UI_Selenium.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">0.506</span>
+  <span class="lead-duration duration">0.510</span>
 
           </div>
 
@@ -661,13 +660,13 @@ $(document).ready(function() {
                 <div class="embedding indention">
         <div data-toggle="collapse" data-target="#embedding-18" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1534328432.png" download target="_blank">
+      <a href="embeddings/embedding_2026997570.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-18" class="collapse collapsable-details">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1534328432.png">
+        <img src="embeddings/embedding_2026997570.png">
       </div>
     </div>
   </div>

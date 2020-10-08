@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runner.ProjectRunner" time="17.24" tests="13" errors="0" skipped="0" failures="2">
+<testsuite name="runner.ProjectRunner" time="11.105" tests="13" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
@@ -56,53 +56,53 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="17.24"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="9.83"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="9.792"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="13.397"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="9.818"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="9.397"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="9.673"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="33.601"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="20.534"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="19.823"/>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="9.602">
-    <failure message="expected [0] but found [92]" type="java.lang.AssertionError">java.lang.AssertionError: expected [0] but found [92]
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="11.105"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="13.418">
+    <failure message="expected [test question] but found [How to get a substring?]" type="java.lang.AssertionError">java.lang.AssertionError: expected [test question] but found [How to get a substring?]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:907)
-	at org.testng.Assert.assertEquals(Assert.java:917)
-	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
-	at ✽.I verify that AllTopic dashboad does not contains "1234566788 1234567??"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadContains(TLA_6_AllTopicsTest.java:63)
+	at ✽.I verify that AllTopic dashboad contains "How to get a substring?"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:19)
 </failure>
-    <system-err><![CDATA[Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 15752
+    <system-err><![CDATA[Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 28428
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Oct 07, 2020 7:01:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Oct 08, 2020 12:03:32 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="11.459">
-    <failure message="expected [0] but found [92]" type="java.lang.AssertionError">java.lang.AssertionError: expected [0] but found [92]
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="13.059"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="16.678"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="11.719"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="9.77"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="10.571"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="19.582"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="19.153"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="19.708"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="19.281"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="21.919">
+    <failure message="expected [0] but found [1]" type="java.lang.AssertionError">java.lang.AssertionError: expected [0] but found [1]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:907)
 	at org.testng.Assert.assertEquals(Assert.java:917)
-	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:82)
+	at UI_Selenium.step_defs.TLA_6_AllTopicsTest.iVerifyThatAllTopicDashboadDoesNotContains(TLA_6_AllTopicsTest.java:72)
 	at ✽.I verify that AllTopic dashboad does not contains "what is your name 342344?"(file:///Users/muneerhussainy/Desktop/DynamicDevelopers/src/test/resources/features/UI/TLA_6_AllTopics.feature:34)
 </failure>
-    <system-err><![CDATA[Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 40912
+    <system-err><![CDATA[Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 2559
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Oct 07, 2020 7:01:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Oct 08, 2020 12:06:05 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario" classname="runner.ProjectRunner" time="18.957"/>
+  <testcase name="runScenario" classname="runner.ProjectRunner" time="28.127"/>
 </testsuite>

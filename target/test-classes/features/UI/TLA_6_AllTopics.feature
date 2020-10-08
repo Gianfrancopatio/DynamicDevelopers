@@ -3,7 +3,7 @@
 Feature: All Topic dashboard test
 
   Background: Open the Login page
-    Given I open "projectURL"
+    Given I open login page
     When I log in with valid email "live@live.com" and password "livelive"
 
 
@@ -23,7 +23,7 @@ Feature: All Topic dashboard test
       | Give me an example of when you’ve successfully solved a problem |
       | What is Javascript?                                             |
       | Define iframe in HTML.                                          |
-      | Explain what is Bootstrap?                                      |
+      | Explain what is Bootstrap Container?                            |
       | What is the difference between JavaScript and jQuery?           |
 
   @notExist

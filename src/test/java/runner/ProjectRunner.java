@@ -15,9 +15,7 @@ import org.testng.annotations.DataProvider;
 
         tags = "@alltopics"
         , dryRun = false
-
 )
-
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = false)

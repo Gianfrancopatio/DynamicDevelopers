@@ -36,13 +36,8 @@ public class ScenarioContext {
         selenium_utils = new Selenium_utils(scenarioContext);
         dosDontsTablePage = new DosDontsTablePage(driver);
         sessionExpiresPage = new SessionExpiresPage(driver);
-
-
-
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
-
         likeButtonPage = new LikeButtonPage(driver);
-
         allTopicsPage = new TLA_6_AllTopicsPage(driver);
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);

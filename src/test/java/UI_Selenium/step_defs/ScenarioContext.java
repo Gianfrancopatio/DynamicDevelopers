@@ -27,6 +27,7 @@ public class ScenarioContext {
     public SessionExpiresPage sessionExpiresPage;
     public AllTopicsPage allTopicsPage;
     public LikeButtonPage likeButtonPage;
+    public TLA11_LikeButtonPage tla11LikeButtonPage;
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
@@ -40,6 +41,8 @@ public class ScenarioContext {
         allTopicsPage = new AllTopicsPage(driver);
 
         likeButtonPage = new LikeButtonPage(driver);
+
+        tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
 
     }
 

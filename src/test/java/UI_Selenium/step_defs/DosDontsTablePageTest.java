@@ -23,19 +23,24 @@ public class DosDontsTablePageTest {
         context.selenium_utils.sendKeys(context.dosDontsTablePage.email15,string);
         context.selenium_utils.sendKeys(context.dosDontsTablePage.password15, string2);
         context.selenium_utils.click(context.dosDontsTablePage.signIn15);
+        context.selenium_utils.logInfo("Logging in with valid credentials; email: " + string + " password: " + string2, true);
     }
 
 
 
         @Then("I verify Do's table exists")
     public void i_verify_do_s_table_exists() {
+        context.selenium_utils.moveIntoView(context.dosDontsTablePage.doTable);
         Assert.assertTrue(context.dosDontsTablePage.doTable.isDisplayed());
         Assert.assertTrue(context.dosDontsTablePage.doTable1.isDisplayed());
+        context.selenium_utils.logInfo("Verifying Do's Table exists", true);
     }
 
     @Then("I verify Dont's table exists")
     public void i_verify_dont_s_table_exists() {
+        context.selenium_utils.moveIntoView(context.dosDontsTablePage.dontsTable);
         Assert.assertTrue(context.dosDontsTablePage.dontsTable.isDisplayed());
         Assert.assertTrue(context.dosDontsTablePage.dontsTable1.isDisplayed());
+        context.selenium_utils.logInfo("Verifying Dont's Table exists", true);
     }
 }

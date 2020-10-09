@@ -12,10 +12,17 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
+<<<<<<< HEAD
         tags = "@sessionExpires",
         dryRun = false
+=======
+
+        tags = "@alltopics"
+        , dryRun = false
+>>>>>>> 1eec6430c63789dd471336cfee79b1607c53a4ba
 
 )
+
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = false)

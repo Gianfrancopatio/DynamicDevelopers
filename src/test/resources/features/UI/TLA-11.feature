@@ -2,7 +2,7 @@
   Feature: LikeButton Test
 
     Background: Open the Login page
-      Given I open "projectURL"
+      Given I open login page
       When I log in with valid email "live@live.com" and password "livelive"
 
 

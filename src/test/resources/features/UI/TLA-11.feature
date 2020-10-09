@@ -7,7 +7,9 @@
 
 
     Scenario: Verify that Like Button is displayed on every question
+
       When I click "all topics dashboard"
+
       Then I verify Like Button is displayed
       And I verify Like Button is clickable
 

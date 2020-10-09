@@ -10,6 +10,15 @@ public class DosDontsTablePage {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement email15;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement password15;
+
+    @FindBy(xpath = "//button[text()='Sign in']")
+    public WebElement signIn15;
+
     @FindBy(xpath = "//div[text()=' Send a personalized thank you letter after the interview']")
     public WebElement doTable;
 

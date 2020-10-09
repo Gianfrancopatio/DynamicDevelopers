@@ -22,24 +22,33 @@ public class ScenarioContext {
     //Classes
     public LogInPage logInPage;
     public Selenium_utils selenium_utils;
-    public LoginTest loginTest;
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
-    public AllTopicsPage allTopicsPage;
+    public DosnDontsStatementsPage dosnDontsStatementsPage;
+
     public LikeButtonPage likeButtonPage;
+
     public TLA11_LikeButtonPage tla11LikeButtonPage;
+
+    public TLA_6_AllTopicsPage allTopicsPage;
+
+
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
         logInPage = new LogInPage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
-
-        dosDontsTablePage =new DosDontsTablePage(driver);
-
+        dosDontsTablePage = new DosDontsTablePage(driver);
         sessionExpiresPage = new SessionExpiresPage(driver);
 
-        allTopicsPage = new AllTopicsPage(driver);
 
+
+        dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
+
+        likeButtonPage = new LikeButtonPage(driver);
+
+        allTopicsPage = new TLA_6_AllTopicsPage(driver);
+        dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);
 
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);

@@ -14,11 +14,11 @@ public class Hooks {
     }
 
     @Before
-    public void setUp(Scenario scenario){
-        if(!ConfigReader.readProperty("testType", "src/test/resources/properties/configuration.properties").equalsIgnoreCase("apiOnly"))
+    public void setUp(Scenario scenario) {
+        if (!ConfigReader.readProperty("testType", "src/test/resources/properties/configuration.properties").equalsIgnoreCase("apiOnly"))
             context.initializeDriver();
-            context.initializeClasses(context);
-            context.scenario = scenario;
+        context.initializeClasses(context);
+        context.scenario = scenario;
 //        RestAssured.baseURI = "http://automation.techleadacademy.io/api";
     }
 

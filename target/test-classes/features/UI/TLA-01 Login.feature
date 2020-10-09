@@ -4,7 +4,7 @@ Feature: Developer Preparation application tests
   Background: User open login/registration page
     Given I open login page
 
-  @VerifyFields @smoketestLogin
+  @VerifyFields
   Scenario: Verify logIn/Sign up fields are existed on the LogIn page
     Then verify "emailfield"  exists
     And  verify "passwordfield"  exists
@@ -13,7 +13,8 @@ Feature: Developer Preparation application tests
     Then verify "namefield"  exists
     And  verify "confirmpasswordfield"  exists
 
-  @SignUpPositive @smoketestLogin
+
+  @SignUpPositive
   Scenario: Verify user is able to sing up a new account
     When user click create new account
     And user provides following data with random name and email
@@ -97,7 +98,7 @@ Feature: Developer Preparation application tests
       | dd   | newDD5@gmail.com |          | dd12356         |
       | dd   | newDD5@gmail.com | dd12356  |                 |
 
-  @ValidSignIn @smoketestLogin
+  @ValidSignIn
   Scenario: user is able to sign in with valid account
     When user provides valid Email
     And user provides valid password

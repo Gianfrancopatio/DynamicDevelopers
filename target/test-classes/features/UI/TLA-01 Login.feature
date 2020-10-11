@@ -60,11 +60,7 @@ Feature: Developer Preparation application tests
     Then  verify the error message is up as Password must be at least six characters in length.
 
   @InvalidEmailFormat
-<<<<<<< HEAD
-  Scenario Outline: verify error msg is up when user Invalid passwordFormat
-=======
   Scenario Outline: verify error msg is up when user fill Invalid password Format
->>>>>>> 915f65304ec056219ea54f47a8a414d1fde0a2b2
     When user click create new account
     And user provides "<name>" "<email>" "<password>" "<confirmPassword>"
     And  user click on signup button

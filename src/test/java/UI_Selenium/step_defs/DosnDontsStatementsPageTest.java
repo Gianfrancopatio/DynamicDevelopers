@@ -32,9 +32,7 @@ public class DosnDontsStatementsPageTest {
     public void i_click_on_add_do_button()  {
         context.selenium_utils.sleep(5000);
         context.selenium_utils.moveIntoView(context.dosnDontsStatementsPage.doAddButton);
-
         context.selenium_utils.click(context.dosnDontsStatementsPage.doAddButton);
-
     }
     @Then("I sendKeys {string} and I verify it")
     public void iSendKeysAndIVerifyIt(String arg0) {
@@ -82,7 +80,5 @@ public class DosnDontsStatementsPageTest {
         context.selenium_utils.logInfo("I verify Second Statements is displayed", true);
 
     }
-
-
 
 }

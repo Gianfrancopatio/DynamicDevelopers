@@ -12,12 +12,18 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0632b523d644e054a7addf4f91cd587bccea000b
 
-        tags = "@doAndDontsTable"
+        tags = "@likebuttonfunctionality"
         , dryRun = false
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0632b523d644e054a7addf4f91cd587bccea000b
 )
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {

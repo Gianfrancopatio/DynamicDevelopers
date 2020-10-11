@@ -5,14 +5,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DashBoardView {
-    public DashBoardView(WebDriver driver) {
+import java.util.List;
+
+public class DashBoardViewTest {
+    public DashBoardViewTest(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath="//div/input[@class='form-control']")
-    public WebElement newDashboardadd;
+    public WebElement newDashboardAdd;
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//button[@class='btn btn-primary mb-2']")
     public WebElement addBtn;
+
+    @FindBy(xpath="//button/img")
+    public List <WebElement> Dash;
+
+
+
 }

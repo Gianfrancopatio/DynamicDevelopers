@@ -5,7 +5,7 @@
       Given Website starting
       When I log in with user email "devDD@gmail.com" and user password "dev5678"
 
-    #@likeoptionsDosandDonts
+   # @likeoptionsDosandDonts
       Scenario: Verifying like buttons functionality
         When I like a statement in the Do's table I verify the like button works properly
         Then the Don't table as well

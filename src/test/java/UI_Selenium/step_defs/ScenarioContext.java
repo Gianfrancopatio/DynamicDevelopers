@@ -32,6 +32,8 @@ public class ScenarioContext {
 
     public TLA_6_AllTopicsPage allTopicsPage;
 
+    public CreateQuestionPage createQuestionPage;
+
 
 
     //Selenium methods
@@ -47,6 +49,8 @@ public class ScenarioContext {
         likeButtonPage = new LikeButtonPage(driver);
 
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
+
+        createQuestionPage = new CreateQuestionPage(driver);
 
     }
 

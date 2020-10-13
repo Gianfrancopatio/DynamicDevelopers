@@ -40,21 +40,14 @@ public class LoginTest {
 
     @And("user provides following data")
     public void userProvidesFollowingData(Map<String,String> dataInput) {
-        Faker faker = new Faker();
-        String name = faker.funnyName().name();
-        String email = faker.internet().emailAddress(name);
 
-        if(dataInput.get("name").equals("null")){
-            context.logInPage.name.sendKeys("");
-            context.selenium_utils.sendKeys(context.logInPage.email, dataInput.get("email"));
-            context.selenium_utils.sendKeys(context.logInPage.password, dataInput.get("password"));
-            context.selenium_utils.sendKeys(context.logInPage.confirmpassword, dataInput.get("confirmpassword"));
-        }else{
+
+
         context.selenium_utils.sendKeys(context.logInPage.name, dataInput.get("name"));
         context.selenium_utils.sendKeys(context.logInPage.email, dataInput.get("email"));
         context.selenium_utils.sendKeys(context.logInPage.password, dataInput.get("password"));
         context.selenium_utils.sendKeys(context.logInPage.confirmpassword, dataInput.get("confirmpassword"));
-        }
+
 
 
     }

@@ -13,8 +13,12 @@ import org.testng.annotations.DataProvider;
                 "rerun:target/re-run.txt"
         },
 
-        tags = "@likebutton"
-        ,dryRun = false
+
+
+        tags = "@createQuestion"
+        , dryRun = false
+
+
 )
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {

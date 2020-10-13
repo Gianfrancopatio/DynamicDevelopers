@@ -22,12 +22,12 @@ public class QA_SectionTest {
         context = scenarioContext;
     }
 
-    @Given("I navigate to login page")
+    @Given("User navigates to login page")
     public void INavigateTo() {
         context.driver.get(ConfigReader.readProperty("projectURL", "src/test/resources/properties/configuration.properties"));
     }
 
-    @When("I log in with valid email and password")
+    @When("User logs in with valid email and password")
     public void iLogInWithValidAnd() {
         String email = ConfigReader.readProperty("email", "src/test/resources/properties/configuration.properties");
         String password = ConfigReader.readProperty("password", "src/test/resources/properties/configuration.properties");
@@ -36,12 +36,12 @@ public class QA_SectionTest {
         context.selenium_utils.click(context.logInPage.signInbtn);
     }
 
-    @And("I navigate to All Topics")
+    @And("User navigates to All Topics")
     public void iNavigateToAllTopics() {
         context.selenium_utils.click(context.allTopicsPage.alltopics_dash);
     }
 
-    @Then("I verify each question contains a Question")
+    @Then("User verifies each question contains a Question")
     public void iVerifyEachQuestionContainsAQuestion() {
         int count = 0;
         for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
@@ -54,7 +54,7 @@ public class QA_SectionTest {
         Assert.assertTrue(count == context.allTopicsPage.questions.size());
     }
 
-    @And("I verify each question has an Answer section")
+    @And("User verifies each question has an Answer section")
     public void iVerifyEachQuestionHasAnAnswerSection() {
         for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
             context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
@@ -66,9 +66,8 @@ public class QA_SectionTest {
         }
     }
 
-    @Then("I verify there is an Answer count for each question")
+    @Then("User verifies there is an Answer count for each question")
     public void iVerifyThereIsAnAnswerCountForEachQuestion() {
-        //Verification option 2
         for (int i = 0; i < context.allTopicsPage.answerCount.size(); i++) {
             Assert.assertTrue(context.allTopicsPage.answerCount.get(i).isDisplayed());
             if (i < 3 || i > context.allTopicsPage.questions.size() - 4) {
@@ -78,7 +77,7 @@ public class QA_SectionTest {
         }
     }
 
-    @And("I verify Answer count corresponds to the actual count of answers under a question")
+    @And("User verifies Answer count corresponds to the actual count of answers under a question")
     public void iVerifyAnswerCountCorrespondsTheActualCountOfAnswersUnderAQuestion() throws InterruptedException {
         int count = 0;
         int size = context.allTopicsPage.questions.size();

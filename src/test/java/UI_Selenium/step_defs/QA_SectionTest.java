@@ -11,6 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -106,6 +107,91 @@ public class QA_SectionTest {
                         context.selenium_utils.logInfo("There are " + rows + "answers in the Answer Section and the Answer Count displays " + count , true);
                 }
             }
+        }
+    }
+
+    @And("User navigates to {string} page")
+    public void userNavigatesTo(String topic) {
+        switch (topic) {
+            case "All Topics":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "Coding":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "Soft skills":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "JavaScript":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "Html":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "Bootstrap":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "Jquery":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "NodeJS":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "MySQL":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "MongoDB":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "React":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "java":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "Python":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+            case "CSS":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
+                break;
+        }
+    }
+
+    @And("User clicks {string} button")
+    public void userClicksButton(String button) {
+        switch(button) {
+            case "Enter new question ":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+button+"']")));
+                break;
+            case "Enter":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+button+"']")));
+                break;
+            case "Post Your Answer":
+                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+button+"']")));
+                break;
+        }
+    }
+
+    @And("User enters {string} into the form")
+    public void userEntersIntoTheForm(String question) {
+        context.selenium_utils.sendKeys(context.allTopicsPage.questionForm, question);
+    }
+
+    @And("User clicks {string} link")
+    public void userClicksLink(String link) {
+        context.selenium_utils.click(context.allTopicsPage.linkQuestion);
+    }
+
+    @And("User inputs {string} into the form")
+    public void userInputsIntoTheForm(String answer) {
+        switch(answer) {
+            case "Testing Answer Count 1":
+                context.selenium_utils.sendKeys(context.allTopicsPage.answerForm, answer);
+                break;
+            case "Testing Answer Count 2":
+                context.selenium_utils.sendKeys(context.allTopicsPage.answerForm, answer);
+                break;
         }
     }
 }

@@ -41,14 +41,16 @@ public class QA_SectionTest {
         context.selenium_utils.click(context.allTopicsPage.alltopics_dash);
     }
 
-    @Then("User verifies each question contains a Question")
+    @Then("User verifies each question field is not empty")
     public void iVerifyEachQuestionContainsAQuestion() {
         int count = 0;
         for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
+            context.selenium_utils.moveIntoView(context.allTopicsPage.questions.get(i));
             if (context.allTopicsPage.questions.get(i).getText().length() > 0) {
+                String question = context.allTopicsPage.questions.get(i).getText();
                 count++;
                 if (i < 3 || i > context.allTopicsPage.questions.size() - 4)
-                    context.selenium_utils.logInfo("Question field is not empty", true);
+                    context.selenium_utils.logInfo("Question is " + question, true);
             }
         }
         Assert.assertTrue(count == context.allTopicsPage.questions.size());
@@ -60,8 +62,9 @@ public class QA_SectionTest {
             context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
             context.selenium_utils.click(context.allTopicsPage.questions.get(i));
             Assert.assertTrue(context.allTopicsPage.answerSection.isDisplayed());
+            String question = context.allTopicsPage.questions.get(i).getText();
             if (i < 3 || i > context.allTopicsPage.questions.size() - 4) {
-                context.selenium_utils.logInfo("Question has an Answer section under it", true);
+                context.selenium_utils.logInfo("Question " + question + " has an Answer section", true);
             }
         }
     }
@@ -71,8 +74,10 @@ public class QA_SectionTest {
         for (int i = 0; i < context.allTopicsPage.answerCount.size(); i++) {
             Assert.assertTrue(context.allTopicsPage.answerCount.get(i).isDisplayed());
             if (i < 3 || i > context.allTopicsPage.questions.size() - 4) {
+                String question = context.allTopicsPage.questions.get(i).getText();
+
                 context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
-                context.selenium_utils.logInfo("Each question contains an Answer Count", true);
+                context.selenium_utils.logInfo("For " + question + " the Answer Count is Displayed", true);
             }
         }
     }
@@ -86,17 +91,19 @@ public class QA_SectionTest {
             context.selenium_utils.sleep(500);
             if (!context.allTopicsPage.answerCount.get(i).getText().trim().equals("0")) {
                 count = context.allTopicsPage.answerRows.size();
+                String answCount = context.allTopicsPage.answerCount.get(i).getText().trim();
                 Assert.assertTrue(count == Integer.parseInt(context.allTopicsPage.answerCount.get(i).getText().substring(0, 2).trim()));
                 if(i < 3 || i > size - 4)
-                context.selenium_utils.logInfo("Verifying if the counter reflects the number of answers", true);
+                context.selenium_utils.logInfo("There are " + count + "answers in the Answer Section and the Answer Count displays " + answCount, true);
             } else {
                 try {
                     context.allTopicsPage.answerRow.isDisplayed();
                 } catch (Exception e) {
+                    String rows = context.allTopicsPage.answerCount.get(i).getText().trim();
                     count = 0;
                     Assert.assertTrue(count == Integer.parseInt(context.allTopicsPage.answerCount.get(i).getText().substring(0,1)));
-                    if(i < 3 || i > size-4)
-                        context.selenium_utils.logInfo("Verifying if the counter reflects the number of answers", true);
+                    if(i < 3 || i > size - 4)
+                        context.selenium_utils.logInfo("There are " + rows + "answers in the Answer Section and the Answer Count displays " + count , true);
                 }
             }
         }

@@ -7,7 +7,7 @@ Feature: Developer Preparation application tests
 
   @TLA9_Q&ASection
   Scenario: Verify each question has an answer section
-    Then User verifies each question contains a Question
+    Then User verifies each question field is not empty
     And User verifies each question has an Answer section
 
   @TLA10_AnswerCount

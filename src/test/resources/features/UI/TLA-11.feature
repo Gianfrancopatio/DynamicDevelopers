@@ -2,14 +2,12 @@
   Feature: LikeButton Test
 
     Background: Open the Login page
-      Given I open "projectURL"
+      Given I open login page
       When I log in with valid email "live@live.com" and password "livelive"
 
 
     Scenario: Verify that Like Button is displayed on every question
-
       When I click "all topics dashboard"
-
       Then I verify Like Button is displayed
       And I verify Like Button is clickable
 

@@ -15,7 +15,7 @@ import org.testng.annotations.DataProvider;
 
 
 
-        tags = "@createQuestion"
+        tags = "@doAndDontsTable"
         , dryRun = false
 
 

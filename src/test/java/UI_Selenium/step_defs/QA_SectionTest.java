@@ -22,7 +22,7 @@ public class QA_SectionTest {
         context = scenarioContext;
     }
 
-    @Given("User navigates to login page")
+    @Given("User navigates to login pages")
     public void INavigateTo() {
         context.driver.get(ConfigReader.readProperty("projectURL", "src/test/resources/properties/configuration.properties"));
     }

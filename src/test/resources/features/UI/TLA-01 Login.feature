@@ -31,7 +31,7 @@ Feature: Developer Preparation application tests
       | email           | kk.best59@gmail.com |
       | password        | Best56780           |
       | confirmpassword | Best56780           |
-    And  user click on signup button
+    And   user click on signup button
     Then  verify message The user already exists is up
 
 

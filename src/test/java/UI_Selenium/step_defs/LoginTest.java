@@ -41,14 +41,10 @@ public class LoginTest {
     @And("user provides following data")
     public void userProvidesFollowingData(Map<String,String> dataInput) {
 
-
-
         context.selenium_utils.sendKeys(context.logInPage.name, dataInput.get("name"));
         context.selenium_utils.sendKeys(context.logInPage.email, dataInput.get("email"));
         context.selenium_utils.sendKeys(context.logInPage.password, dataInput.get("password"));
         context.selenium_utils.sendKeys(context.logInPage.confirmpassword, dataInput.get("confirmpassword"));
-
-
 
     }
 
@@ -85,7 +81,6 @@ public class LoginTest {
                     Thread.sleep(1000);
                     context.selenium_utils.highlightElement(context.logInPage.email);
                     Assert.assertTrue(context.logInPage.email.isDisplayed());
-
                     break;
 
                 case "passwordfield":
@@ -146,7 +141,8 @@ public class LoginTest {
 
     @When("user provides valid Email")
     public void userProvidesValidEmail() {
-        context.selenium_utils.sendKeys(context.logInPage.email,ConfigReader.readProperty("email","src/test/resources/properties/configuration.properties"));
+        context.selenium_utils.sendKeys
+        (context.logInPage.email,ConfigReader.readProperty("email","src/test/resources/properties/configuration.properties"));
     }
 
     @And("user provides valid password")
@@ -199,6 +195,15 @@ public class LoginTest {
         context.selenium_utils.sendKeys(context.logInPage.confirmpassword, dataInput.get("confirmpassword"));
 
     }
+
+
+//    @When("{string} provides valid Email")
+//    public void providesValidEmail(String role) {
+//        switch (role.toLowerCase()){
+//            case "user":
+//        }
+//
+//    }
 }
 
 

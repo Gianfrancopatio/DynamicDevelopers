@@ -42,4 +42,13 @@ public class TLA_6_AllTopicsPage {
     @FindBy(xpath = "//div[@class='logo']")
     public WebElement logoBtn;
 
+    @FindBy(xpath = "//*[contains(@placeholder, 'Your Answer')]")
+    public WebElement answerForm;
+
+    @FindBy(css = ".form-control")
+    public WebElement questionForm;
+
+    @FindBy(linkText = "Test 7")
+    public WebElement linkQuestion;
+
 }

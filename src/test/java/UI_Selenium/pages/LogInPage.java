@@ -34,18 +34,6 @@ public class LogInPage {
     @FindBy(xpath="//button[@class='btn btn-primary mb-3']")
     public WebElement signUp;
 
-    @FindBy(xpath="//div[contains(text(),'Successfully signed up!')]")
-    public WebElement SuccessfullyText;
-
-    @FindBy(xpath="//div[contains(text(),'The user already exists')]")
-    public WebElement userexists;
-
-    @FindBy(xpath = "//div[contains(text(),'Password must be at least 6 characters in length')]")
-    public WebElement passwordDigiterror;
-
-    @FindBy(xpath = "//div[contains(text(),'The passwords did not match')]")
-    public WebElement unmatchConfirmPassword;
-
     @FindBy(linkText = "Welcome")
     public WebElement welcomeText;
 
@@ -54,6 +42,11 @@ public class LogInPage {
 
     @FindBy(xpath="//div[contains(text(),'Invalid email format')]")
     public WebElement invalidEmailformat;
+
+
+    public static String buttonXpath = "//button[text()='%s']";
+    public static String inputXpath = "//input[@placeholder='%s']";
+    public static String errorMsgXpath = "//div[contains(text(),'%s')]";
 
 
 

@@ -3,9 +3,8 @@ Feature: Developer Preparation application tests
 
   Background: User open login/registration page
     Given I open login page
-    When user provides valid Email
-    And user provides valid password
-    And  user click on signIn button
+    When user provides valid "admin" Email and password
+    And  user click on "Sign in" button
 
 
   @VerifyImage
@@ -21,14 +20,14 @@ Feature: Developer Preparation application tests
   @CreateNewDashBoard
   Scenario: user have ability to create new ones.
     When  User create new dashboard name with "newTopicName"
-    And   User click add button
+    And   user click on "+ Add" button
     Then  Verify new dashboard has same name as as we created
     Then  Verify dashboard contains image
 
   @existingDashBoard
   Scenario: user is unable to create new dash board with existing name
     When  User create new dashboard name with "existingtopicname"
-    And   User click add button
+    And   user click on "+ Add" button
     Then  Verify the error message appeared as existing TopicName already exists
 
 

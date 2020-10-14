@@ -42,13 +42,6 @@ public class TLA_6_AllTopicsTest {
         Assert.assertTrue(context.allTopicsPage.alltopics_dash.isEnabled());
         context.selenium_utils.logInfo("I verify that Alltopics dash is enabled", false);
     }
-    @And("user click on {string} button")
-    public void userClickOnButton(String buttonName) {
-        String xPath = String.format(TLA_6_AllTopicsPage.buttonXpath, buttonName);
-        //xpath = //button[text()='Login']
-        WebElement element = context.driver.findElement(By.xpath(xPath));
-        context.selenium_utils.click(element);
-    }
 
     List<String> questions = new ArrayList<>();
     @And("user capture questions from {string}")

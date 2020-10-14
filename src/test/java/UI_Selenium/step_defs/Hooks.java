@@ -25,11 +25,11 @@ public class Hooks {
     @After
     public void tearDown(Scenario scenario) {
         if (context.driver != null) {
-            if (scenario.isFailed()) {
+            {
                 context.selenium_utils.takeScreenshot();
             }
             context.selenium_utils.quitDriver();
-        }
+       }
 
     }
 }

@@ -25,6 +25,7 @@ public class ScenarioContext {
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
     public DosnDontsStatementsPage dosnDontsStatementsPage;
+    public DashBoardViewPage dashBoardViewPage;
 
     public LikeButtonPage likeButtonPage;
 
@@ -45,6 +46,7 @@ public class ScenarioContext {
         allTopicsPage = new TLA_6_AllTopicsPage(driver);
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);
+        dashBoardViewPage = new DashBoardViewPage(driver);
 
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
 

@@ -37,4 +37,13 @@ public class TLA_6_AllTopicsPage {
 
     @FindBy(css = "div.row.answer")
     public WebElement answerRow;
+
+    @FindBy(xpath = "//*[contains(@placeholder, 'Your Answer')]")
+    public WebElement answerForm;
+
+    @FindBy(xpath = "//*[contains(@placeholder, 'Your Question')]")
+    public WebElement questionForm;
+
+    @FindBy(linkText = "Test Pavel Z")
+    public WebElement linkQuestion;
 }

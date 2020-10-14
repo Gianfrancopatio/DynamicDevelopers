@@ -72,4 +72,5 @@ public class TLA_6_AllTopicsTest {
         Assert.assertEquals(list.size(), 0);
         context.selenium_utils.logInfo("Alltopics dash doesn't contain " + randomQuestion, true);
     }
+    
 }

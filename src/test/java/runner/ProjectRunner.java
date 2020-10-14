@@ -13,8 +13,7 @@ import org.testng.annotations.DataProvider;
                 "rerun:target/re-run.txt"
         },
 
-
-        tags = "@alltopics"
+        tags = "@Bug_AnswerCount"
         , dryRun = false
 
 )

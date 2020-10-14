@@ -17,7 +17,7 @@ Feature: All Topic dashboard test
     And user capture questions from "<buttonname>"
     When user navigate to main page
     When user click on "All Topics" button
-    Then user verify that AllTopic dashboard contains question
+    Then user verify that AllTopic dashboard contains questions from "<buttonname>"
     Examples:
       | buttonname  |
       | Coding      |

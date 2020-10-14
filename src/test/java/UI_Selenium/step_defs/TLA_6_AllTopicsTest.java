@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -29,6 +30,7 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.highlightElement(context.allTopicsPage.alltopics_dash);
         Assert.assertTrue(context.allTopicsPage.alltopics_dash.isDisplayed());
         context.selenium_utils.logInfo("I verify AllTopics dash is displayed", true);
+
     }
 
     @And("I verify that All Topic dash is clickable")
@@ -38,39 +40,33 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.logInfo("I verify that Alltopics dash is enabled", false);
     }
 
-    @When("I click on Alltopics dashboard")
-    public void iClickOnAlltopicsDashboard() {
-        context.selenium_utils.click(context.allTopicsPage.alltopics_dash);
+    @When("user click on {string} button")
+    public void userClickOnButton(String arg0) {
+    }
+    List<String> questions = new ArrayList<>();
+    @And("user capture questions from {string}")
+    public void userCaptureQuestionsFrom(String arg0) {
+        for (WebElement element : context.allTopicsPage.questions){
+            questions.add(element.getText());
+        }
+    }
+    @When("user navigate to main page")
+    public void userNavigateToMainPage() {
+        context.selenium_utils.click(context.allTopicsPage.logoBtn);
     }
 
-    @And("I sendKey {string}")
-    public void iSendKey(String question) {
-        context.selenium_utils.sendKeys(context.allTopicsPage.search_Field, question);
-        context.selenium_utils.logInfo("I sendKey: " + question + " in search field", true);
+    @Then("user verify that AllTopic dashboard contains question")
+    public void userVerifyThatAllTopicDashboardContainsQuestion() {
+        int count = 0;
+        for (int i = 0;i < context.allTopicsPage.questions.size(); i++){
+            for(int j = 0; j < questions.size(); j++){
+                if (context.allTopicsPage.questions.get(i).getText().equals(questions.get(j))){
+                    count ++;
+                }
+            }
 
+        }
+        Assert.assertEquals(count, questions.size());
+        context.selenium_utils.logInfo("All topics dashboard contains question" , true);
     }
-
-    @When("I click {string} button")
-    public void iClickButton(String searchBtn) {
-        context.selenium_utils.click(context.allTopicsPage.search_Btn);
-        context.selenium_utils.logInfo("I click " + searchBtn + "button", false);
-
-    }
-
-    @Then("I verify that AllTopic dashboad contains {string}")
-    public void iVerifyThatAllTopicDashboadContains(String question) {
-        context.selenium_utils.sleep(2000);
-        Assert.assertEquals(question, context.allTopicsPage.search_result.get(0).getText());
-        context.selenium_utils.logInfo("Alltopics dash contains " + question, true);
-
-    }
-
-    @Then("I verify that AllTopic dashboad does not contains {string}")
-    public void iVerifyThatAllTopicDashboadDoesNotContains(String randomQuestion) {
-        context.selenium_utils.sleep(2000);
-        List<WebElement> list = context.allTopicsPage.search_result;
-        Assert.assertEquals(list.size(), 0);
-        context.selenium_utils.logInfo("Alltopics dash doesn't contain " + randomQuestion, true);
-    }
-    
 }

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TLA_6_AllTopicsPage {
@@ -38,12 +39,16 @@ public class TLA_6_AllTopicsPage {
     @FindBy(css = "div.row.answer")
     public WebElement answerRow;
 
+    @FindBy(xpath = "//div[@class='logo']")
+    public WebElement logoBtn;
+
     @FindBy(xpath = "//*[contains(@placeholder, 'Your Answer')]")
     public WebElement answerForm;
 
-    @FindBy(xpath = "//*[contains(@placeholder, 'Your Question')]")
+    @FindBy(css = ".form-control")
     public WebElement questionForm;
 
-    @FindBy(linkText = "Test Pavel Z")
+    @FindBy(linkText = "Test 7")
     public WebElement linkQuestion;
+
 }

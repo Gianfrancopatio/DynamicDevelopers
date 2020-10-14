@@ -1,8 +1,6 @@
 package UI_Selenium.step_defs;
 
-
 import UI_Selenium.pages.TLA_6_AllTopicsPage;
-
 
 import UI_Selenium.pages.LogInPage;
 import common_utils.ConfigReader;
@@ -69,47 +67,6 @@ public class QA_SectionTest {
             }
         }
     }
-
-    @Then("User verifies there is an Answer count for each question")
-    public void iVerifyThereIsAnAnswerCountForEachQuestion() {
-        for (int i = 0; i < context.allTopicsPage.answerCount.size(); i++) {
-            Assert.assertTrue(context.allTopicsPage.answerCount.get(i).isDisplayed());
-            if (i < 3 || i > context.allTopicsPage.questions.size() - 4) {
-                String question = context.allTopicsPage.questions.get(i).getText();
-
-                context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
-                context.selenium_utils.logInfo("For " + question + " the Answer Count is Displayed", true);
-            }
-        }
-    }
-
-    @And("User verifies Answer count corresponds to the actual count of answers under a question")
-    public void iVerifyAnswerCountCorrespondsTheActualCountOfAnswersUnderAQuestion() throws InterruptedException {
-        int count = 0;
-        int size = context.allTopicsPage.questions.size();
-        for (int i = 0; i < size; i++) {
-            context.selenium_utils.click(context.allTopicsPage.questions.get(i));
-            context.selenium_utils.sleep(500);
-            if (!context.allTopicsPage.answerCount.get(i).getText().trim().equals("0")) {
-                count = context.allTopicsPage.answerRows.size();
-                String answCount = context.allTopicsPage.answerCount.get(i).getText().trim();
-                Assert.assertTrue(count == Integer.parseInt(context.allTopicsPage.answerCount.get(i).getText().substring(0, 2).trim()));
-                if(i < 3 || i > size - 4)
-                context.selenium_utils.logInfo("There are " + count + "answers in the Answer Section and the Answer Count displays " + answCount, true);
-            } else {
-                try {
-                    context.allTopicsPage.answerRow.isDisplayed();
-                } catch (Exception e) {
-                    String rows = context.allTopicsPage.answerCount.get(i).getText().trim();
-                    count = 0;
-                    Assert.assertTrue(count == Integer.parseInt(context.allTopicsPage.answerCount.get(i).getText().substring(0,1)));
-                    if(i < 3 || i > size - 4)
-                        context.selenium_utils.logInfo("There are " + rows + "answers in the Answer Section and the Answer Count displays " + count , true);
-                }
-            }
-        }
-    }
-
     @And("User navigates to {string} page")
     public void userNavigatesTo(String topic) {
         switch (topic) {
@@ -193,6 +150,28 @@ public class QA_SectionTest {
                 context.selenium_utils.sendKeys(context.allTopicsPage.answerForm, answer);
                 break;
         }
+    }
+
+    @Then("User verifies there is an Answer count for each Question")
+    public void iVerifyThereIsAnAnswerCountForEachQuestion() {
+        for (int i = 0; i < context.allTopicsPage.answerCount.size(); i++) {
+            Assert.assertTrue(context.allTopicsPage.answerCount.get(i).isDisplayed());
+            if (i < 3 || i > context.allTopicsPage.questions.size() - 4) {
+                String question = context.allTopicsPage.questions.get(i).getText();
+
+                context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
+                context.selenium_utils.logInfo("For " + question + " the Answer Count is Displayed", true);
+            }
+        }
+    }
+
+    @And("User verifies the answer count is {string} for {string}")
+    public void userVerifiesTheAnswerCountIsFor(String answCount, String question) {
+        context.selenium_utils.click(context.allTopicsPage.questions.get(0));
+        String count = context.allTopicsPage.answerCount.get(0).getText().trim();
+        System.out.println(count);
+        Assert.assertTrue(count.equals(answCount));
+        context.selenium_utils.logInfo("Question " + question + " has " + count + " answers and the Answer Counter displays " + answCount, true);
     }
 }
 

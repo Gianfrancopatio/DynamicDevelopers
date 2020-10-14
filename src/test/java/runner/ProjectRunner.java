@@ -15,9 +15,12 @@ import org.testng.annotations.DataProvider;
 
 
 
+<<<<<<< HEAD
         tags = "@doAndDontsTable"
+=======
+        tags = "@TLA10_AnswerCount"
+>>>>>>> f98de4956b5c11effb28c1ccc03a7db22b731bd7
         , dryRun = false
-
 
 )
 

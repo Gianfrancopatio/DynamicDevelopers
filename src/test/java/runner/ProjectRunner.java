@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
                 "rerun:target/re-run.txt"
         },
 
-        tags = "@existingDashBoard"
+        tags = " @LogInPage"
         , dryRun = false
 
 )

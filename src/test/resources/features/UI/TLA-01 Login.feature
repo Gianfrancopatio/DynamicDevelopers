@@ -19,8 +19,8 @@ Feature: Developer Preparation application tests
     And user provides following data with random name and email
       | password        | dd12345 |
       | confirmpassword | dd12345 |
-    And  user click on signup button
-    Then  verify message Successfully signed up! is up
+    And  user click on "Sign up" button
+    Then  verify the error message is up as "Successfully signed up!"
 
   @SignUpWexistingName
   Scenario: Verify user is unable to sing up with existing name
@@ -31,8 +31,8 @@ Feature: Developer Preparation application tests
       | email           | kk.best59@gmail.com |
       | password        | Best56780           |
       | confirmpassword | Best56780           |
-    And   user click on signup button
-    Then  verify message The user already exists is up
+    And   user click on "Sign up" button
+    Then  verify the error message is up as "The user already exists"
 
 
   @SignUpWexistingEmail
@@ -44,8 +44,8 @@ Feature: Developer Preparation application tests
                           ##existingEmail
       | password        | Best56780           |
       | confirmpassword | Best56780           |
-    And  user click on signup button
-    Then  verify message The user already exists is up
+    And  user click on "Sign up" button
+    Then  verify the error message is up as "The user already exists"
 
   @passwordSighUpInvalid
   Scenario: verify error msg is up when user provide password less than 6 digits
@@ -56,15 +56,15 @@ Feature: Developer Preparation application tests
       | password        | dd123             |
                           ##password is less than 6
       | confirmpassword | dd123             |
-    And  user click on signup button
-    Then  verify the error message is up as Password must be at least six characters in length.
+    And  user click on "Sign up" button
+    Then  verify the error message is up as "Password must be at least 6 characters in length."
 
   @InvalidEmailFormat
   Scenario Outline: verify error msg is up when user fill Invalid password Format
     When user click create new account
     And user provides "<name>" "<email>" "<password>" "<confirmPassword>"
-    And  user click on signup button
-    Then  verify the error message is up as Invalid email format
+    And user click on "Sign up" button
+    Then  verify the error message is up as "Invalid email format"
     Examples:
       | name          | email                        | password | confirmPassword |
       | emailinvalid1 | emailinvalid1                | dd12356  | dd12356         |
@@ -82,8 +82,8 @@ Feature: Developer Preparation application tests
       | password        | dd12356          |
       | confirmpassword | dd12567          |
                          #unmatch confirmpassword
-    And  user click on signup button
-    Then  verify message The passwords did not match is up
+    And  user click on "Sign up" button
+    Then  verify the error message is up as "The passwords did not match"
 
   @blankfield
   Scenario Outline: verify sign up button is not enable if some of the fields is blank
@@ -101,22 +101,22 @@ Feature: Developer Preparation application tests
   Scenario: user is able to sign in with valid account
     When user provides valid Email
     And user provides valid password
-    And  user click on signIn button
+    And  user click on "Sign in" button
     Then  verify user on DevPrepp page
 
   @inValidEmail
   Scenario: user is not able to sign in with invalid Email
     When user provides invalid Email
     And user provides valid password
-    And  user click on signIn button
-    Then  verify the error message is up as invalid credentials
+    And  user click on "Sign in" button
+    Then  verify the error message is up as "invalid credentials"
 
   @inValidPassword
   Scenario: user is not able to sign in with invalid password
     When user provides valid Email
     And user provides invalid password
-    And  user click on signIn button
-    Then  verify the error message is up as invalid credentials
+    And  user click on "Sign in" button
+    Then  verify the error message is up as "invalid credentials"
 
 
 

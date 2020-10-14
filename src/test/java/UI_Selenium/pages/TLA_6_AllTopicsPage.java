@@ -51,4 +51,7 @@ public class TLA_6_AllTopicsPage {
     @FindBy(linkText = "Test 7")
     public WebElement linkQuestion;
 
+    public static String buttonXpath = "//button[text()='%s']";
+    public static String inputXpath = "//input[@placeholder='%s']";
+
 }

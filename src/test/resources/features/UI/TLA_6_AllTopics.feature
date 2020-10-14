@@ -13,12 +13,26 @@ Feature: All Topic dashboard test
 
 
   Scenario Outline: verify AllTopics dashboard contain all questions
-    When user click on "buttonname" button
-    And user capture questions from "buttonname"
+    When user click on "<buttonname>" button
+    And user capture questions from "<buttonname>"
     When user navigate to main page
-    When user click on "buttonname" button
+    When user click on "All Topics" button
     Then user verify that AllTopic dashboard contains question
     Examples:
+      | buttonname  |
+      | Coding      |
+      | Soft skills |
+      | JavaScript  |
+      | Html        |
+      | Bootstrap   |
+      | Jquery      |
+      | NodeJS      |
+      | MySQL       |
+      | MongoDB     |
+      | React       |
+      | java        |
+      | Python      |
+      | CSS         |
 
 
 

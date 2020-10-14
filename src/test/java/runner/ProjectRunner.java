@@ -12,7 +12,7 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
-        tags = "@doAndDontsTable"
+        tags = "@alltopics"
         , dryRun = false
 
 )

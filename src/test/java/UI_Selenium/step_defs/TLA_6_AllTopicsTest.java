@@ -1,8 +1,11 @@
 package UI_Selenium.step_defs;
 
+
+import UI_Selenium.pages.TLA_6_AllTopicsPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -39,10 +42,14 @@ public class TLA_6_AllTopicsTest {
         Assert.assertTrue(context.allTopicsPage.alltopics_dash.isEnabled());
         context.selenium_utils.logInfo("I verify that Alltopics dash is enabled", false);
     }
-
-    @When("user click on {string} button")
-    public void userClickOnButton(String arg0) {
+    @And("user click on {string} button")
+    public void userClickOnButton(String buttonName) {
+        String xPath = String.format(TLA_6_AllTopicsPage.buttonXpath, buttonName);
+        //xpath = //button[text()='Login']
+        WebElement element = context.driver.findElement(By.xpath(xPath));
+        context.selenium_utils.click(element);
     }
+
     List<String> questions = new ArrayList<>();
     @And("user capture questions from {string}")
     public void userCaptureQuestionsFrom(String arg0) {
@@ -53,6 +60,7 @@ public class TLA_6_AllTopicsTest {
     @When("user navigate to main page")
     public void userNavigateToMainPage() {
         context.selenium_utils.click(context.allTopicsPage.logoBtn);
+        context.selenium_utils.logInfo("user navigate to home page", true);
     }
 
     @Then("user verify that AllTopic dashboard contains question")

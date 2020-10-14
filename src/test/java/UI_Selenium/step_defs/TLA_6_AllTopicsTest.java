@@ -40,9 +40,9 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.logInfo("I verify that Alltopics dash is enabled", false);
     }
 
-    @When("user click on {string} button")
-    public void userClickOnButton(String arg0) {
-    }
+//    @When("user click on {string} button")
+//    public void userClickOnButton(String arg0) {
+//    }
     List<String> questions = new ArrayList<>();
     @And("user capture questions from {string}")
     public void userCaptureQuestionsFrom(String arg0) {

@@ -3,8 +3,7 @@ Feature: Developer Preparation application tests
 
   Background: User open login/registration page
     Given I open login page
-    When user provides valid Email
-    And user provides valid password
+    When user provides valid "admin" Email and password
     And  user click on "Sign in" button
 
 

@@ -60,9 +60,7 @@ public class LoginTest {
                 Thread.sleep(1000);
                 context.selenium_utils.highlightElement(context.logInPage.email);
                 Assert.assertTrue(context.logInPage.email.isDisplayed());
-
                 break;
-
             case "passwordfield":
                 Thread.sleep(1000);
                 context.selenium_utils.highlightElement(context.logInPage.passwordbfSignup);
@@ -118,7 +116,8 @@ public class LoginTest {
     @When("user provides valid Email")
     public void userProvidesValidEmail() {
         context.selenium_utils.sendKeys
-                (context.logInPage.email, ConfigReader.readProperty("email", "src/test/resources/properties/configuration.properties"));
+                (context.logInPage.email, ConfigReader.readProperty("email",
+                        "src/test/resources/properties/configuration.properties"));
     }
 
     @And("user provides valid password")
@@ -185,6 +184,32 @@ public class LoginTest {
         context.selenium_utils.logInfo(msg + "is displayed", true);
 
     }
+
+    @When("user provides valid {string} Email and password")
+    public void userProvidesValidEmailandpassword(String role) {
+        switch (role.toLowerCase()){
+            case "user":
+                context.selenium_utils.sendKeys
+                        (context.logInPage.email, ConfigReader.readProperty("email",
+                                "src/test/resources/properties/configuration.properties"));
+                context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, ConfigReader
+                        .readProperty("password", "src/test/resources/properties/configuration.properties"));
+                context.selenium_utils.logInfo("user provides valid email and password", true);
+                break;
+
+            case "admin":
+                context.selenium_utils.sendKeys
+                        (context.logInPage.email, ConfigReader.readProperty("adminEmail",
+                                "src/test/resources/properties/configuration.properties"));
+                context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, ConfigReader
+                        .readProperty("adminPassWord", "src/test/resources/properties/configuration.properties"));
+                context.selenium_utils.logInfo("user provides valid email and password", true);
+
+                break;
+
+        }
+    }
+
 
 }
 

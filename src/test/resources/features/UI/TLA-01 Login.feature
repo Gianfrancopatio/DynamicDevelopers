@@ -99,8 +99,7 @@ Feature: Developer Preparation application tests
 
   @ValidSignIn @smoketestLogin
   Scenario: user is able to sign in with valid account
-    When user provides valid Email
-    And user provides valid password
+    When user provides valid "user" Email and password
     And  user click on "Sign in" button
     Then  verify user on DevPrepp page
 

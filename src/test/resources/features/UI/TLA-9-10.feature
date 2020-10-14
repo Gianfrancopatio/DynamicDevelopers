@@ -46,10 +46,10 @@ Feature: Developer Preparation application tests
 
     Examples:
       | topic       |
-#      | Coding      |
-#      | Soft skills |
-#      | JavaScript  |
-#      | Html        |
+      | Coding      |
+      | Soft skills |
+      | JavaScript  |
+      | Html        |
       | Bootstrap   |
       | Jquery      |
       | NodeJS      |

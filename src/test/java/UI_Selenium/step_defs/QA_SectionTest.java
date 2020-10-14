@@ -67,52 +67,12 @@ public class QA_SectionTest {
             }
         }
     }
+    
     @And("User navigates to {string} page")
     public void userNavigatesTo(String topic) {
-        switch (topic) {
-            case "All Topics":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "Coding":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "Soft skills":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "JavaScript":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "Html":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "Bootstrap":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "Jquery":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "NodeJS":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "MySQL":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "MongoDB":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "React":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "java":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "Python":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-            case "CSS":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+topic+"']")));
-                break;
-        }
+        String template = "//*[text()='%s']";
+        String xpath = String.format(template, topic);
+        context.selenium_utils.click(context.driver.findElement(By.xpath(xpath)));
     }
 
     @And("User clicks {string} button")
@@ -158,7 +118,6 @@ public class QA_SectionTest {
             Assert.assertTrue(context.allTopicsPage.answerCount.get(i).isDisplayed());
             if (i < 3 || i > context.allTopicsPage.questions.size() - 4) {
                 String question = context.allTopicsPage.questions.get(i).getText();
-
                 context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
                 context.selenium_utils.logInfo("For " + question + " the Answer Count is Displayed", true);
             }

@@ -12,6 +12,16 @@ public class TLA_13_AdminRolePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "(//form[@class='form-inline']//div//div[@id='x'])[13]")
-    public WebElement deleteBtn;
+    @FindBy(xpath = "//div[@id='x']")
+    public List<WebElement> deleteBtn;
+
+    @FindBy(xpath = "//h1[text()='Warning']")
+    public WebElement warningHeader;
+
+    @FindBy(xpath = "//div//h4[contains(text(),'Are you sure')]")
+    public WebElement warningMsg;
+
+    public static String deleteStr = "(//div[@id='x'])[%s]";
+
+
 }

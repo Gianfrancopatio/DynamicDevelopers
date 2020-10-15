@@ -67,7 +67,7 @@ public class QA_SectionTest {
             }
         }
     }
-    
+
     @And("User navigates to {string} page")
     public void userNavigatesTo(String topic) {
         String template = "//*[text()='%s']";
@@ -77,17 +77,9 @@ public class QA_SectionTest {
 
     @And("User clicks {string} button")
     public void userClicksButton(String button) {
-        switch(button) {
-            case "Enter new question ":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+button+"']")));
-                break;
-            case "Enter":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+button+"']")));
-                break;
-            case "Post Your Answer":
-                context.selenium_utils.click(context.driver.findElement(By.xpath("//*[text()='"+button+"']")));
-                break;
-        }
+        String template = "//*[text()='%s']";
+        String xpath = String.format(template, button);
+        context.selenium_utils.click(context.driver.findElement(By.xpath(xpath)));
     }
 
     @And("User enters {string} into the form")
@@ -127,8 +119,7 @@ public class QA_SectionTest {
     @And("User verifies the answer count is {string} for {string}")
     public void userVerifiesTheAnswerCountIsFor(String answCount, String question) {
         context.selenium_utils.click(context.allTopicsPage.questions.get(0));
-        String count = context.allTopicsPage.answerCount.get(0).getText().trim();
-        System.out.println(count);
+        String count = context.allTopicsPage.answerCount.get(0).getText();
         Assert.assertTrue(count.equals(answCount));
         context.selenium_utils.logInfo("Question " + question + " has " + count + " answers and the Answer Counter displays " + answCount, true);
     }

@@ -1,9 +1,10 @@
 package UI_Selenium.step_defs;
 
+
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.util.ArrayList;
@@ -21,13 +22,15 @@ public class TLA_6_AllTopicsTest {
     public void iLogInWithValidEmailAndPassword(String email, String password) {
         context.selenium_utils.sendKeys(context.logInPage.email, email);
         context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, password);
-        context.selenium_utils.click(context.logInPage.signInbtn);
         context.selenium_utils.logInfo("I login using valid email: " + email + " and password: " + password, true);
+        context.selenium_utils.click(context.logInPage.signInbtn);
+
     }
 
     @Then("I verify that All Topic dash is visible")
     public void iVerifyThatAllTopicDashIsVisible() {
         context.selenium_utils.highlightElement(context.allTopicsPage.alltopics_dash);
+        context.selenium_utils.sleep(500);
         Assert.assertTrue(context.allTopicsPage.alltopics_dash.isDisplayed());
         context.selenium_utils.logInfo("I verify AllTopics dash is displayed", true);
 
@@ -37,36 +40,37 @@ public class TLA_6_AllTopicsTest {
     public void iVerifyThatAllTopicDashIsClickable() {
         context.selenium_utils.highlightElement(context.allTopicsPage.alltopics_dash);
         Assert.assertTrue(context.allTopicsPage.alltopics_dash.isEnabled());
-        context.selenium_utils.logInfo("I verify that Alltopics dash is enabled", false);
+        context.selenium_utils.logInfo("I verify that AllTopics dash is enabled", false);
     }
 
-//    @When("user click on {string} button")
-//    public void userClickOnButton(String arg0) {
-//    }
     List<String> questions = new ArrayList<>();
     @And("user capture questions from {string}")
-    public void userCaptureQuestionsFrom(String arg0) {
-        for (WebElement element : context.allTopicsPage.questions){
-            questions.add(element.getText());
-        }
+    public void userCaptureQuestionsFrom(String dashboard) {
+        context.selenium_utils.sleep(500);
+        questions = context.allTopicsPage.convertToList(context.allTopicsPage.questions);
+        context.selenium_utils.logInfo("capturing question form " + dashboard, true);
     }
     @When("user navigate to main page")
     public void userNavigateToMainPage() {
         context.selenium_utils.click(context.allTopicsPage.logoBtn);
+        context.selenium_utils.logInfo("user navigate to home page", true);
     }
 
-    @Then("user verify that AllTopic dashboard contains question")
-    public void userVerifyThatAllTopicDashboardContainsQuestion() {
+    @Then("user verify that AllTopic dashboard contains questions from {string}")
+    public void userVerifyThatAllTopicDashboardContainsQuestionsFrom(String dashboard) {
         int count = 0;
-        for (int i = 0;i < context.allTopicsPage.questions.size(); i++){
+        context.selenium_utils.sleep(1000);
+        List<String> questionsList = context.allTopicsPage.convertToList(context.allTopicsPage.questions);
+//        System.out.println(questionsList.size());
+        for (int i =0; i < questionsList.size(); i++){
             for(int j = 0; j < questions.size(); j++){
-                if (context.allTopicsPage.questions.get(i).getText().equals(questions.get(j))){
+                if (questionsList.get(i).equals(questions.get(j))){
+                    context.selenium_utils.moveIntoView(context.allTopicsPage.questions.get(i));
+                    context.selenium_utils.logInfo("All topics dash contains |"+ questionsList.get(i) + "| from "+ dashboard, true);
                     count ++;
                 }
             }
-
         }
         Assert.assertEquals(count, questions.size());
-        context.selenium_utils.logInfo("All topics dashboard contains question" , true);
     }
 }

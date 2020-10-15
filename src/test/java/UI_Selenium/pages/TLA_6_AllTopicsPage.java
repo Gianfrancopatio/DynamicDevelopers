@@ -15,15 +15,6 @@ public class TLA_6_AllTopicsPage {
     @FindBy(xpath = "//button[text()='All Topics']")
     public WebElement alltopics_dash;
 
-    @FindBy(xpath = "//input[@name='search']")
-    public WebElement search_Field;
-
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement search_Btn;
-
-    @FindBy(xpath = "//div[@class='col-md-8']")
-    public List<WebElement> search_result;
-
     @FindBy(xpath = "//a[contains(@href, ':')]")
     public List<WebElement> questions;
 
@@ -48,7 +39,17 @@ public class TLA_6_AllTopicsPage {
     @FindBy(css = ".form-control")
     public WebElement questionForm;
 
-    @FindBy(linkText = "Test 7")
+    @FindBy(linkText = "Test 321")
     public WebElement linkQuestion;
+
+    public List<String> convertToList(List<WebElement> list){
+        List<String> strList = new ArrayList<>();
+        for (int i = 0;i < list.size(); i++){
+            if (!strList.contains(list.get(i).getText())){
+                strList.add(list.get(i).getText());
+            }
+        }
+        return strList;
+    }
 
 }

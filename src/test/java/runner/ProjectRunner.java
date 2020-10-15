@@ -14,7 +14,7 @@ import org.testng.annotations.DataProvider;
         },
 
 
-        tags = "@existingDashBoard"
+        tags = "@alltopics"
 
 
         , dryRun = false

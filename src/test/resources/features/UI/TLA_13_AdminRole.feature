@@ -5,11 +5,11 @@
       Given I open login page
       When I log in with valid email "admin@gmail.com" and password "admin123"
 
-#    Scenario: Admin should see delete option for dashboards
-#      Then I verify delete button is visible
-#      Then user signs out by pressing welcome button
-#      When I log in with valid email "live@live.com" and password "livelive"
-#      Then I verify that delete button in not visible
+    Scenario: Admin should see delete option for dashboards
+      Then I verify delete button is visible
+      Then user signs out by pressing welcome button
+      When I log in with valid email "live@live.com" and password "livelive"
+      Then I verify that delete button in not visible
 
 
 #  Scenario: Admin should be able to delete dashboards

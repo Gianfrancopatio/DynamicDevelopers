@@ -26,9 +26,10 @@ Feature: Developer Preparation application tests
 
   @existingDashBoard
   Scenario: user is unable to create new dash board with existing name
-    When  User create new dashboard name with "existingtopicname"
-    And   user click on "+ Add" button
+
     Then  Verify the error message appeared as existing TopicName already exists
+
+
 
 
 

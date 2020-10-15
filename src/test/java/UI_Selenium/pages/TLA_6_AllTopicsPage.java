@@ -39,7 +39,7 @@ public class TLA_6_AllTopicsPage {
     @FindBy(css = ".form-control")
     public WebElement questionForm;
 
-    @FindBy(linkText = "Test 7")
+    @FindBy(linkText = "Test 321")
     public WebElement linkQuestion;
 
     public static String questionXpath = "//p[contains(text(),'%s')]";

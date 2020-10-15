@@ -50,6 +50,7 @@ public class DosDontsTablePageTest {
         switch (table.toLowerCase()) {
             case "do's":
                 Thread.sleep(1000);
+                context.selenium_utils.moveIntoView(element);
                 context.selenium_utils.highlightElement(element);
                 Assert.assertTrue(element.isDisplayed());
                 context.selenium_utils.logInfo("Verifying Do's Table exists", true);
@@ -57,6 +58,7 @@ public class DosDontsTablePageTest {
                 break;
             case "dont's":
                 Thread.sleep(1000);
+                context.selenium_utils.moveIntoView(element);
                 context.selenium_utils.highlightElement(element);
                 Assert.assertTrue(element.isDisplayed());
                 context.selenium_utils.logInfo("Verifying Do's Table exists", true);

@@ -27,16 +27,14 @@ public class DashBoardViewTest {
                 context.selenium_utils.highlightElement(context.dashBoardViewPage.newDashboardAdd);
                 context.selenium_utils.sendKeys(context.dashBoardViewPage.newDashboardAdd, topic);
                 break;
+
         }
         switch (name.toLowerCase()) {
             case "existingtopicname":
                 context.selenium_utils.highlightElement(context.dashBoardViewPage.newDashboardAdd);
-                for (int i = 0; i < context.dashBoardViewPage.topicName.size() ; i++) {
-
-                    context.selenium_utils.sendKeys(context.dashBoardViewPage.newDashboardAdd,
-                            context.dashBoardViewPage.topicName.get(i).getText() );
-                }
+                context.selenium_utils.sendKeys(context.dashBoardViewPage.newDashboardAdd, "");
                 break;
+
         }
 
     }
@@ -52,9 +50,14 @@ public class DashBoardViewTest {
     public void verifyTheErrorMessageAppearedAsExistingTopicNameAlreadyExists() {
         // when user insert the topic that already been use the error message come up
         // I use list of topic name web element with loop to try to send key w all topic name
-        System.out.println(context.dashBoardViewPage.topicName.get(0).getText());
-        Assert.assertEquals(context.dashBoardViewPage.errorExist.getText(),
-                "\'CSS\' already exists");
+        context.selenium_utils.highlightElement(context.dashBoardViewPage.newDashboardAdd);
+        for (int i = 0; i < context.dashBoardViewPage.topicName.size(); i++) {
+            context.selenium_utils.sendKeys(context.dashBoardViewPage.newDashboardAdd,
+                    context.dashBoardViewPage.topicName.get(i).getText());
+            context.selenium_utils.click(context.dashBoardViewPage.addBtn);
+            Assert.assertEquals(context.dashBoardViewPage.errorExist.getText().toLowerCase(),
+                    "\'"+context.dashBoardViewPage.topicName.get(i).getText().toLowerCase()+"\'" +" already exists");
+        }
     }
 
 

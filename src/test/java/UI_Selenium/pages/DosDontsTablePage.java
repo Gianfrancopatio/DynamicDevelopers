@@ -1,8 +1,6 @@
 package UI_Selenium.pages;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DosDontsTablePage {
@@ -10,6 +8,6 @@ public class DosDontsTablePage {
         PageFactory.initElements(driver, this);
     }
 
-    public static String templateXpath = "//div[text()=\"%s\"]";
+    public static String templateXpath = "//div[text()='%s']";
 
 }

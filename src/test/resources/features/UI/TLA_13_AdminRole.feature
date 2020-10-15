@@ -37,10 +37,6 @@
 #      When user click on "Cancel" button
 #      Then I verify that deleted dashboard is displayed
 #
-#
-#
-#
-#
 #  Scenario: Admin should be able to add new dashboard
 #      When I create an new "dashboard"
 #    Then I verify new "dashboard" created

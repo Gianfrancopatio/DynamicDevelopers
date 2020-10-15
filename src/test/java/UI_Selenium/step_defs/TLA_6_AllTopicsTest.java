@@ -2,9 +2,13 @@ package UI_Selenium.step_defs;
 
 
 
+import UI_Selenium.pages.TLA_6_AllTopicsPage;
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.util.ArrayList;
@@ -43,12 +47,24 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.logInfo("I verify that AllTopics dash is enabled", false);
     }
 
+
     List<String> questions = new ArrayList<>();
     @And("user capture questions from {string}")
     public void userCaptureQuestionsFrom(String dashboard) {
-        context.selenium_utils.sleep(500);
-        questions = context.allTopicsPage.convertToList(context.allTopicsPage.questions);
-        context.selenium_utils.logInfo("capturing question form " + dashboard, true);
+            int listSize = context.allTopicsPage.questions.size();
+            if (listSize < 3){
+                for (int i = 0;i < context.allTopicsPage.questions.size(); i++){
+                    context.selenium_utils.sleep(2000);
+                    questions.add(context.allTopicsPage.questions.get(i).getText());
+                }
+            }else{
+                for (int i = 0; i < 3 ; i++){
+                    context.selenium_utils.sleep(2000);
+                    questions.add(context.allTopicsPage.questions.get(i).getText());
+                }
+            }
+
+            context.selenium_utils.logInfo("capturing question form " + dashboard, true);
     }
     @When("user navigate to main page")
     public void userNavigateToMainPage() {
@@ -58,19 +74,14 @@ public class TLA_6_AllTopicsTest {
 
     @Then("user verify that AllTopic dashboard contains questions from {string}")
     public void userVerifyThatAllTopicDashboardContainsQuestionsFrom(String dashboard) {
-        int count = 0;
-        context.selenium_utils.sleep(1000);
-        List<String> questionsList = context.allTopicsPage.convertToList(context.allTopicsPage.questions);
-//        System.out.println(questionsList.size());
-        for (int i =0; i < questionsList.size(); i++){
-            for(int j = 0; j < questions.size(); j++){
-                if (questionsList.get(i).equals(questions.get(j))){
-                    context.selenium_utils.moveIntoView(context.allTopicsPage.questions.get(i));
-                    context.selenium_utils.logInfo("All topics dash contains |"+ questionsList.get(i) + "| from "+ dashboard, true);
-                    count ++;
-                }
-            }
+        for (int i = 0; i < questions.size(); i++){
+            context.selenium_utils.sleep(2000);
+            String xPath = String.format(TLA_6_AllTopicsPage.questionXpath,questions.get(i));
+            WebElement element = context.driver.findElement(By.xpath(xPath));
+            context.selenium_utils.moveIntoView(element);
+            Assert.assertTrue(element.isDisplayed());
+            context.selenium_utils.logInfo("All topics dash contains |" + questions.get(i)+ " | from" + dashboard, true);
         }
-        Assert.assertEquals(count, questions.size());
+
     }
 }

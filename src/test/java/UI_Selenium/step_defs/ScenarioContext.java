@@ -35,6 +35,8 @@ public class ScenarioContext {
 
     public CreateQuestionPage createQuestionPage;
 
+    public TLA_13_AdminRolePage tla_13_adminRolePage;
+
 
 
     //Selenium methods
@@ -53,6 +55,7 @@ public class ScenarioContext {
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
 
         createQuestionPage = new CreateQuestionPage(driver);
+        tla_13_adminRolePage = new TLA_13_AdminRolePage(driver);
 
     }
 

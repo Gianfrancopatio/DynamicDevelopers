@@ -20,16 +20,16 @@ Feature: All Topic dashboard test
     Then user verify that AllTopic dashboard contains questions from "<buttonname>"
     Examples:
       | buttonname  |
-      | Coding      |
-      | Soft skills |
-      | JavaScript  |
-      | Html        |
-      | Bootstrap   |
-      | Jquery      |
-      | NodeJS      |
-      | MySQL       |
-      | MongoDB     |
-      | React       |
+#      | Coding      |
+#      | Soft skills |
+#      | JavaScript  |
+#      | Html        |
+#      | Bootstrap   |
+#      | Jquery      |
+#      | NodeJS      |
+#      | MySQL       |
+#      | MongoDB     |
+#      | React       |
       | java        |
       | Python      |
       | CSS         |

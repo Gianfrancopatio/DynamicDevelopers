@@ -5,40 +5,48 @@
       Given I open login page
       When I log in with valid email "admin@gmail.com" and password "admin123"
 
+#    Scenario: Admin should see delete option for dashboards
+#      Then I verify delete button is visible
+#      Then user signs out by pressing welcome button
+#      When I log in with valid email "live@live.com" and password "livelive"
+#      Then I verify that delete button in not visible
 
-#  Scenario: Admin should be able to hide dashboard
-#    Given I verify hide button is working properly
-#    When I hide a dashboard
-#    And I log out as AdminRole
-#    When I log in with valid email "live@live.com" and password "livelive"
-#    Then I verify that hidden dashboard is not displayed
-#
-#  Scenario: Admin should be able to delete dashboard
-#    Given I verify delete button is working properly
-#    When I delete a dashboard
-#    And I log out as AdminRole
+
+#  Scenario: Admin should be able to delete dashboards
+#     When I create an new "dashboard"
+#      Then I verify new "dashboard" created
+#    When I delete a "dashboard"
+#    Then I verify dashboard deleted
+#    And I log out
 #    When I log in with valid email "live@live.com" and password "livelive"
 #    Then I verify that deleted dashboard is not displayed
 #
+#    Scenario: Verify popUp warning message on deleting dashboards
+#      When I create an new "dashboard"
+#      When I delete a "dashboard"
+#      Then I verify Pop up warning message displayed
+#      And I verify Pup up waring message contain number of question
+#      When user click on "Delete" button
+#      Then I verify that deleted dashboard is not displayed
 #
-#  Scenario: Admin should be able to disable adding new dashboard option
-#    When I click disable button
-#    Then I verify disable button is working properly
-#    When I disable the adding new dashboard option
-#    And I log out as AdminRole
+#    Scenario: Verify popUp warning message on deleting dashboards
+#      When I create an new "dashboard"
+#      When I delete a "dashboard"
+#      Then I verify Pop up warning message displayed
+#      And I verify Pup up waring message contain number of question
+#      When user click on "Cancel" button
+#      Then I verify that deleted dashboard is displayed
+#
+#
+#
+#
+#
+#  Scenario: Admin should be able to add new dashboard
+#      When I create an new "dashboard"
+#    Then I verify new "dashboard" created
+#    And I log out
 #    When I log in with valid email "live@live.com" and password "livelive"
-#    Then I verify that adding new dashboard option is not displayed
-#
-#  Scenario: Admin should be able to enable adding  new dashboard option
-#    When I click enable button
-#    Then I verify enable button is working properly
-#    When I enable the adding new dashboard option
-#    And I log out as AdminRole
-#    When I log in with valid email "live@live.com" and password "livelive"
-#    Then I verify that adding new dashboard option is displayed
-#
-#  Scenario: Verify popUp warning message on deleting dashboards with more then 10 questions
-#    Given I verify that dashboard contain more than 10 questions
-#    When I delete dashboard with more then 10 question
-#    Then I verify popUp warning message
+#    Then I verify new "dashboard" created
+
+
 

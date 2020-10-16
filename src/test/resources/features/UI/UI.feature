@@ -3,6 +3,8 @@ Feature: Developer Preparation application tests
     Background: User open login/registration page
     Given I open login page
 
+#      Hello
+
   #Best
   #TLA-01
   @LogInPage @VerifyFields @smoketestLogin

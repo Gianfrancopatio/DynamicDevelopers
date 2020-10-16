@@ -32,7 +32,11 @@ public class TLA_6_AllTopicsTest {
 
 
 
-
+    /**
+     * verify visibility of dashboard
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
     @Then("I verify that {string} dash is visible")
     public void iVerifyThatDashIsVisible(String dashboard) {
         context.selenium_utils.sleep(500);
@@ -41,7 +45,11 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.logInfo("Dash is displayed: " + dashboard, true);
     }
 
-
+    /**
+     * verify dashboard is enable
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
     @And("I verify that {string} dash is clickable")
     public void iVerifyThatDashIsClickable(String dashboard) {
         String xPath = String.format(LogInPage.buttonXpath,dashboard);
@@ -50,6 +58,11 @@ public class TLA_6_AllTopicsTest {
 
     }
 
+    /**
+     * capture 3 first question from dashboard
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
     List<String> questions = new ArrayList<>();
     @And("user capture questions from {string}")
     public void userCaptureQuestionsFrom(String dashboard) {
@@ -63,12 +76,22 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.logInfo("capturing question form " + dashboard, true);
     }
 
+    /**
+     * Navigate to main page
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
     @When("user navigate to main page")
     public void userNavigateToMainPage() {
         context.selenium_utils.click(context.allTopicsPage.logoBtn);
         context.selenium_utils.logInfo("user navigate to home page", true);
     }
 
+    /**
+     * verify All topics dash contains question form other dashboards
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
     @Then("user verify that AllTopic dashboard contains questions from {string}")
     public void userVerifyThatAllTopicDashboardContainsQuestionsFrom(String dashboard) {
         for (int i = 0; i < questions.size(); i++) {
@@ -81,6 +104,11 @@ public class TLA_6_AllTopicsTest {
         }
     }
 
+    /**
+     * verify All Topics dash contains specific question
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
     @Then("user verify that AllTopic dashboard contains {string} from {string}")
     public void userVerifyThatAllTopicDashboardContainsFrom(String question, String dashboard) {
 //        context.selenium_utils.sleep(500);

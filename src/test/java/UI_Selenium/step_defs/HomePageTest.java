@@ -28,6 +28,10 @@ public class HomePageTest {
                 context.selenium_utils.highlightElement(context.homePage.newDashboardAdd);
                 context.selenium_utils.sendKeys(context.homePage.newDashboardAdd, topic);
                 break;
+            case "admintest":
+                context.selenium_utils.highlightElement(context.homePage.newDashboardAdd);
+                context.selenium_utils.sendKeys(context.homePage.newDashboardAdd, name);
+                break;
 
         }
 

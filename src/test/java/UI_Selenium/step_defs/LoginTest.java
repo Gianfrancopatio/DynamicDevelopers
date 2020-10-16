@@ -195,6 +195,7 @@ public class LoginTest {
                 context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, ConfigReader
                         .readProperty("password", "src/test/resources/properties/configuration.properties"));
                 context.selenium_utils.logInfo("user provides valid email and password", true);
+
                 break;
 
             case "admin":
@@ -208,9 +209,16 @@ public class LoginTest {
                 break;
 
         }
+
+
     }
 
 
+    @When("user login as {string}")
+    public void userLoginAs(String role) {
+        userProvidesValidEmailandpassword(role.toLowerCase());
+        userClickOnButton("Sign in");
+    }
 }
 
 

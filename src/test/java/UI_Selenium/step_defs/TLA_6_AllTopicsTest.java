@@ -45,9 +45,7 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.logInfo("I verify that AllTopics dash is enabled", false);
     }
 
-
     List<String> questions = new ArrayList<>();
-
     @And("user capture questions from {string}")
     public void userCaptureQuestionsFrom(String dashboard) {
         for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {

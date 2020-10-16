@@ -98,8 +98,5 @@ public class TLA_13_AdminRoleTest {
         System.out.println(questionNum);
         Assert.assertTrue(context.tla_13_adminRolePage.warningMsg.getText().contains(String.valueOf(questionNum)));
         context.selenium_utils.logInfo("Warning message contains: " + dashName, true);
-
     }
-
-
 }

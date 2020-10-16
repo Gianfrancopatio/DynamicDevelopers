@@ -49,9 +49,7 @@ public class ScenarioContext {
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);
         dashBoardViewPage = new DashBoardViewPage(driver);
-
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
-
         createQuestionPage = new CreateQuestionPage(driver);
 
     }

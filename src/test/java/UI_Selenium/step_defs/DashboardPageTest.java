@@ -38,32 +38,32 @@ public class DashboardPageTest {
 
     @And("User navigates to All Topics")
     public void iNavigateToAllTopics() {
-        context.selenium_utils.click(context.allTopicsPage.alltopics_dash);
+        context.selenium_utils.click(context.dashboardPage.alltopics_dash);
     }
 
     @Then("User verifies each question field is not empty")
     public void iVerifyEachQuestionContainsAQuestion() {
         int count = 0;
-        for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
-            context.selenium_utils.moveIntoView(context.allTopicsPage.questions.get(i));
-            if (context.allTopicsPage.questions.get(i).getText().length() > 0) {
-                String question = context.allTopicsPage.questions.get(i).getText();
+        for (int i = 0; i < context.dashboardPage.questions.size(); i++) {
+            context.selenium_utils.moveIntoView(context.dashboardPage.questions.get(i));
+            if (context.dashboardPage.questions.get(i).getText().length() > 0) {
+                String question = context.dashboardPage.questions.get(i).getText();
                 count++;
-                if (i < 3 || i > context.allTopicsPage.questions.size() - 4)
+                if (i < 3 || i > context.dashboardPage.questions.size() - 4)
                     context.selenium_utils.logInfo("Question is " + question, true);
             }
         }
-        Assert.assertTrue(count == context.allTopicsPage.questions.size());
+        Assert.assertTrue(count == context.dashboardPage.questions.size());
     }
 
     @And("User verifies each question has an Answer section")
     public void iVerifyEachQuestionHasAnAnswerSection() {
-        for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
-            context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
-            context.selenium_utils.click(context.allTopicsPage.questions.get(i));
-            Assert.assertTrue(context.allTopicsPage.answerSection.isDisplayed());
-            String question = context.allTopicsPage.questions.get(i).getText();
-            if (i < 3 || i > context.allTopicsPage.questions.size() - 4) {
+        for (int i = 0; i < context.dashboardPage.questions.size(); i++) {
+            context.selenium_utils.moveIntoView(context.dashboardPage.answerCount.get(i));
+            context.selenium_utils.click(context.dashboardPage.questions.get(i));
+            Assert.assertTrue(context.dashboardPage.answerSection.isDisplayed());
+            String question = context.dashboardPage.questions.get(i).getText();
+            if (i < 3 || i > context.dashboardPage.questions.size() - 4) {
                 context.selenium_utils.logInfo("Question " + question + " has an Answer section", true);
             }
         }
@@ -85,33 +85,33 @@ public class DashboardPageTest {
 
     @And("User enters {string} into the form")
     public void userEntersIntoTheForm(String question) {
-        context.selenium_utils.sendKeys(context.allTopicsPage.questionForm, question);
+        context.selenium_utils.sendKeys(context.dashboardPage.questionForm, question);
     }
 
     @And("User clicks {string} link")
     public void userClicksLink(String link) {
-        context.selenium_utils.click(context.allTopicsPage.linkQuestion);
+        context.selenium_utils.click(context.dashboardPage.linkQuestion);
     }
 
     @And("User inputs {string} into the form")
     public void userInputsIntoTheForm(String answer) {
         switch (answer) {
             case "Testing Answer Count 1":
-                context.selenium_utils.sendKeys(context.allTopicsPage.answerForm, answer);
+                context.selenium_utils.sendKeys(context.dashboardPage.answerForm, answer);
                 break;
             case "Testing Answer Count 2":
-                context.selenium_utils.sendKeys(context.allTopicsPage.answerForm, answer);
+                context.selenium_utils.sendKeys(context.dashboardPage.answerForm, answer);
                 break;
         }
     }
 
     @Then("User verifies there is an Answer count for each Question")
     public void iVerifyThereIsAnAnswerCountForEachQuestion() {
-        for (int i = 0; i < context.allTopicsPage.answerCount.size(); i++) {
-            Assert.assertTrue(context.allTopicsPage.answerCount.get(i).isDisplayed());
-            if (i < 3 || i > context.allTopicsPage.questions.size() - 4) {
-                String question = context.allTopicsPage.questions.get(i).getText();
-                context.selenium_utils.moveIntoView(context.allTopicsPage.answerCount.get(i));
+        for (int i = 0; i < context.dashboardPage.answerCount.size(); i++) {
+            Assert.assertTrue(context.dashboardPage.answerCount.get(i).isDisplayed());
+            if (i < 3 || i > context.dashboardPage.questions.size() - 4) {
+                String question = context.dashboardPage.questions.get(i).getText();
+                context.selenium_utils.moveIntoView(context.dashboardPage.answerCount.get(i));
                 context.selenium_utils.logInfo("For " + question + " the Answer Count is Displayed", true);
             }
         }
@@ -119,7 +119,7 @@ public class DashboardPageTest {
 
     @And("User verifies the answer count is {string} for {string}")
     public void userVerifiesTheAnswerCountIsFor(String answCount, String question) {
-        context.selenium_utils.click(context.allTopicsPage.questions.get(0));
+        context.selenium_utils.click(context.dashboardPage.questions.get(0));
         String count = context.allTopicsPage.answerCount.get(0).getText();
         Assert.assertTrue(count.equals(answCount));
         context.selenium_utils.logInfo("Question " + question + " has " + count + " answers and the Answer Counter displays " + answCount, true);

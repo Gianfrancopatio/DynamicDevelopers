@@ -1,7 +1,6 @@
 package UI_Selenium.step_defs;
 
-import UI_Selenium.pages.TLA_6_AllTopicsPage;
-
+import UI_Selenium.pages.DashboardPage;
 import UI_Selenium.pages.LogInPage;
 import common_utils.ConfigReader;
 import io.cucumber.java.en.And;
@@ -10,17 +9,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
-public class QA_SectionTest {
+import java.util.ArrayList;
+import java.util.List;
+
+public class DashboardPageTest {
     ScenarioContext context;
 
-    public QA_SectionTest(ScenarioContext scenarioContext) {
-        context = scenarioContext;
+    public DashboardPageTest(ScenarioContext scenarioContext) {
+        this.context = scenarioContext;
     }
 
+    //Pavel
     @Given("User navigates to login pages")
     public void INavigateTo() {
         context.driver.get(ConfigReader.readProperty("projectURL", "src/test/resources/properties/configuration.properties"));
@@ -94,7 +95,7 @@ public class QA_SectionTest {
 
     @And("User inputs {string} into the form")
     public void userInputsIntoTheForm(String answer) {
-        switch(answer) {
+        switch (answer) {
             case "Testing Answer Count 1":
                 context.selenium_utils.sendKeys(context.allTopicsPage.answerForm, answer);
                 break;
@@ -123,7 +124,99 @@ public class QA_SectionTest {
         Assert.assertTrue(count.equals(answCount));
         context.selenium_utils.logInfo("Question " + question + " has " + count + " answers and the Answer Counter displays " + answCount, true);
     }
+    // End of Pavel's steps
+
+    /**
+     * ----------------------------------/-Muneer-started/------------------------------------
+     */
+    /**
+     * verify visibility of dashboard
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
+    @Then("I verify that {string} dash is visible")
+    public void iVerifyThatDashIsVisible(String dashboard) {
+        context.selenium_utils.sleep(500);
+        String xPath = String.format(LogInPage.buttonXpath,dashboard);
+        org.testng.Assert.assertTrue(context.driver.findElement(By.xpath(xPath)).isDisplayed());
+        context.selenium_utils.logInfo("Dash is displayed: " + dashboard, true);
+    }
+
+    /**
+     * verify dashboard is enable
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
+    @And("I verify that {string} dash is clickable")
+    public void iVerifyThatDashIsClickable(String dashboard) {
+        String xPath = String.format(LogInPage.buttonXpath,dashboard);
+        org.testng.Assert.assertTrue(context.driver.findElement(By.xpath(xPath)).isEnabled());
+        context.selenium_utils.logInfo("Dash is enabled: " + dashboard, false);
+
+    }
+
+    /**
+     * capture 3 first question from dashboard
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
+    List<String> questions = new ArrayList<>();
+    @And("user capture questions from {string}")
+    public void userCaptureQuestionsFrom(String dashboard) {
+        for (int i = 0; i < context.dashboardPage.questions.size(); i++) {
+            context.selenium_utils.sleep(500);
+            questions.add(context.dashboardPage.questions.get(i).getText());
+            if (i == 2) {
+                break;
+            }
+        }
+        context.selenium_utils.logInfo("capturing question form " + dashboard, true);
+    }
+
+    /**
+     * Navigate to main page
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
+    @When("user navigate to main page")
+    public void userNavigateToMainPage() {
+        context.selenium_utils.click(context.dashboardPage.logoBtn);
+        context.selenium_utils.logInfo("user navigate to home page", true);
+    }
+
+    /**
+     * verify All topics dash contains question form other dashboards
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
+    @Then("user verify that AllTopic dashboard contains questions from {string}")
+    public void userVerifyThatAllTopicDashboardContainsQuestionsFrom(String dashboard) {
+        for (int i = 0; i < questions.size(); i++) {
+//            context.selenium_utils.sleep(500);
+            String xPath = String.format(DashboardPage.questionXpath, questions.get(i));
+            WebElement element = context.driver.findElement(By.xpath(xPath));
+            context.selenium_utils.moveIntoView(element);
+            org.testng.Assert.assertTrue(element.isDisplayed());
+            context.selenium_utils.logInfo("All topics dash contains | " + questions.get(i) + " | from" + dashboard, true);
+        }
+    }
+
+    /**
+     * verify All Topics dash contains specific question
+     * TlA-6 All Topics dash
+     * @author: Muneer
+     */
+    @Then("user verify that AllTopic dashboard contains {string} from {string}")
+    public void userVerifyThatAllTopicDashboardContainsFrom(String question, String dashboard) {
+//        context.selenium_utils.sleep(500);
+        String xPath = String.format(DashboardPage.questionXpath, question);
+        WebElement element = context.driver.findElement(By.xpath(xPath));
+        context.selenium_utils.moveIntoView(element);
+        org.testng.Assert.assertTrue(element.isDisplayed());
+        context.selenium_utils.logInfo("All topics dash contains | " + question + " | from" + dashboard, true);
+
+    }
+    /**
+     * ----------------------------------/-Muneer-ended/------------------------------------
+     */
 }
-
-
-

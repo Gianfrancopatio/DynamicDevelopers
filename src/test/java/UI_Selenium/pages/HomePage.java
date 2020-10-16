@@ -1,11 +1,10 @@
 package UI_Selenium.pages;
 
-import UI_Selenium.step_defs.ScenarioContext;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,12 +12,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class DashBoardViewPage {
-    public DashBoardViewPage(WebDriver driver) {
+public class HomePage {
+    public HomePage (WebDriver driver) {
 
         PageFactory.initElements(driver, this);
     }
-
+    // best
     @FindBy(xpath="//div/input[@class='form-control']")
     public WebElement newDashboardAdd;
 
@@ -32,7 +31,7 @@ public class DashBoardViewPage {
     public List<WebElement> topicName;
 
     @FindBy(xpath=" //div[contains(text(),'already exists')]")
-    public WebElement errorExist;
+    public WebElement errorExistingNameMsg;
 
     public boolean verifyimageActive(WebElement imgElement) {
         try {
@@ -48,6 +47,7 @@ public class DashBoardViewPage {
         }
         return true;
     }
+    // -------------------------------------Best-----------------------------------------------//
 
 
 

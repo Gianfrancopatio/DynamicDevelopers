@@ -21,11 +21,17 @@ public class ScenarioContext {
 
     //Classes
     public LogInPage logInPage;
+    public HomePage homePage;
+    public DashboardPage dashboardPage;
     public Selenium_utils selenium_utils;
+
+
+
+
+
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
     public DosnDontsStatementsPage dosnDontsStatementsPage;
-    public DashBoardViewPage dashBoardViewPage;
     public LikeButtonPage likeButtonPage;
     public TLA11_LikeButtonPage tla11LikeButtonPage;
     public TLA_6_AllTopicsPage allTopicsPage;
@@ -37,7 +43,11 @@ public class ScenarioContext {
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
         logInPage = new LogInPage(driver);
+        homePage = new HomePage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
+
+
+
         dosDontsTablePage = new DosDontsTablePage(driver);
         sessionExpiresPage = new SessionExpiresPage(driver);
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
@@ -45,7 +55,6 @@ public class ScenarioContext {
         allTopicsPage = new TLA_6_AllTopicsPage(driver);
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);
-        dashBoardViewPage = new DashBoardViewPage(driver);
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
         createQuestionPage = new CreateQuestionPage(driver);
         tla_13_adminRolePage = new TLA_13_AdminRolePage(driver);

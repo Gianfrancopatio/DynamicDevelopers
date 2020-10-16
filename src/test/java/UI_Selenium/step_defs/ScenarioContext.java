@@ -28,7 +28,6 @@ public class ScenarioContext {
 
 
  //delete class below after you merging to page above
-
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
     public DosnDontsStatementsPage dosnDontsStatementsPage;
@@ -44,8 +43,8 @@ public class ScenarioContext {
     public void initializeClasses(ScenarioContext scenarioContext) {
         logInPage = new LogInPage(driver);
         homePage = new HomePage(driver);
+        dashboardPage = new DashboardPage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
-
 
 
         dosDontsTablePage = new DosDontsTablePage(driver);
@@ -58,7 +57,6 @@ public class ScenarioContext {
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
         createQuestionPage = new CreateQuestionPage(driver);
         tla_13_adminRolePage = new TLA_13_AdminRolePage(driver);
-
     }
 
 //    //API

@@ -1,8 +1,6 @@
 package UI_Selenium.step_defs;
 
-import UI_Selenium.pages.TLA_6_AllTopicsPage;
-
-import UI_Selenium.pages.LogInPage;
+import UI_Selenium.pages.DashboardPage;
 import common_utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -10,17 +8,15 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
 
-public class QA_SectionTest {
+public class DashboardPageTest {
     ScenarioContext context;
 
-    public QA_SectionTest(ScenarioContext scenarioContext) {
-        context = scenarioContext;
+    public DashboardPageTest(ScenarioContext scenarioContext) {
+        this.context = scenarioContext;
     }
 
+    //Pavel
     @Given("User navigates to login pages")
     public void INavigateTo() {
         context.driver.get(ConfigReader.readProperty("projectURL", "src/test/resources/properties/configuration.properties"));
@@ -94,7 +90,7 @@ public class QA_SectionTest {
 
     @And("User inputs {string} into the form")
     public void userInputsIntoTheForm(String answer) {
-        switch(answer) {
+        switch (answer) {
             case "Testing Answer Count 1":
                 context.selenium_utils.sendKeys(context.allTopicsPage.answerForm, answer);
                 break;
@@ -123,7 +119,5 @@ public class QA_SectionTest {
         Assert.assertTrue(count.equals(answCount));
         context.selenium_utils.logInfo("Question " + question + " has " + count + " answers and the Answer Counter displays " + answCount, true);
     }
+    // End of Pavel's steps
 }
-
-
-

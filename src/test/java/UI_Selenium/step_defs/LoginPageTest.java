@@ -13,10 +13,10 @@ import org.testng.Assert;
 
 import java.util.Map;
 
-public class LoginTest {
+public class LoginPageTest {
     ScenarioContext context;
 
-    public LoginTest(ScenarioContext scenarioContext) {
+    public LoginPageTest(ScenarioContext scenarioContext) {
 
         this.context = scenarioContext;
     }

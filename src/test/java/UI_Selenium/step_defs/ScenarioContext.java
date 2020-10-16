@@ -45,6 +45,7 @@ public class ScenarioContext {
         logInPage = new LogInPage(driver);
         homePage = new HomePage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
+        dashboardPage = new DashboardPage(driver);
 
 
 

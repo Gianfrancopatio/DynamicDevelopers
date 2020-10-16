@@ -1,6 +1,7 @@
 package UI_Selenium.step_defs;
 
 
+import UI_Selenium.pages.DashboardPage;
 import UI_Selenium.pages.LogInPage;
 import UI_Selenium.pages.TLA_6_AllTopicsPage;
 import io.cucumber.java.en.And;
@@ -66,9 +67,9 @@ public class TLA_6_AllTopicsTest {
     List<String> questions = new ArrayList<>();
     @And("user capture questions from {string}")
     public void userCaptureQuestionsFrom(String dashboard) {
-        for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
+        for (int i = 0; i < context.dashboardPage.questions.size(); i++) {
             context.selenium_utils.sleep(500);
-            questions.add(context.allTopicsPage.questions.get(i).getText());
+            questions.add(context.dashboardPage.questions.get(i).getText());
             if (i == 2) {
                 break;
             }
@@ -83,7 +84,7 @@ public class TLA_6_AllTopicsTest {
      */
     @When("user navigate to main page")
     public void userNavigateToMainPage() {
-        context.selenium_utils.click(context.allTopicsPage.logoBtn);
+        context.selenium_utils.click(context.dashboardPage.logoBtn);
         context.selenium_utils.logInfo("user navigate to home page", true);
     }
 
@@ -96,7 +97,7 @@ public class TLA_6_AllTopicsTest {
     public void userVerifyThatAllTopicDashboardContainsQuestionsFrom(String dashboard) {
         for (int i = 0; i < questions.size(); i++) {
 //            context.selenium_utils.sleep(500);
-            String xPath = String.format(TLA_6_AllTopicsPage.questionXpath, questions.get(i));
+            String xPath = String.format(DashboardPage.questionXpath, questions.get(i));
             WebElement element = context.driver.findElement(By.xpath(xPath));
             context.selenium_utils.moveIntoView(element);
             Assert.assertTrue(element.isDisplayed());
@@ -112,7 +113,7 @@ public class TLA_6_AllTopicsTest {
     @Then("user verify that AllTopic dashboard contains {string} from {string}")
     public void userVerifyThatAllTopicDashboardContainsFrom(String question, String dashboard) {
 //        context.selenium_utils.sleep(500);
-        String xPath = String.format(TLA_6_AllTopicsPage.questionXpath, question);
+        String xPath = String.format(DashboardPage.questionXpath, question);
         WebElement element = context.driver.findElement(By.xpath(xPath));
         context.selenium_utils.moveIntoView(element);
         Assert.assertTrue(element.isDisplayed());

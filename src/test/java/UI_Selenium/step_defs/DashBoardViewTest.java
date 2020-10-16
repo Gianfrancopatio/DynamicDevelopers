@@ -29,21 +29,14 @@ public class DashBoardViewTest {
                 break;
 
         }
+
         switch (name.toLowerCase()) {
             case "existingtopicname":
                 context.selenium_utils.highlightElement(context.dashBoardViewPage.newDashboardAdd);
                 context.selenium_utils.sendKeys(context.dashBoardViewPage.newDashboardAdd, "");
                 break;
-
         }
-
-    }
-
-    @And("User click add button")
-    public void userClickAddButton() {
-        context.selenium_utils.highlightElement(context.dashBoardViewPage.addBtn);
-        context.selenium_utils.click(context.dashBoardViewPage.addBtn);
-
+        context.selenium_utils.logInfo("adding --> " +name, true);
     }
 
     @Then("Verify the error message appeared as existing TopicName already exists")
@@ -57,6 +50,7 @@ public class DashBoardViewTest {
             context.selenium_utils.click(context.dashBoardViewPage.addBtn);
             Assert.assertEquals(context.dashBoardViewPage.errorExist.getText().toLowerCase(),
                     "\'"+context.dashBoardViewPage.topicName.get(i).getText().toLowerCase()+"\'" +" already exists");
+            context.selenium_utils.logInfo("adding --> existing  " + context.dashBoardViewPage.topicName.get(i).getText(), true);
         }
     }
 
@@ -67,6 +61,8 @@ public class DashBoardViewTest {
         for (int i = 0; i < context.dashBoardViewPage.dash.size(); i++) {
             context.selenium_utils.highlightElement(context.dashBoardViewPage.dash.get(i));
             Assert.assertTrue(context.dashBoardViewPage.verifyimageActive(context.dashBoardViewPage.dash.get(i)));
+            context.selenium_utils.logInfo("image presented --> " , true);
+
         }
     }
 
@@ -76,12 +72,13 @@ public class DashBoardViewTest {
         for (int i = 0; i < context.dashBoardViewPage.dash.size(); i++) {
             context.selenium_utils.highlightElement(context.dashBoardViewPage.topicName.get(i));
             Assert.assertTrue(context.dashBoardViewPage.topicName.get(i).isDisplayed());
+            context.selenium_utils.logInfo("Topic name " +context.dashBoardViewPage.topicName.get(i).getText(), true);
         }
     }
 
 
     @Then("Verify new dashboard has same name as as we created")
-    public void verifyNewDashboardHasSameNameAsAsWeCreated() throws InterruptedException {
+    public void verifyNewDashboardHasSameNameAsAsWeCreated() {
         //count if this topic is equal to 1 mean we already create that dashboard with this name
         System.out.println(topic);
         int count = 0;
@@ -92,13 +89,15 @@ public class DashBoardViewTest {
             }
         }
         Assert.assertEquals(count, 1, topic + " appeared not 1 time");
+        context.selenium_utils.logInfo("dashboard has name >> " +topic , true);
+
     }
 
     @Then("Verify dashboard contains image")
     public void verifyDashboardContainsImage() {
         //the recent dashboard we just create will be at the last index so we use "verifyimageActive" to test if it contain picture
         Assert.assertTrue(context.dashBoardViewPage.verifyimageActive(context.dashBoardViewPage.dash.get(context.dashBoardViewPage.dash.size() - 1)));
-
+        context.selenium_utils.logInfo("image presented --> " , true);
     }
 
     @Then("Verify each DashBoard won't contain duplicate topicname")
@@ -115,6 +114,7 @@ public class DashBoardViewTest {
         }
 
         Assert.assertEquals(nonDup.size(), topicname.size());
+        context.selenium_utils.logInfo(" DashBoard won't contain duplicate topicname" , true);
 
     }
 

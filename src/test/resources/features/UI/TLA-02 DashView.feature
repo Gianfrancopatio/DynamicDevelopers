@@ -6,12 +6,11 @@ Feature: Developer Preparation application tests
     When user provides valid "admin" Email and password
     And  user click on "Sign in" button
 
-
-  @VerifyImage
+  #Best
+  @VerifyImageandName
   Scenario: Each dashboard will have it’s own name and image
     Then  Verify each dashBoard contains own topic name
     Then  verify each dash board has image present
-
 
   @VerifyDupName
   Scenario: Each dashboard should not have same name
@@ -28,6 +27,11 @@ Feature: Developer Preparation application tests
   Scenario: user is unable to create new dash board with existing name
 
     Then  Verify the error message appeared as existing TopicName already exists
+
+@wip
+  Scenario: user is unable to create new dash board with existing name
+    When  User create new dashboard name with "existingtopicname"
+
 
 
 

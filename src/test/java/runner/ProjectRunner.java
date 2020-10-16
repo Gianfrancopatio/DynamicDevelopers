@@ -12,10 +12,8 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
-
         tags = "@adminRole"
         , dryRun = false
-
 )
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {

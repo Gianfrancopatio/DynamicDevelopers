@@ -3,19 +3,17 @@ Feature: Developer Preparation application tests
 
   Background: User open login/registration page
     Given I open login page
+
+
+  #Best
+  @VerifyImageandName
+    Scenario: Each dashboard will have it’s own name and image
     When user provides valid "admin" Email and password
     And  user click on "Sign in" button
-
-
-  @VerifyImage
-  Scenario: Each dashboard will have it’s own name and image
     Then  Verify each dashBoard contains own topic name
     Then  verify each dash board has image present
 
 
-  @VerifyDupName
-  Scenario: Each dashboard should not have same name
-    Then Verify each DashBoard won't contain duplicate topicname
 
   @CreateNewDashBoard
   Scenario: user have ability to create new ones.
@@ -28,6 +26,9 @@ Feature: Developer Preparation application tests
   Scenario: user is unable to create new dash board with existing name
 
     Then  Verify the error message appeared as existing TopicName already exists
+
+
+
 
 
 

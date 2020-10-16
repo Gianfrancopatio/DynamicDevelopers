@@ -18,7 +18,11 @@ public class TLA_13_AdminRoleTest {
         context = scenarioContext;
     }
 
-    // deleting dashboard based on name of the dashboard
+    /**
+     * deleting dashboard based on name of the dashboard
+     * TlA-13 admin role
+     * @author: Muneer
+     */
     String dashName = "";
     @When("I delete a {string}")
     public void i_delete_a(String dashboard) {
@@ -29,6 +33,11 @@ public class TLA_13_AdminRoleTest {
         context.selenium_utils.logInfo("Deleting :" + dashboard, true);
     }
 
+    /**
+     * verify pop up warning is displayed
+     * TlA-13 admin role
+     * @author: Muneer
+     */
     @Then("I verify Pop up warning message displayed")
     public void iVerifyPopUpWarningMessageDisplayed() {
         context.selenium_utils.sleep(1000);
@@ -37,12 +46,22 @@ public class TLA_13_AdminRoleTest {
 
     }
 
+    /**
+     * verify warning message contains number of question
+     * TlA-13 admin role
+     * @author: Muneer
+     */
     @And("I verify Pup up waring message contain number of question is {string}")
     public void iVerifyPupUpWaringMessageContainNumberOfQuestionIs(String numberOfQuestion) {
         Assert.assertTrue(context.tla_13_adminRolePage.warningMsg.getText().contains(numberOfQuestion));
         context.selenium_utils.logInfo("Warning message contains: " + numberOfQuestion, true);
     }
 
+    /**
+     * verify dashboard is deleted and not deleted
+     * TlA-13 admin role
+     * @author: Muneer
+     */
     @Then("I verify dashboard {string}")
     public void iVerifyDashboard(String delete) {
         switch (delete){
@@ -61,7 +80,12 @@ public class TLA_13_AdminRoleTest {
                 System.out.println("Invalid option provided");
         }
     }
-    // verify main dashboards is not deletable
+
+    /**
+     * verify main dashboards is not deletable
+     * TlA-13 admin role
+     * @author: Muneer
+     */
     @Then("I verify dashboard {string} doesn't have delete option")
     public void iVerifyDashboardDoesnTHaveDeleteOption(String dashboard) {
         //highlight dashboard
@@ -75,7 +99,11 @@ public class TLA_13_AdminRoleTest {
         context.selenium_utils.logInfo("Verify: "+ dashboard + "is not Deletable", true);
     }
 
-    // verifying visibility of adding new dashboard for admin
+    /**
+     * verifying visibility of adding new dashboard for admin
+     * TlA-13 admin role
+     * @author: Muneer
+     */
     @Then("I verify adding {string} is visible only for admin")
     public void iVerifyAddingIsVisibleOnlyForAdmin(String option) {
         String xPath = String.format(LogInPage.inputXpath, option);
@@ -85,13 +113,24 @@ public class TLA_13_AdminRoleTest {
         context.selenium_utils.logInfo("verify: " + option + " is displayed for admin.", true);
 
     }
-    // getting number of question in each dashboard
+
+    /**
+     * getting number of question in each dashboard
+     * TlA-13 admin role
+     * @author: Muneer
+     */
     int questionNum = 0;
     @And("user get number of questions")
     public void userGetNumberOfQuestions() {
         context.selenium_utils.sleep(1000);
         questionNum = context.allTopicsPage.questions.size();
     }
+
+    /**
+     * verify warning message contain dashboard name
+     * TlA-13 admin role
+     * @author: Muneer
+     */
     @Then("I verify Pop up warning message contains {string} and number of questions")
     public void iVerifyPopUpWarningMessageContainsAndNumberOfQuestions(String dashName) {
         Assert.assertTrue(context.tla_13_adminRolePage.warningMsg.getText().contains(dashName));

@@ -8,8 +8,8 @@ Feature: All Topic dashboard test
 
 
   Scenario: Verifying All topics dashboard is visible
-    Then I verify that All Topic dash is visible
-    And I verify that All Topic dash is clickable
+    Then I verify that "All Topic" dash is visible
+    And I verify that "All Topic" dash is clickable
 
 
   Scenario Outline: verify AllTopics dashboard contain all questions
@@ -27,7 +27,7 @@ Feature: All Topic dashboard test
       | Python      |
 
   Scenario: verify AllTopics dashboard contains new added question
-    And User navigates to "Coding" page
+    When user click on "Coding" button
     And User clicks "Enter new question " button
     And User enters "Test question for TLA_6 story?" into the form
     And User clicks "Enter" button

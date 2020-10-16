@@ -27,6 +27,10 @@ public class DashBoardViewTest {
                 context.selenium_utils.highlightElement(context.dashBoardViewPage.newDashboardAdd);
                 context.selenium_utils.sendKeys(context.dashBoardViewPage.newDashboardAdd, topic);
                 break;
+            case "admintest":
+                context.selenium_utils.highlightElement(context.dashBoardViewPage.newDashboardAdd);
+                context.selenium_utils.sendKeys(context.dashBoardViewPage.newDashboardAdd, name);
+                break;
 
         }
         switch (name.toLowerCase()) {

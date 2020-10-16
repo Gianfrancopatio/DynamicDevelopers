@@ -1,6 +1,7 @@
 package UI_Selenium.step_defs;
 
 
+import UI_Selenium.pages.LogInPage;
 import UI_Selenium.pages.TLA_6_AllTopicsPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -29,25 +30,27 @@ public class TLA_6_AllTopicsTest {
 
     }
 
-    @Then("I verify that All Topic dash is visible")
-    public void iVerifyThatAllTopicDashIsVisible() {
-        context.selenium_utils.highlightElement(context.allTopicsPage.alltopics_dash);
+
+
+
+    @Then("I verify that {string} dash is visible")
+    public void iVerifyThatDashIsVisible(String dashboard) {
         context.selenium_utils.sleep(500);
-        Assert.assertTrue(context.allTopicsPage.alltopics_dash.isDisplayed());
-        context.selenium_utils.logInfo("I verify AllTopics dash is displayed", true);
-
+        String xPath = String.format(LogInPage.buttonXpath,dashboard);
+        Assert.assertTrue(context.driver.findElement(By.xpath(xPath)).isDisplayed());
+        context.selenium_utils.logInfo("Dash is displayed: " + dashboard, true);
     }
 
-    @And("I verify that All Topic dash is clickable")
-    public void iVerifyThatAllTopicDashIsClickable() {
-        context.selenium_utils.highlightElement(context.allTopicsPage.alltopics_dash);
-        Assert.assertTrue(context.allTopicsPage.alltopics_dash.isEnabled());
-        context.selenium_utils.logInfo("I verify that AllTopics dash is enabled", false);
-    }
 
+    @And("I verify that {string} dash is clickable")
+    public void iVerifyThatDashIsClickable(String dashboard) {
+        String xPath = String.format(LogInPage.buttonXpath,dashboard);
+        Assert.assertTrue(context.driver.findElement(By.xpath(xPath)).isEnabled());
+        context.selenium_utils.logInfo("Dash is enabled: " + dashboard, false);
+
+    }
 
     List<String> questions = new ArrayList<>();
-
     @And("user capture questions from {string}")
     public void userCaptureQuestionsFrom(String dashboard) {
         for (int i = 0; i < context.allTopicsPage.questions.size(); i++) {
@@ -88,4 +91,5 @@ public class TLA_6_AllTopicsTest {
         context.selenium_utils.logInfo("All topics dash contains | " + question + " | from" + dashboard, true);
 
     }
+
 }

@@ -23,5 +23,7 @@ public class TLA_13_AdminRolePage {
 
     public static String deleteStr = "(//div[@id='x'])[%s]";
 
+    public static String deleteBtnTemplate = "//form//div//button[text()='%s']/parent::a/following-sibling::div";
+
 
 }

@@ -18,7 +18,7 @@ public class CreateQuestionPage {
     @FindBy(xpath = "//button[@class='btn btn-warning badge-pill newbtn']")
     public WebElement clickButton;
 
-    @FindBy(xpath = "//textarea[@class='form-control']")
+    @FindBy(xpath = "//input[@class='form-control']")
     public WebElement EnterQA;
 
     @FindBy(xpath = "//button[@type='submit']")

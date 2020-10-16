@@ -172,6 +172,7 @@ public class LoginTest {
         String xPath = String.format(LogInPage.buttonXpath, buttonName);
         //xpath = //button[text()='Login']
         WebElement element = context.driver.findElement(By.xpath(xPath));
+        context.selenium_utils.sleep(1000);
         context.selenium_utils.click(element);
     }
 

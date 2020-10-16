@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class TLA_13_AdminRoleTest {
     ScenarioContext context;
     public TLA_13_AdminRoleTest(ScenarioContext scenarioContext){
@@ -17,10 +19,10 @@ public class TLA_13_AdminRoleTest {
 
     int dashCount = 0;
     @When("I delete a {string}")
-    public void i_delete_a(String string) {
+    public void i_delete_a(String dashboard) {
         dashCount = context.tla_13_adminRolePage.deleteBtn.size();
         context.selenium_utils.sleep(1000);
-        String xPath = String.format(TLA_13_AdminRolePage.deleteStr,dashCount +1);
+        String xPath = String.format(TLA_13_AdminRolePage.deleteBtnTemplate,dashboard);
         WebElement element = context.driver.findElement(By.xpath(xPath));
         context.selenium_utils.click(element);
     }
@@ -41,13 +43,25 @@ public class TLA_13_AdminRoleTest {
         switch (delete){
             case "deleted":
                 context.selenium_utils.sleep(1000);
+                System.out.println(dashCount);
+                System.out.println(context.tla_13_adminRolePage.deleteBtn.size());
                 Assert.assertTrue(dashCount == context.tla_13_adminRolePage.deleteBtn.size());
                 break;
             case "not deleted":
-                Assert.assertTrue(dashCount < context.tla_13_adminRolePage.deleteBtn.size());
+                System.out.println(dashCount);
+                System.out.println(context.tla_13_adminRolePage.deleteBtn.size());
+                Assert.assertTrue(dashCount == context.tla_13_adminRolePage.deleteBtn.size());
                 break;
             default:
                 System.out.println("Invalid option provided");
         }
+    }
+
+
+    @Then("I verify dashboard {string} doesn't have delete option")
+    public void iVerifyDashboardDoesnTHaveDeleteOption(String dashboard) {
+        String xPath = String.format(TLA_13_AdminRolePage.deleteBtnTemplate,dashboard);
+        List<WebElement> element = context.driver.findElements(By.xpath(xPath));
+        Assert.assertTrue(element.size()== 0);
     }
 }

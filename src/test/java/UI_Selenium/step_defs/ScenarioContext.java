@@ -27,7 +27,7 @@ public class ScenarioContext {
 
 
 
-
+ //delete class below after you merging to page above
 
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;

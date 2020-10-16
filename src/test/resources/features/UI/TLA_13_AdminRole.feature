@@ -6,16 +6,30 @@ Feature: AdminRole Test
     Given I open login page
     When I log in with valid email "admin@gmail.com" and password "admin123"
 
-    Scenario Outline: Verify three main dashboard is not deletable
-      Then I verify dashboard "<dashboard>" doesn't have delete option
-      Examples:
-      |dashboard|
-      |All Topics|
-      |Coding    |
-      |Soft skills|
+  @dashNotDeletable
+  Scenario Outline: Verify three main dashboard is not deletable
+    Then I verify dashboard "<dashboard>" doesn't have delete option
+    Examples:
+      | dashboard   |
+      | All Topics  |
+      | Coding      |
+      | Soft skills |
 
-
-
+  @deleteExistingDash
+  Scenario Outline: Verify delete option on existing dashboards
+    When user click on "<dashboard>" button
+    And user get number of questions
+    When user navigate to main page
+    When I delete a "<dashboard>"
+    Then I verify Pop up warning message displayed
+    Then I verify Pop up warning message contains "<dashboard>" and number of questions
+    When user click on "Cancel" button
+    Then I verify dashboard "not deleted"
+    Examples:
+      | dashboard |
+      | CSS       |
+      | MongoDB   |
+      | NodeJS    |
 
 
   @deleteDash
@@ -30,9 +44,9 @@ Feature: AdminRole Test
 
   @NotDeleteDash
   Scenario: Admin should be able to delete dashboard contain question
-    When  User create new dashboard name with "admintest"
-    And   user click on "+ Add" button
-    And   user click on "admintest" button
+    When User create new dashboard name with "admintest"
+    And user click on "+ Add" button
+    And user click on "admintest" button
     And user click on "Enter new question " button
     And User enters "admin role test question?" into the form
     And User clicks "Enter" button
@@ -46,10 +60,8 @@ Feature: AdminRole Test
 
 
   Scenario: Adding new dashboard only available for admin
+    Then I verify adding "New dashboard" is visible only for admin
 
-#    And I log out
-#    When I log in with valid email "live@live.com" and password "livelive"
-#    Then I verify new "dashboard" created
 
 
 

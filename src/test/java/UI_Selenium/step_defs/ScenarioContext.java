@@ -26,14 +26,11 @@ public class ScenarioContext {
     public SessionExpiresPage sessionExpiresPage;
     public DosnDontsStatementsPage dosnDontsStatementsPage;
     public DashBoardViewPage dashBoardViewPage;
-
     public LikeButtonPage likeButtonPage;
-
     public TLA11_LikeButtonPage tla11LikeButtonPage;
-
     public TLA_6_AllTopicsPage allTopicsPage;
-
     public CreateQuestionPage createQuestionPage;
+    public TLA_13_AdminRolePage tla_13_adminRolePage;
 
 
 
@@ -51,6 +48,7 @@ public class ScenarioContext {
         dashBoardViewPage = new DashBoardViewPage(driver);
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
         createQuestionPage = new CreateQuestionPage(driver);
+        tla_13_adminRolePage = new TLA_13_AdminRolePage(driver);
 
     }
 

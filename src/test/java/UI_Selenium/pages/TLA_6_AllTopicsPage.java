@@ -42,14 +42,11 @@ public class TLA_6_AllTopicsPage {
     @FindBy(linkText = "Test 321")
     public WebElement linkQuestion;
 
-    public List<String> convertToList(List<WebElement> list){
-        List<String> strList = new ArrayList<>();
-        for (int i = 0;i < list.size(); i++){
-            if (!strList.contains(list.get(i).getText())){
-                strList.add(list.get(i).getText());
-            }
-        }
-        return strList;
-    }
+    public static String questionXpath = "//p[contains(text(),'%s')]";
+
+
+
+
+
 
 }

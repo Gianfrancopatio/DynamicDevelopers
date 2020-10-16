@@ -20,20 +20,20 @@ Feature: All Topic dashboard test
     Then user verify that AllTopic dashboard contains questions from "<buttonname>"
     Examples:
       | buttonname  |
-      | Coding      |
       | Soft skills |
       | JavaScript  |
-      | Html        |
-      | Bootstrap   |
-      | Jquery      |
       | NodeJS      |
       | MySQL       |
-      | MongoDB     |
-      | React       |
-      | java        |
       | Python      |
-      | CSS         |
 
+  Scenario: verify AllTopics dashboard contains new added question
+    And User navigates to "Coding" page
+    And User clicks "Enter new question " button
+    And User enters "Test question for TLA_6 story?" into the form
+    And User clicks "Enter" button
+    When user navigate to main page
+    When user click on "All Topics" button
+    Then user verify that AllTopic dashboard contains "Test question for TLA_6 story?" from "Coding"
 
 
 

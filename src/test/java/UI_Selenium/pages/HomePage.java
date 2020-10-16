@@ -48,10 +48,20 @@ public class HomePage {
         return true;
     }
     // -------------------------------------Best-----------------------------------------------//
+    // -------------------------------------Muneer-started-------------------------------------//
+    /**
+     * TLA13 deleteOption
+     */
 
+    @FindBy(xpath = "//h1[text()='Warning']")
+    public WebElement warningHeader;
 
+    @FindBy(xpath = "//div//h4[contains(text(),'Are you sure')]")
+    public WebElement warningMsg;
 
+    public static String deleteStr = "(//div[@id='x'])[%s]";
 
-
+    public static String deleteBtnTemplate = "//form//div//button[text()='%s']/parent::a/following-sibling::div";
+    // -------------------------------------Muneer-ended-------------------------------------//
 
 }

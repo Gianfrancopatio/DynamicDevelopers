@@ -1,8 +1,8 @@
 package UI_Selenium.step_defs;
 
 
+import UI_Selenium.pages.HomePage;
 import UI_Selenium.pages.LogInPage;
-import UI_Selenium.pages.TLA_13_AdminRolePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -27,7 +27,7 @@ public class TLA_13_AdminRoleTest {
     @When("I delete a {string}")
     public void i_delete_a(String dashboard) {
         dashName = dashboard;
-        String xPath = String.format(TLA_13_AdminRolePage.deleteBtnTemplate,dashboard);
+        String xPath = String.format(HomePage.deleteBtnTemplate,dashboard);
         WebElement element = context.driver.findElement(By.xpath(xPath));
         context.selenium_utils.click(element);
         context.selenium_utils.logInfo("Deleting :" + dashboard, true);
@@ -41,9 +41,8 @@ public class TLA_13_AdminRoleTest {
     @Then("I verify Pop up warning message displayed")
     public void iVerifyPopUpWarningMessageDisplayed() {
         context.selenium_utils.sleep(1000);
-        Assert.assertTrue(context.tla_13_adminRolePage.warningHeader.getText().contains("Warning"));
+        Assert.assertTrue(context.homePage.warningHeader.getText().contains("Warning"));
         context.selenium_utils.logInfo("Warning massage displayed", true);
-
     }
 
     /**
@@ -53,7 +52,7 @@ public class TLA_13_AdminRoleTest {
      */
     @And("I verify Pup up waring message contain number of question is {string}")
     public void iVerifyPupUpWaringMessageContainNumberOfQuestionIs(String numberOfQuestion) {
-        Assert.assertTrue(context.tla_13_adminRolePage.warningMsg.getText().contains(numberOfQuestion));
+        Assert.assertTrue(context.homePage.warningMsg.getText().contains(numberOfQuestion));
         context.selenium_utils.logInfo("Warning message contains: " + numberOfQuestion, true);
     }
 
@@ -93,7 +92,7 @@ public class TLA_13_AdminRoleTest {
         WebElement element = context.driver.findElement(By.xpath(xPath1));
         context.selenium_utils.highlightElement(element);
         // verify dashboard is not deletable
-        String xPath = String.format(TLA_13_AdminRolePage.deleteBtnTemplate,dashboard);
+        String xPath = String.format(HomePage.deleteBtnTemplate,dashboard);
         List<WebElement> element1 = context.driver.findElements(By.xpath(xPath));
         Assert.assertTrue(element1.size()== 0);
         context.selenium_utils.logInfo("Verify: "+ dashboard + "is not Deletable", true);
@@ -123,7 +122,7 @@ public class TLA_13_AdminRoleTest {
     @And("user get number of questions")
     public void userGetNumberOfQuestions() {
         context.selenium_utils.sleep(1000);
-        questionNum = context.allTopicsPage.questions.size();
+        questionNum = context.dashboardPage.questions.size();
     }
 
     /**
@@ -133,9 +132,9 @@ public class TLA_13_AdminRoleTest {
      */
     @Then("I verify Pop up warning message contains {string} and number of questions")
     public void iVerifyPopUpWarningMessageContainsAndNumberOfQuestions(String dashName) {
-        Assert.assertTrue(context.tla_13_adminRolePage.warningMsg.getText().contains(dashName));
+        Assert.assertTrue(context.homePage.warningMsg.getText().contains(dashName));
         System.out.println(questionNum);
-        Assert.assertTrue(context.tla_13_adminRolePage.warningMsg.getText().contains(String.valueOf(questionNum)));
+        Assert.assertTrue(context.homePage.warningMsg.getText().contains(String.valueOf(questionNum)));
         context.selenium_utils.logInfo("Warning message contains: " + dashName, true);
     }
 }

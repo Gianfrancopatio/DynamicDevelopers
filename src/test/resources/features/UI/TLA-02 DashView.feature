@@ -13,9 +13,7 @@ Feature: Developer Preparation application tests
     Then  Verify each dashBoard contains own topic name
     Then  verify each dash board has image present
 
-  @VerifyDupName
-  Scenario: Each dashboard should not have same name
-    Then Verify each DashBoard won't contain duplicate topicname
+
 
   @CreateNewDashBoard
   Scenario: user have ability to create new ones.

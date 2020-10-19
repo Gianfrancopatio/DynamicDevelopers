@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
-        tags = "@deleteTest"
+        tags = "@TLA_07Question"
         , dryRun = false
 )
 

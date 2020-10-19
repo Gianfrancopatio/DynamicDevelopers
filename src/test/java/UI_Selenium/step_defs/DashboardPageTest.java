@@ -120,7 +120,7 @@ public class DashboardPageTest {
     @And("User verifies the answer count is {string} for {string}")
     public void userVerifiesTheAnswerCountIsFor(String answCount, String question) {
         context.selenium_utils.click(context.dashboardPage.questions.get(0));
-        String count = context.allTopicsPage.answerCount.get(0).getText();
+        String count = context.dashboardPage.answerCount.get(0).getText();
         Assert.assertTrue(count.equals(answCount));
         context.selenium_utils.logInfo("Question " + question + " has " + count + " answers and the Answer Counter displays " + answCount, true);
     }
@@ -132,12 +132,13 @@ public class DashboardPageTest {
     /**
      * verify visibility of dashboard
      * TlA-6 All Topics dash
+     *
      * @author: Muneer
      */
     @Then("I verify that {string} dash is visible")
     public void iVerifyThatDashIsVisible(String dashboard) {
         context.selenium_utils.sleep(500);
-        String xPath = String.format(LogInPage.buttonXpath,dashboard);
+        String xPath = String.format(LogInPage.buttonXpath, dashboard);
         org.testng.Assert.assertTrue(context.driver.findElement(By.xpath(xPath)).isDisplayed());
         context.selenium_utils.logInfo("Dash is displayed: " + dashboard, true);
     }
@@ -145,11 +146,12 @@ public class DashboardPageTest {
     /**
      * verify dashboard is enable
      * TlA-6 All Topics dash
+     *
      * @author: Muneer
      */
     @And("I verify that {string} dash is clickable")
     public void iVerifyThatDashIsClickable(String dashboard) {
-        String xPath = String.format(LogInPage.buttonXpath,dashboard);
+        String xPath = String.format(LogInPage.buttonXpath, dashboard);
         org.testng.Assert.assertTrue(context.driver.findElement(By.xpath(xPath)).isEnabled());
         context.selenium_utils.logInfo("Dash is enabled: " + dashboard, false);
 
@@ -158,9 +160,11 @@ public class DashboardPageTest {
     /**
      * capture 3 first question from dashboard
      * TlA-6 All Topics dash
+     *
      * @author: Muneer
      */
     List<String> questions = new ArrayList<>();
+
     @And("user capture questions from {string}")
     public void userCaptureQuestionsFrom(String dashboard) {
         for (int i = 0; i < context.dashboardPage.questions.size(); i++) {
@@ -176,6 +180,7 @@ public class DashboardPageTest {
     /**
      * Navigate to main page
      * TlA-6 All Topics dash
+     *
      * @author: Muneer
      */
     @When("user navigate to main page")
@@ -187,6 +192,7 @@ public class DashboardPageTest {
     /**
      * verify All topics dash contains question form other dashboards
      * TlA-6 All Topics dash
+     *
      * @author: Muneer
      */
     @Then("user verify that AllTopic dashboard contains questions from {string}")
@@ -204,6 +210,7 @@ public class DashboardPageTest {
     /**
      * verify All Topics dash contains specific question
      * TlA-6 All Topics dash
+     *
      * @author: Muneer
      */
     @Then("user verify that AllTopic dashboard contains {string} from {string}")
@@ -219,4 +226,80 @@ public class DashboardPageTest {
     /**
      * ----------------------------------/-Muneer-ended/------------------------------------
      */
+
+
+    /**
+     * CreateQuestion- TLA 7- Juan
+     */
+
+    @Given("User navigates to login page")
+    public void user_navigates_to_login_page() {
+        context.driver.get(ConfigReader.readProperty(
+                "projectURL",
+                "src/test/resources/properties/configuration.properties"));
 }
+    @When("User log in with valid email and password")
+    public void userLogInWithValidEmailAndPassword() {
+        String email = ConfigReader.readProperty("email", "src/test/resources/properties/configuration.properties");
+        String password = ConfigReader.readProperty("password", "src/test/resources/properties/configuration.properties");
+        context.selenium_utils.sendKeys(context.logInPage.email, email);
+        context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, password);
+        context.selenium_utils.click(context.logInPage.signInbtn);
+
+        context.selenium_utils.logInfo("login credentials were accepted", true);
+
+    }
+
+    @And("User can navigate to Coding Dashboard")
+    public void userCanNavigateToCodingDashboard() {
+        context.selenium_utils.click(context.dashboardPage.SelectCoding);
+        context.selenium_utils.logInfo("Coding dashboard window open", true);
+
+
+    }
+
+    @Then("User clicks on yellow icon")
+    public void userClicksOnYellowIcon() {
+        context.selenium_utils.click(context.dashboardPage.clickButton);
+        context.selenium_utils.logInfo("Icon was clickable successfully", true);
+
+    }
+
+    @Then("User can input NEW questions under yellow icon")
+    public void userCanInputNEWQuestionsUnderYellowIcon() throws InterruptedException {
+        context.selenium_utils.click(context.dashboardPage.EnterQA);
+        context.selenium_utils.logInfo("Was able to input question in bar", true);
+
+
+
+    }
+
+
+    @Then("User can type question {string}")
+    public void userCanTypeQuestion(String arg0) throws InterruptedException {
+        Thread.sleep(200);
+        context.selenium_utils.waitForVisibility(context.dashboardPage.EnterQA);
+        context.selenium_utils.sendKeys(context.dashboardPage.EnterQA, arg0);
+        context.selenium_utils.click(context.dashboardPage.EnterQA);
+        context.selenium_utils.logInfo("Question was accepted ", true);
+    }
+
+    @When("User click enter for question")
+    public void userClickEnterForQuestion() {
+        context.selenium_utils.click(context.dashboardPage.click_enter);
+        context.selenium_utils.logInfo("Was able to enter question", true);
+    }
+
+
+    @And("Time stamp is verified")
+    public void timeStampIsVerified() {
+        Assert.assertTrue(context.dashboardPage.DisplayStamp.isDisplayed());
+        context.selenium_utils.logInfo("Question displayed with stamp detail ", true);
+    }
+
+/**
+ * ----------------------End- Juan-------------------------------------------------------
+ */
+}
+
+

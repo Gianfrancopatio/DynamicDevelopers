@@ -132,4 +132,16 @@ Examples:
 | CSS         |
 
 #_______________________________________________________//_______________________________________________
+# Juan- TL7
+  @TLA_07Question
+  Scenario: Verify question option works
 
+    Given User navigates to login page
+    When User log in with valid email and password
+
+    And User can navigate to Coding Dashboard
+    Then User clicks on yellow icon
+   Then User can input NEW questions under yellow icon
+    Then User can type question "What is coding?"
+    When User click enter for question
+    And Time stamp is verified

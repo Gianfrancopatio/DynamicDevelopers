@@ -120,7 +120,7 @@ public class DashboardPageTest {
     @And("User verifies the answer count is {string} for {string}")
     public void userVerifiesTheAnswerCountIsFor(String answCount, String question) {
         context.selenium_utils.click(context.dashboardPage.questions.get(0));
-        String count = context.allTopicsPage.answerCount.get(0).getText();
+        String count = context.dashboardPage.answerCount.get(0).getText();
         Assert.assertTrue(count.equals(answCount));
         context.selenium_utils.logInfo("Question " + question + " has " + count + " answers and the Answer Counter displays " + answCount, true);
     }

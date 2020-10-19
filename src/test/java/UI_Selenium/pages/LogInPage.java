@@ -40,8 +40,7 @@ public class LogInPage {
     @FindBy(xpath="//div[contains(text(),'invalid credentials')]")
     public WebElement inValidCredentials;
 
-    @FindBy(xpath="//div[contains(text(),'Invalid email format')]")
-    public WebElement invalidEmailformat;
+
 
 
     public static String buttonXpath = "//button[text()='%s']";

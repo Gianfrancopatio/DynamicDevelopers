@@ -37,10 +37,6 @@ public class HomePageTest {
                 context.selenium_utils.highlightElement(context.homePage.newDashboardAdd);
                 context.selenium_utils.sendKeys(context.homePage.newDashboardAdd, name);
                 break;
-
-        }
-
-        switch (name.toLowerCase()) {
             case "existingtopicname":
                 context.selenium_utils.highlightElement(context.homePage.newDashboardAdd);
                 context.selenium_utils.sendKeys(context.homePage.newDashboardAdd, "");
@@ -64,7 +60,7 @@ public class HomePageTest {
         }
     }
 
-    //Best TLA-02
+    //@author: Best TLA-02
     @Then("verify each dash board has image present")
     public void verifyEachDashBoardHasImagePresent() {
         //check if dashboard contain picture by using the medthod verifyimageActive
@@ -75,7 +71,7 @@ public class HomePageTest {
 
         }
     }
-    //Best TLA-02
+    //@author: Best TLA-02
     @Then("Verify each dashBoard contains own topic name")
     public void verifyEachDashBoardContainsOwnTopicName() {
         // check dashboard topic name element is present
@@ -86,7 +82,7 @@ public class HomePageTest {
         }
     }
 
-    //Best TLA-02
+    //@author: Best TLA-02
     @Then("Verify new dashboard has same name as as we created")
     public void verifyNewDashboardHasSameNameAsAsWeCreated() {
         //count if this topic is equal to 1 mean we already create that dashboard with this name
@@ -102,14 +98,14 @@ public class HomePageTest {
         context.selenium_utils.logInfo("dashboard has name >> " +topic , true);
 
     }
-    //Best TLA-02
+    //@author: Best TLA-02
     @Then("Verify dashboard contains image")
     public void verifyDashboardContainsImage() {
         //the recent dashboard we just create will be at the last index so we use "verifyimageActive" to test if it contain picture
         Assert.assertTrue(context.homePage.verifyimageActive(context.homePage.dash.get(context.homePage.dash.size() - 1)));
         context.selenium_utils.logInfo("image presented --> " , true);
     }
-    //Best TLA-02
+    //@author: Best TLA-02
     @Then("Verify each DashBoard won't contain duplicate topicname")
     public void verifyEachDashBoardWonTContainDuplicateTopicname() {
 
@@ -217,6 +213,8 @@ public class HomePageTest {
     @Then("I verify adding {string} is visible only for admin")
     public void iVerifyAddingIsVisibleOnlyForAdmin(String option) {
         String xPath = String.format(LogInPage.inputXpath, option);
+
+
         WebElement element = context.driver.findElement(By.xpath(xPath));
         context.selenium_utils.highlightElement(element);
         Assert.assertTrue(element.isDisplayed());

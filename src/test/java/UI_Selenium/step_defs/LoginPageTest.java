@@ -13,28 +13,28 @@ import org.testng.Assert;
 
 import java.util.Map;
 
-public class LoginTest {
+public class LoginPageTest {
     ScenarioContext context;
 
-    public LoginTest(ScenarioContext scenarioContext) {
+    public LoginPageTest(ScenarioContext scenarioContext) {
 
         this.context = scenarioContext;
     }
 
-
+ //author: Best
     @Given("I open login page")
     public void i_open() {
         context.driver.get(ConfigReader.readProperty
                 ("projectURL", "src/test/resources/properties/configuration.properties"));
     }
 
-
+    //author: Best
     @When("user click create new account")
     public void userIsAbleToClickCreateNewAccount() throws InterruptedException {
         Thread.sleep(1000);
         context.selenium_utils.click(context.logInPage.createAccountbtn);
     }
-
+    //author: Best
     @And("user provides following data")
     public void userProvidesFollowingData(Map<String, String> dataInput) {
 
@@ -44,14 +44,14 @@ public class LoginTest {
         context.selenium_utils.sendKeys(context.logInPage.confirmpassword, dataInput.get("confirmpassword"));
 
     }
-
+    //author: Best
     @Then("user click on signup button")
     public void userClickOnSighupButton() {
 
         context.selenium_utils.click(context.logInPage.signUp);
     }
 
-
+    //author: Best
     @Then("verify {string}  exists")
     public void verifyExists(String field) throws InterruptedException {
 
@@ -93,14 +93,14 @@ public class LoginTest {
         context.selenium_utils.logInfo("verify " + field + "  exists", true);
     }
 
-
+    //author: Best
     @Then("verify sign up button is not enable")
     public void verifySignUpButtonIsNotEnable() {
         Assert.assertFalse(context.logInPage.signUp.isEnabled());
         context.selenium_utils.logInfo("verify sign up button is not enable", true);
 
     }
-
+    //author: Best
     @And("user provides {string} {string} {string} {string}")
     public void userProvidesNameEmailPasswordConfirmPassword(String name, String email, String pass, String conPass) {
 
@@ -112,14 +112,14 @@ public class LoginTest {
 
     }
 
-
+    //author: Best
     @When("user provides valid Email")
     public void userProvidesValidEmail() {
         context.selenium_utils.sendKeys
                 (context.logInPage.email, ConfigReader.readProperty("email",
                         "src/test/resources/properties/configuration.properties"));
     }
-
+    //author: Best
     @And("user provides valid password")
     public void userProvidesValidPassword() {
         context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, ConfigReader
@@ -127,32 +127,32 @@ public class LoginTest {
         context.selenium_utils.logInfo("user provides valid password", true);
     }
 
-
+    //author: Best
     @Then("verify user on DevPrepp page")
     public void verifyUserOnDevPreppPage() {
         Assert.assertTrue(context.logInPage.welcomeText.isDisplayed());
         context.selenium_utils.logInfo("Verify welcome text is displayed", true);
 
     }
-
+    //author: Best
     @When("user provides invalid Email")
     public void userProvidesInvalidEmail() {
         context.selenium_utils.sendKeys(context.logInPage.email, "devDDinvalid@gmail.com");
         context.selenium_utils.logInfo("User Provides Invalid Email", true);
     }
-
+    //author: Best
     @Then("verify the error message is up as invalid credentials")
     public void verifyTheErrorMessageIsUpAsInvalidCredentials() {
         Assert.assertTrue(context.logInPage.inValidCredentials.isDisplayed());
     }
-
+    //author: Best
     @And("user provides invalid password")
     public void userProvidesInvalidPassword() {
         context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, "dd879000");
         context.selenium_utils.logInfo("user provides invalid password", true);
     }
 
-
+    //author: Best
     @And("user provides following data with random name and email")
     public void userProvidesFollowingDataWithRandomNameAndEmail(Map<String, String> dataInput) {
         Faker faker = new Faker();
@@ -166,15 +166,16 @@ public class LoginTest {
         context.selenium_utils.logInfo("user provides following data with random name , email and password", true);
 
     }
-
+    //author: Best
     @And("user click on {string} button")
     public void userClickOnButton(String buttonName) {
         String xPath = String.format(LogInPage.buttonXpath, buttonName);
         //xpath = //button[text()='Login']
         WebElement element = context.driver.findElement(By.xpath(xPath));
+        context.selenium_utils.sleep(1000);
         context.selenium_utils.click(element);
     }
-
+    //author: Best
     @Then("verify the error message is up as {string}")
     public void verifyTheErrorMessageIsUpAs(String msg) {
         String xPath = String.format(LogInPage.errorMsgXpath, msg);
@@ -184,7 +185,7 @@ public class LoginTest {
         context.selenium_utils.logInfo(msg + "is displayed", true);
 
     }
-
+    //author: Best 
     @When("user provides valid {string} Email and password")
     public void userProvidesValidEmailandpassword(String role) {
         switch (role.toLowerCase()){
@@ -195,6 +196,7 @@ public class LoginTest {
                 context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, ConfigReader
                         .readProperty("password", "src/test/resources/properties/configuration.properties"));
                 context.selenium_utils.logInfo("user provides valid email and password", true);
+
                 break;
 
             case "admin":
@@ -208,9 +210,16 @@ public class LoginTest {
                 break;
 
         }
+
+
     }
 
-
+    //author: Best
+    @When("user login as {string}")
+    public void userLoginAs(String role) {
+        userProvidesValidEmailandpassword(role.toLowerCase());
+        userClickOnButton("Sign in");
+    }
 }
 
 

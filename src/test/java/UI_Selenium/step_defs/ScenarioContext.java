@@ -21,38 +21,41 @@ public class ScenarioContext {
 
     //Classes
     public LogInPage logInPage;
+    public HomePage homePage;
+    public DashboardPage dashboardPage;
     public Selenium_utils selenium_utils;
+
+
+
+ //delete class below after you merging to page above
     public DosDontsTablePage dosDontsTablePage;
     public SessionExpiresPage sessionExpiresPage;
     public DosnDontsStatementsPage dosnDontsStatementsPage;
-    public DashBoardViewPage dashBoardViewPage;
-
     public LikeButtonPage likeButtonPage;
-
     public TLA11_LikeButtonPage tla11LikeButtonPage;
-
-    public TLA_6_AllTopicsPage allTopicsPage;
-
-    public CreateQuestionPage createQuestionPage;
+    //public TLA_6_AllTopicsPage allTopicsPage;
+    //public CreateQuestionPage createQuestionPage;
 
 
 
     //Selenium methods
     public void initializeClasses(ScenarioContext scenarioContext) {
         logInPage = new LogInPage(driver);
+        homePage = new HomePage(driver);
+        dashboardPage = new DashboardPage(driver);
         selenium_utils = new Selenium_utils(scenarioContext);
+        dashboardPage = new DashboardPage(driver);
+
+
         dosDontsTablePage = new DosDontsTablePage(driver);
         sessionExpiresPage = new SessionExpiresPage(driver);
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);
-        allTopicsPage = new TLA_6_AllTopicsPage(driver);
+        //allTopicsPage = new TLA_6_AllTopicsPage(driver);
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);
-        dashBoardViewPage = new DashBoardViewPage(driver);
-
         tla11LikeButtonPage = new TLA11_LikeButtonPage(driver);
-
-        createQuestionPage = new CreateQuestionPage(driver);
+        //createQuestionPage = new CreateQuestionPage(driver);
 
     }
 

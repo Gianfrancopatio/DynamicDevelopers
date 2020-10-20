@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class TLA11_LikeButtonPage {
-    public TLA11_LikeButtonPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+    public TLA11_LikeButtonPage(WebDriver driver){
+        PageFactory.initElements(driver,this);
     }
 
     @FindBy(xpath = "//button[text()='All Topics']")

@@ -2,7 +2,6 @@ package runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.junit.runner.RunWith;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
@@ -12,13 +11,16 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
+<<<<<<< HEAD
 
 
         tags = "@doAndDontsTable"
 
 
+=======
+        tags = "@smoketestLogin"
+>>>>>>> 95ae09df8e0ba000332d83850ec42842bf41c076
         , dryRun = false
-
 )
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {

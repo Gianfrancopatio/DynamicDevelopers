@@ -26,7 +26,7 @@ public class DosDontsTablePageTest {
         context.selenium_utils.sendKeys(context.logInPage.email,string);
         context.selenium_utils.sendKeys(context.logInPage.passwordbfSignup, string2);
         context.selenium_utils.click(context.logInPage.signInbtn);
-        context.selenium_utils.logInfo("Logging in with valid credentials; email: " + string + " password: " + string2, true);
+        context.selenium_utils.logInfo("Login in with valid credentials; email: " + string + " password: " + string2, true);
     }
 
     @When("I open homepage and see {string} table")
@@ -38,6 +38,7 @@ public class DosDontsTablePageTest {
         context.selenium_utils.highlightElement(element);
         Thread.sleep(1000);
         Assert.assertTrue(element.isDisplayed());
+        context.selenium_utils.moveIntoView(context.dosDontsTablePage.table);
         context.selenium_utils.logInfo("Verifying Do's Table exists", true);
     }
 
@@ -47,10 +48,12 @@ public class DosDontsTablePageTest {
         String finalXpath =  String.format(DosDontsTablePage.templateXpath, message);
         WebElement element = context.driver.findElement(By.xpath(finalXpath));
 
+
         switch (table.toLowerCase()) {
             case "do's":
                 Thread.sleep(1000);
-                context.selenium_utils.moveIntoView(element);
+               context.selenium_utils.moveIntoView(context.dosDontsTablePage.table);
+                context.selenium_utils.sleep(5000);
                 context.selenium_utils.highlightElement(element);
                 Assert.assertTrue(element.isDisplayed());
                 context.selenium_utils.logInfo("Verifying Do's Table exists", true);

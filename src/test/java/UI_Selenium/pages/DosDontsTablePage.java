@@ -12,4 +12,8 @@ public class DosDontsTablePage {
 
     public static String templateXpath = "//div[text()=\"%s\"]";
 
+    @FindBy(xpath= "//div[text()='Interview']")
+    public WebElement table;
+
+
 }

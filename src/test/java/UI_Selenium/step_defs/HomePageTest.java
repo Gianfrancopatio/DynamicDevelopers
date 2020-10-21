@@ -202,7 +202,7 @@ public class HomePageTest {
         String xPath = String.format(HomePage.deleteBtnTemplate,dashboard);
         List<WebElement> element1 = context.driver.findElements(By.xpath(xPath));
         Assert.assertTrue(element1.size()== 0);
-        context.selenium_utils.logInfo("Verify: "+ dashboard + "is not Deletable", true);
+        context.selenium_utils.logInfo("Verify: "+ dashboard + " is not Deletable", true);
     }
 
     /**
@@ -213,11 +213,11 @@ public class HomePageTest {
     @Then("I verify adding {string} is visible only for admin")
     public void iVerifyAddingIsVisibleOnlyForAdmin(String option) {
         String xPath = String.format(LogInPage.inputXpath, option);
-
-
         WebElement element = context.driver.findElement(By.xpath(xPath));
+        context.selenium_utils.moveIntoView(element);
         context.selenium_utils.highlightElement(element);
         Assert.assertTrue(element.isDisplayed());
+        context.selenium_utils.sleep(500);
         context.selenium_utils.logInfo("verify: " + option + " is displayed for admin.", true);
 
     }
@@ -245,6 +245,31 @@ public class HomePageTest {
         System.out.println(questionNum);
         Assert.assertTrue(context.homePage.warningMsg.getText().contains(String.valueOf(questionNum)));
         context.selenium_utils.logInfo("Warning message contains: " + dashName, true);
+    }
+
+    /**
+     * log out
+     * TlA-13 admin role
+     * @author: Muneer
+     */
+    @When("I log out")
+    public void iLogOut() {
+        SessionExpiresPageTest expiresPageTest = new SessionExpiresPageTest(context);
+        expiresPageTest.userSignsOutByPressingWelcomeButton();
+        expiresPageTest.userClicksOnSignOut();
+    }
+
+    /**
+     * verify adding new dashboard option is not visible for users
+     * TlA-13 admin role
+     * @author: Muneer
+     */
+    @Then("I verify adding {string} is not visible for user")
+    public void iVerifyAddingIsNotVisibleForUser(String option) {
+        String xPath = String.format(LogInPage.inputXpath, option);
+        List<WebElement> elements = context.driver.findElements(By.xpath(xPath));
+        Assert.assertFalse(elements.size() != 0);
+        context.selenium_utils.logInfo("verify: " + option + " is not displayed for users.", true);
     }
     //--------------------------------Muneer-Ended--------------------------------------------
 

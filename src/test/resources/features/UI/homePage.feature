@@ -101,6 +101,9 @@ Feature: Homepage scenarios
   Scenario: Adding new dashboard only available for admin
     When user login as "admin"
     Then I verify adding "New dashboard" is visible only for admin
+    When I log out
+    When user login as "user"
+    Then I verify adding "New dashboard" is not visible for user
 
     ##------------------------Muneer-ended-----------------------------
 

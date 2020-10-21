@@ -28,7 +28,7 @@ public class ScenarioContext {
 
 
  //delete class below after you merging to page above
-    public DosDontsTablePage dosDontsTablePage;
+
     public SessionExpiresPage sessionExpiresPage;
     public DosnDontsStatementsPage dosnDontsStatementsPage;
     public LikeButtonPage likeButtonPage;
@@ -47,7 +47,6 @@ public class ScenarioContext {
         dashboardPage = new DashboardPage(driver);
 
 
-        dosDontsTablePage = new DosDontsTablePage(driver);
         sessionExpiresPage = new SessionExpiresPage(driver);
         dosnDontsStatementsPage = new DosnDontsStatementsPage(driver);
         likeButtonPage = new LikeButtonPage(driver);

@@ -151,6 +151,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/ProjectRunner.java</include>
+                        <include>**/FailedRunner.java</include>
                     </includes>
                     <systemPropertyVariables>
                         <testng.dtd.http>true</testng.dtd.http>

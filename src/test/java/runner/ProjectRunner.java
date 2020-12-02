@@ -11,12 +11,12 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber.json",
                 "rerun:target/re-run.txt"
         },
-        tags = "@deleteTest"
+        tags = "@dashboard"
         , dryRun = false
 )
 
 public class ProjectRunner extends AbstractTestNGCucumberTests {
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }
